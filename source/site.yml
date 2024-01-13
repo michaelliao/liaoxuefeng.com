@@ -1,30 +1,38 @@
 site:
-  title: GitSite
-  description: GitSite is a static web site generator for Git.
-  keywords: gitsite, git, static web site, html
+  title: 廖雪峰的官网
+  description: 廖雪峰的官方网站
+  keywords: liaoxuefeng, 廖雪峰
   theme: default
-  language: en-US
+  language: zh-CN
   navigation:
-    - title: User Guide
-      type: book
-      ref: gitsite-guide
-    - title: Blogs
-      type: blog
-    - title: License
-      type: page
-      ref: license
-    - title: Discuss
-      type: link
-      ref: https://github.com/michaelliao/gitsite/discussions
+    - title: 技术
+      uri: /blogs/tech/index.html
+    - title: 读书
+      uri: /blogs/reading/index.html
+    - title: Java教程
+      uri: https://www.liaoxuefeng.com/wiki/1252599548343744
+      external: true
+    - title: Python教程
+      uri: https://www.liaoxuefeng.com/wiki/1016959663602400
+      external: true
+    - title: Git教程
+      uri: https://www.liaoxuefeng.com/wiki/896043488029600
       external: true
   git:
-    base-url: https://github.com/michaelliao/gitsite/blob/main/source
+    base-url: https://github.com/michaelliao/liaoxuefeng.com/blob/main/source
     # display git link for quick edit:
     link: true
   contact:
     name: Michael Liao
-    github: https://github.com/michaelliao/gitsite
+    github: https://github.com/michaelliao
     twitter: https://twitter.com/liaoxuefeng
+  footer: |
+    <p>
+      <a href="/">廖雪峰的官网</a> &copy;2019
+      <a href="/pages/license/index.html">使用许可</a>
+      <a target="_blank" href="https://github.com/michaelliao">网站源码</a>
+      <a target="_blank" href="https://beian.miit.gov.cn">京ICP备13005808号-11</a>
+    </p>
   books:
     index-marker: true
   search:
@@ -33,7 +41,6 @@ site:
     # google = google site search
     type: browser
   integration:
-    disqus-comment: gitsite
     google-analytics: G-5Z40K7NBL5
 
 build:
