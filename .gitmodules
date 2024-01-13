@@ -1,0 +1,3 @@
+[submodule "themes/default"]
+	path = themes/default
+	url = git@github.com:michaelliao/gitsite-theme-default.git
