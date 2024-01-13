@@ -1,0 +1,46 @@
+site:
+  title: GitSite
+  description: GitSite is a static web site generator for Git.
+  keywords: gitsite, git, static web site, html
+  theme: default
+  language: en-US
+  navigation:
+    - title: User Guide
+      type: book
+      ref: gitsite-guide
+    - title: Blogs
+      type: blog
+    - title: License
+      type: page
+      ref: license
+    - title: Discuss
+      type: link
+      ref: https://github.com/michaelliao/gitsite/discussions
+      external: true
+  git:
+    base-url: https://github.com/michaelliao/gitsite/blob/main/source
+    # display git link for quick edit:
+    link: true
+  contact:
+    name: Michael Liao
+    github: https://github.com/michaelliao/gitsite
+    twitter: https://twitter.com/liaoxuefeng
+  books:
+    index-marker: true
+  search:
+    # none = no search
+    # browser = flex search in browser
+    # google = google site search
+    type: browser
+  integration:
+    disqus-comment: gitsite
+    google-analytics: G-5Z40K7NBL5
+
+build:
+  # copy special files under root dir (ignore if not found):
+  copy:
+    - favicon.ico
+    - robots.txt
+    - ads.txt
+
+# you can add any items:
