@@ -1,4 +1,4 @@
-# How to Execute JavaScript when Using innerHTML
+# 设置innerHTML并执行JavaScript
 
 当我们使用AJAX动态加载部分页面时，经常使用innerHTML来更新页面：
 
@@ -67,5 +67,3 @@ function setInnerHTML(dom, html) {
         });
 }
 ```
-
-
