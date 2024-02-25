@@ -4,7 +4,7 @@
 
 如何让`iframe`自适应自身高度，让整个页面看起来像一个整体？
 
-在HTML5之前，有很多使用JavaScript的Hack技巧，代码量大，而且很难通用。随着现代浏览器引入了新的[^ResizeObserver] API，解决`iframe`高度问题就变得简单了。
+在HTML5之前，有很多使用JavaScript的Hack技巧，代码量大，而且很难通用。随着现代浏览器引入了新的ResizeObserver API[^ResizeObserver]，解决`iframe`高度问题就变得简单了。
 
 [^ResizeObserver]: [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver)接口监视Element或者SVGElement尺寸的变化。
 
@@ -53,7 +53,7 @@ document.getElementById('crossDomain').appendChild(iframe2);
 
 在`cross.html`页面中，如何获取自身高度？
 
-我们需要现代浏览器引入的一个新的[^MutationObserver] API，它允许监控任意DOM树的修改。
+我们需要现代浏览器引入的一个新的MutationObserver API[^MutationObserver]，它允许监控任意DOM树的修改。
 
 [^MutationObserver]: [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)接口提供了对DOM树更改的监视能力。
 
