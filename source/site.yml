@@ -4,6 +4,7 @@ site:
   keywords: liaoxuefeng, 廖雪峰
   theme: default
   language: zh-CN
+  root-path: /liaoxuefeng.com
   navigation:
     - title: 技术
       uri: /blogs/tech/index.html
