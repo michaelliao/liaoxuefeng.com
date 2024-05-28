@@ -1,39 +1,31 @@
 site:
-  title: 廖雪峰的官网
-  description: 廖雪峰的官方网站
-  keywords: liaoxuefeng, 廖雪峰
+  title: 廖雪峰的官方网站
+  description: 廖雪峰的官方网站 (liaoxuefeng.com) 研究互联网产品和技术，提供原创中文精品教程
+  keywords: 廖雪峰, liaoxuefeng, git, gitsite, javascript, node, jquery, python, java, spring, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币
   theme: default
   language: zh-CN
-  root-path: /liaoxuefeng.com
+  # set the /<rootPath> pathname under which your site is served
+  # for GitHub pages deployment without a custom domain, it is often '/<projectName>'
+  # root-path: /gitsite
   navigation:
-    - title: 技术
-      uri: /blogs/tech/index.html
-    - title: 读书
-      uri: /blogs/reading/index.html
     - title: Java教程
-      uri: https://www.liaoxuefeng.com/wiki/1252599548343744
-      external: true
-    - title: Python教程
-      uri: https://www.liaoxuefeng.com/wiki/1016959663602400
-      external: true
-    - title: Git教程
-      uri: https://www.liaoxuefeng.com/wiki/896043488029600
-      external: true
+      uri: /books/java/index.html
+    - title: 手写Spring
+      uri: /books/summerframework/index.html
+    - title: 手写Tomcat
+      uri: /books/jerrymouse/index.html
+    - title: 区块链教程
+      uri: /books/blockchain/index.html
+    - title: Makefile教程
+      uri: /books/makefile/index.html
+    - title: 博客
+      uri: /blogs/all/index.html
   git:
-    base-url: https://github.com/michaelliao/liaoxuefeng.com/blob/main/source
-    # display git link for quick edit:
-    link: true
+    base-url: https://github.com/michaelliao/geeksite.net/blob/main/source
   contact:
     name: Michael Liao
-    github: https://github.com/michaelliao
+    github: https://github.com/michaelliao/geeksite.net
     twitter: https://twitter.com/liaoxuefeng
-  footer: |
-    <p>
-      <a href="/">廖雪峰的官网</a> &copy;2019
-      <a href="/pages/license/index.html">使用许可</a>
-      <a target="_blank" href="https://github.com/michaelliao">网站源码</a>
-      <a target="_blank" href="https://beian.miit.gov.cn">京ICP备13005808号-11</a>
-    </p>
   books:
     index-marker: true
   search:
@@ -41,8 +33,21 @@ site:
     # browser = flex search in browser
     # google = google site search
     type: browser
+  # control styles:
+  styles:
+    # show 'Edit in Git':
+    display-git-link: true
+    # any custom styles used in theme:
+    # code-font: Monaco
   integration:
     google-analytics: G-5Z40K7NBL5
+  footer: |
+          <div>
+            <a href="/">liaoxuefeng.com</a> &copy; 2024
+            - <a href="https://weibo.com/liaoxuefeng" target="_blank">微博</a>
+            - <a href="https://github.com/michaelliao/liaoxuefeng.com" target="_blank">GitHub</a>
+          </div>
+
 
 build:
   # copy special files under root dir (ignore if not found):
