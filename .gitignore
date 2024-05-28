@@ -387,5 +387,6 @@ Temporary Items
 _site/
 _site_*/
 
+!source/**/*.zip
 !.gitignore
 !.gitsubmodules
