@@ -1,12 +1,12 @@
 /* custom css */
 
-div.home-list {
+div.home-book-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
-div.home-list .home-list-item {
+div.home-book-list .home-book-list-item {
     cursor: pointer;
     display: block;
     border: solid 1px rgb(209 213 219);
@@ -17,27 +17,31 @@ div.home-list .home-list-item {
     margin: 16px;
 }
 
-div.home-list .home-list-item:hover {
+div.home-book-list .home-book-list-item:hover {
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     opacity: 1;
 }
 
-:is(.dark div.home-list .home-list-item) {
+:is(.dark div.home-book-list .home-book-list-item) {
     border-color: rgb(75 85 99);
 }
 
-:is(.dark div.home-list .home-list-item:hover) {
+:is(.dark div.home-book-list .home-book-list-item:hover) {
     box-shadow: 0 4px 6px -1px rgb(255 255 255 / 0.1), 0 2px 4px -2px rgb(255 255 255 / 0.1);
 }
 
-div.home-list div.home-list-title {
+div.home-book-list div.home-book-list-title {
     font-weight: bold;
     text-align: center;
     padding: 8px 4px;
 }
 
-div.home-list div.home-list-desc {
+div.home-book-list div.home-book-list-desc {
     padding: 4px 4px 8px 4px;
+}
+
+div.home-blog-list div.home-blog-list-item {
+    margin: 16px;
 }
 
 /******************** git explorer ********************/
@@ -153,5 +157,6 @@ div.git-explorer>div.git-explorer-frame>div.git-explorer-frame-code>pre {
 }
 
 div.git-explorer>div.git-explorer-frame>div.git-explorer-frame-code>pre>code {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
 }
