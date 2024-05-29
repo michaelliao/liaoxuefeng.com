@@ -120,10 +120,9 @@
     </div>
 </div>
 
-最新发表博客文章：
+最新发表的博客文章：
 
-<div id="home-blog-list" class="home-blog-list">
-</div>
+<div id="home-blog-list" class="home-blog-list"></div>
 
 <script>
     documentReady(async ()=>{
