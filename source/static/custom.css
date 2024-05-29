@@ -44,6 +44,25 @@ div.home-blog-list div.home-blog-list-item {
     margin: 16px;
 }
 
+/******************** execute lang ********************/
+
+.spinner {
+    border: 2px solid currentcolor;
+    border-right-color: transparent;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: -0.125em;
+    border-radius: 50%;
+    animation: 0.75s linear infinite spinner
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
 /******************** git explorer ********************/
 
 div.git-explorer {
