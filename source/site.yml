@@ -14,17 +14,25 @@ site:
       uri: /books/summerframework/index.html
     - title: 手写Tomcat
       uri: /books/jerrymouse/index.html
+    - title: Python教程
+      uri: /books/python/index.html
+    - title: JavaScript教程
+      uri: /books/javascript/index.html
     - title: 区块链教程
       uri: /books/blockchain/index.html
     - title: Makefile教程
       uri: /books/makefile/index.html
+    - title: SQL教程
+      uri: /books/sql/index.html
+    - title: Git教程
+      uri: /books/git/index.html
     - title: 博客
       uri: /blogs/all/index.html
   git:
-    base-url: https://github.com/michaelliao/geeksite.net/blob/main/source
+    base-url: https://github.com/michaelliao/liaoxuefeng.com/blob/main/source
   contact:
     name: Michael Liao
-    github: https://github.com/michaelliao/geeksite.net
+    github: https://github.com/michaelliao/liaoxuefeng.com
     twitter: https://twitter.com/liaoxuefeng
   books:
     index-marker: true
@@ -43,9 +51,10 @@ site:
     google-analytics: G-5Z40K7NBL5
   footer: |
           <div>
-            <a href="/">liaoxuefeng.com</a> &copy; 2024
+            &copy;<a href="/">liaoxuefeng.com</a> 
             - <a href="https://weibo.com/liaoxuefeng" target="_blank">微博</a>
             - <a href="https://github.com/michaelliao/liaoxuefeng.com" target="_blank">GitHub</a>
+            - <a href="/pages/license/index.html" target="_blank">License</a>
           </div>
 
 
