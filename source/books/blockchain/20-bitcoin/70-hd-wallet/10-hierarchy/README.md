@@ -12,14 +12,14 @@ let
     root = bitcoin.HDNode.fromBase58(xprv);
 
 // m/0:
-var m_0 = root.derive(0);
+let m_0 = root.derive(0);
 console.log("xprv m/0: " + m_0.toBase58());
 console.log("xpub m/0: " + m_0.neutered().toBase58());
 console.log(" prv m/0: " + m_0.keyPair.toWIF());
 console.log(" pub m/0: " + m_0.keyPair.getAddress());
 
 // m/1:
-var m_1 = root.derive(1);
+let m_1 = root.derive(1);
 console.log("xprv m/1: " + m_1.toBase58());
 console.log("xpub m/1: " + m_1.neutered().toBase58());
 console.log(" prv m/1: " + m_1.keyPair.toWIF());

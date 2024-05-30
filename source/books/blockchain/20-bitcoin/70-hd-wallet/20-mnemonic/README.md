@@ -55,7 +55,7 @@ console.log('is valid mnemonic? ' + bip39.validateMnemonic(words));
 const bip39 = require('bip39');
 
 // 第二个参数rng可以为null:
-var words = bip39.generateMnemonic(256, null, bip39.wordlists.chinese_simplified);
+let words = bip39.generateMnemonic(256, null, bip39.wordlists.chinese_simplified);
 console.log(words);
 ```
 
