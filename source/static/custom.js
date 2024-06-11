@@ -1,6 +1,6 @@
 console.log(`welcome to ${location.hostname}!`);
 
-// auto load git explorer if link found:
+/******************** auto load git explorer if link found ********************/
 
 function initGitExplorer() {
     let git_links = document.querySelectorAll('#gsi-content a.git-explorer');
@@ -14,23 +14,114 @@ function initGitExplorer() {
                 createGitExplorer(git_link, git_url);
             }
         };
-        if (!window._git_explorer_js_) {
-            let e = document.createElement('script');
-            e.src = '/static/git-explorer.js';
-            e.type = 'text/javascript';
-            e.addEventListener('load', create);
-            document.getElementsByTagName('head')[0].appendChild(e);
-            window._git_explorer_js_ = true;
-        } else {
-            create();
-        }
+        gitsite.loadScript('/static/git-explorer.js', create);
     }
 }
 
 documentReady(initGitExplorer);
 gitsite.addContentChangedListener(initGitExplorer);
 
-// auto load x-lang if <pre class="hljs"><code class="language-x-lang"> found:
+/******************** load script for blockchian ********************/
+
+if (location.pathname.startsWith('/books/blockchain/')) {
+    documentReady(() => {
+        gitsite.loadScript('/static/blockchain-lib.js', null, true);
+    });
+}
+
+/******************** load script for sql ********************/
+
+if (location.pathname.startsWith('/books/sql/')) {
+    let initSql = function () {
+        alasql.options.joinstar = 'underscore';
+        let
+            i,
+            classes_data = [['一班'], ['二班'], ['三班'], ['四班']],
+            students_data = [[1, '小明', 'M', 90], [1, '小红', 'F', 95], [1, '小军', 'M', 88], [1, '小米', 'F', 73], [2, '小白', 'F', 81], [2, '小兵', 'M', 55], [2, '小林', 'M', 85], [3, '小新', 'F', 91], [3, '小王', 'M', 89], [3, '小丽', 'F', 88]];
+        alasql('DROP TABLE IF EXISTS classes');
+        alasql('DROP TABLE IF EXISTS students');
+        alasql('CREATE TABLE classes (id BIGINT NOT NULL AUTO_INCREMENT, name VARCHAR(10) NOT NULL, PRIMARY KEY (id))');
+        alasql('CREATE TABLE students (id BIGINT NOT NULL AUTO_INCREMENT, class_id BIGINT NOT NULL, name VARCHAR(10) NOT NULL, gender CHAR(1) NOT NULL, score BIGINT NOT NULL, PRIMARY KEY (id))');
+        for (i = 0; i < classes_data.length; i++) {
+            alasql('INSERT INTO classes (name) VALUES (?)', classes_data[i]);
+        }
+        for (i = 0; i < students_data.length; i++) {
+            alasql('INSERT INTO students (class_id, name, gender, score) VALUES (?, ?, ?, ?)', students_data[i]);
+        }
+    };
+    documentReady(() => {
+        gitsite.loadScript('/static/alasql.js', initSql, true);
+    });
+    gitsite.addContentChangedListener(initSql);
+}
+
+/******************** auto load x-lang ********************/
+
+async function exec_sql(code) {
+    if (typeof (alasql) === undefined) {
+        throw 'JavaScript嵌入式SQL引擎尚未加载完成，请稍后再试或者刷新页面！';
+    }
+    const genTable = function (rs) {
+        if (rs.length === 0) {
+            return '<pre><code>empty result set</pre></code>';
+        }
+        let keys = Object.keys(rs[0]);
+        let ths = keys.map(th => {
+            let n = th.indexOf('!');
+            if (n >= 0) {
+                th = th.substring(n + 1);
+            }
+            return '<th>' + gitsite.encodeHtml(th) + '</th>';
+        });
+        let trs = rs.map(row => {
+            let tds = keys.map(key => {
+                let v = row[key];
+                if (v === undefined || v === null) {
+                    v = 'NULL';
+                }
+                return '<td>' + gitsite.encodeHtml(String(v)) + '</td>';
+            });
+            return '<tr>' + tds.join('') + '</tr>';
+        });
+        return `<table><thead><tr>${ths.join('')}</tr></thead><tbody>${trs.join('')}</tbody></table>`;
+    };
+    // format lines:
+    let lines = code.split('\n')
+        .map( // remove comment
+            line => {
+                let n = line.indexOf('--');
+                if (n >= 0) {
+                    line = line.substring(0, n);
+                }
+                return line;
+            })
+        .join('\n')
+        .split(';')
+        .map(line => line.trim().replace(/[\s\n]+/g, ' '))
+        .filter(line => line !== ''); // remove empty line
+    console.log(lines);
+    // execute each line:
+    let results = [];
+    for (let line of lines) {
+        let result = '';
+        try {
+            let rs = alasql(line);
+            if (Array.isArray(rs)) {
+                result = genTable(rs);
+            } else {
+                result = '<pre><code>' + gitsite.encodeHtml(String(rs)) + '</code></pre>';
+            }
+        } catch (err) {
+            result = '<pre><code>' + gitsite.encodeHtml(String(err)) + '</code></pre>';
+        }
+        results.push('<pre><code>&gt;&nbsp;' + gitsite.encodeHtml(line) + '</code></pre>');
+        results.push(result);
+    }
+    return {
+        html: true,
+        output: results.join('')
+    };
+}
 
 async function exec_javascript(code) {
     // we must capture console.log / console.error / ...:
@@ -60,8 +151,14 @@ async function exec_javascript(code) {
         eval('(function () { const console=_console;\n' + code + '\n})();');
     } catch (err) {
         buffer = buffer + String(err);
+        return {
+            error: true,
+            output: buffer
+        };
     }
-    return buffer || '(no output)';
+    return {
+        output: buffer
+    };
 }
 
 function try_exec_code(btn) {
@@ -75,30 +172,40 @@ function try_exec_code(btn) {
     let svgIdle = btn.querySelector('svg.exec-form-icon-idle');
     let svgBusy = btn.querySelector('svg.exec-form-icon-busy');
     let divResult = form.querySelector('div.exec-form-result');
-    let codeResult = divResult.querySelector('code');
     // start run:
     divResult.style.display = 'none';
-    codeResult.innerText = '';
+    divResult.innerHTML = '';
     svgIdle.style.display = 'none';
     svgBusy.style.display = 'inline';
     btn.disabled = true;
-    const cleanup = () => {
+    const setResult = (result) => {
         svgIdle.style.display = 'inline';
         svgBusy.style.display = 'none';
         btn.disabled = false;
         divResult.style.display = 'block';
+        if (result.html) {
+            // this is a html fragment:
+            divResult.innerHTML = result.output || '<pre><code>(no output)</code></pre>';
+        } else {
+            divResult.innerHTML = '<pre><code></code></pre>';
+            divResult.querySelector('code').innerText = result.output || '(no output)';
+        }
     };
-    // run async function:
-    let asyncExecFn = window[`exec_${lang}`];
-    asyncExecFn(codeText)
-        .then(result => {
-            codeResult.innerText = result.toString();
-            cleanup();
-        })
-        .catch(err => {
-            codeResult.innerText = (err || 'Error').toString();
-            cleanup();
-        });
+    setTimeout(() => {
+        // run async function:
+        let asyncExecFn = window[`exec_${lang}`];
+        asyncExecFn(codeText)
+            .then(result => {
+                setResult(result);
+            })
+            .catch(err => {
+                setResult({
+                    error: true,
+                    html: false,
+                    output: (err || 'Error').toString()
+                });
+            });
+    }, 200);
 }
 
 function initExecLang() {
@@ -124,7 +231,7 @@ function initExecLang() {
         let formHtml = `
 <form data-lang="${lang}" class="exec-form" style="margin: 16px 0;" onsubmit="return false">
     <div>
-        <textarea class="exec-form-textarea" rows="10" name="comment" id="comment" class="" style="width: 100%; resize: vertical; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;"></textarea>
+        <textarea class="exec-form-textarea" name="comment" id="comment" class="" style="width:100%; height:260px; resize:vertical; font-family:Menlo,Consolas,Monaco,'Courier New',monospace;"></textarea>
     </div>
     <div>
         <button class="exec-form-button" type="button" onclick="try_exec_code(this)">
@@ -149,4 +256,3 @@ function initExecLang() {
 
 documentReady(initExecLang);
 gitsite.addContentChangedListener(initExecLang);
-
