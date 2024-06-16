@@ -29,6 +29,23 @@ if (location.pathname.startsWith('/books/blockchain/')) {
     });
 }
 
+/******************** load script for javascript ********************/
+
+if (location.pathname.startsWith('/books/javascript/')) {
+    documentReady(() => {
+        function initJqueryOrUnderscore() {
+            if (location.pathname.startsWith('/books/javascript/jquery/')) {
+                gitsite.loadScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');
+            }
+            else if (location.pathname.startsWith('/books/javascript/underscore/')) {
+                gitsite.loadScript('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-umd-min.js');
+            }
+        }
+        initJqueryOrUnderscore();
+        gitsite.addContentChangedListener(initJqueryOrUnderscore);
+    });
+}
+
 /******************** load script for sql ********************/
 
 if (location.pathname.startsWith('/books/sql/')) {
