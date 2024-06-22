@@ -204,24 +204,26 @@ const env = createEnv('view', {
     noCache: process.env.NODE_ENV !== 'production'
 });
 
-export default async function (ctx, next) {
-    ctx.render = function (view, model) {
-        ctx.response.type = 'text/html; charset=utf-8';
-        ctx.response.body = env.render(view, Object.assign({}, ctx.state || {}, model || {}));
-    };
-    await next();
-}
+// 导出env对象:
+export default env;
 ```
 
 使用的时候，我们在`app.mjs`添加如下代码：
 
 ```javascript
-app.use(view);
+import templateEngine from './view.mjs';
+
+// app.context是每个请求创建的ctx的原型,
+// 因此把render()方法绑定在原型对象上:
+app.context.render = function (view, model) {
+    this.response.type = 'text/html; charset=utf-8';
+    this.response.body = templateEngine.render(view, Object.assign({}, this.state || {}, model || {}));
+};
 ```
 
-注意到`createEnv()`函数和前面使用Nunjucks时编写的函数是一模一样的。我们主要关心`export default async`函数，在这个函数中，我们只给`ctx`“安装”了一个`render()`函数，其他什么事情也没干，就继续调用下一个middleware。
+注意到`createEnv()`函数和前面使用Nunjucks时编写的函数是一模一样的。
 
-这里我们定义了一个常量`isProduction`，它判断当前环境是否是production环境。如果是，就使用缓存，如果不是，就关闭缓存。在开发环境下，关闭缓存后，我们修改View，可以直接刷新浏览器看到效果，否则，每次修改都必须重启Node程序，会极大地降低开发效率。
+这里我们判断当前环境是否是production环境。如果是，就使用缓存，如果不是，就关闭缓存。在开发环境下，关闭缓存后，我们修改View，可以直接刷新浏览器看到效果，否则，每次修改都必须重启Node程序，会极大地降低开发效率。
 
 Node.js在全局变量`process`中定义了一个环境变量`env.NODE_ENV`，为什么要使用该环境变量？因为我们在开发的时候，环境变量应该设置为`'development'`，而部署到服务器时，环境变量应该设置为`'production'`。在编写代码的时候，要根据当前环境作不同的判断。
 
@@ -271,12 +273,6 @@ if (!isProduction) {
 
 ```javascript
 app.use(bodyParser());
-```
-
-第四个middleware负责给`ctx`加上`render()`来使用Nunjucks：
-
-```javascript
-app.use(view);
 ```
 
 最后一个middleware处理URL路由：
