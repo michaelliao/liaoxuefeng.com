@@ -307,15 +307,7 @@ app.use(await controller());
 
 经过重新整理后的工程`url2-koa`目前具备非常好的模块化，所有处理URL的函数按功能组存放在`controller`目录，今后我们也只需要不断往这个目录下加东西就可以了，`app.mjs`保持不变。
 
-### 参考源码
-
-[url-koa](https://github.com/michaelliao/learn-javascript/tree/master/samples/node/web/koa/url-koa)
-
-[url2-koa](https://github.com/michaelliao/learn-javascript/tree/master/samples/node/web/koa/url2-koa)
-
-
-
-
+最后我们整理一下koa处理一个HTTP请求的流程：
 
 ```ascii
            │
@@ -339,4 +331,10 @@ app.use(await controller());
                           └──────────────────▶│async(ctx,next) {...}│
                                               └─────────────────────┘
 ```
+
+一个HTTP请求是按顺序由一系列注册到koa的middleware处理的，首先由log函数处理，并通过`await next()`把请求传递到下一个middleware，紧接着是`bodyParser`处理，最后是`router`处理。在router的内部，又会根据注册到router的HTTP方法+Path来决定由哪个async函数处理请求。如果URL没有匹配到，则简单返回404。以上就是整个基于koa的webapp处理流程，非常清晰易懂。
+
+### 参考源码
+
+[url](url.zip)
 
