@@ -162,7 +162,7 @@ async function signin(ctx, next) {
 let user = await ctx.db.fetch`SELECT * FROM users WHERE email=${email}`;
 ```
 
-这是一个[标签函数](../../../function/tag-function/index.html)，它自动将参数变为如下调用：
+这是一个[标签函数](../../../../function/tag-function/index.html)，它自动将参数变为如下调用：
 
 ```javascript
 let user = await ctx.db.fetch(['SELECT * FROM users WHERE email=', ''], email);

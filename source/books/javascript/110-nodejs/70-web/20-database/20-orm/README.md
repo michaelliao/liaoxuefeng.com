@@ -7,8 +7,8 @@
 | id | email             | name  | password |
 |----|-------------------|-------|----------|
 | 1  | admin@example.com | Bob   | 123456   |
-| 2  | lucy@node.js      | Lucy  | abcdef   |
-| 3  | alice@node.js     | Alice | hello123 |
+| 2  | lucy@example.com  | Lucy  | abcdef   |
+| 3  | alice@example.com | Alice | hello123 |
 
 每一行可以用一个JavaScript对象表示，例如第一行：
 
@@ -47,7 +47,7 @@ Sequelize的所有操作都是Promise，所以我们可以用await实现异步�
 
 ### 实战
 
-在使用Sequlize操作数据库之前，我们需要告诉Sequlize如何映射数据库中的每一个表。
+在使用Sequelize操作数据库之前，我们需要告诉Sequelize如何映射数据库中的每一个表。
 
 以`users`表为例，我们需要定义如下：
 
@@ -108,7 +108,7 @@ sql/
 "sqlite3": "^5.1.7"
 ```
 
-在`app.js`中，删除相关SQL操作，改为通过Sequelize初始化数据库：
+在`app.mjs`中，删除相关SQL操作，改为通过Sequelize初始化数据库：
 
 ```javascript
 import { sequelize, User } from './orm.mjs';
@@ -186,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 Sequelize提供了`findAll()`和`findOne()`两种查询，分别返回多行和一行。
 
-`create()`操作可以存储一个对象，`save()`和`destroy()`分别对应更新和删除操作。
+`create()`操作可以存储一个对象到数据库的一行记录，`save()`和`destroy()`分别对应更新和删除操作。
 
 Sequelize还提供了一对多等高级ORM功能，具体可以参考官方文档。
 

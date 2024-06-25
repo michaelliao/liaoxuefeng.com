@@ -75,7 +75,7 @@ SELECT * FROM classes WHERE grade_id = '1';
 
 ![class-students](table_relationship2.jpg)
 
-由于本教程不涉及到关系数据库的详细内容，如果你想从零学习关系数据库和基本的SQL语句，请参考[SQL教程](../../../../../sql/index.html)。
+由于本教程不涉及到关系数据库的详细内容，如果你想从零学习关系数据库和基本的SQL语句，请参考[SQL教程](../../../../sql/index.html)。
 
 ### NoSQL
 
