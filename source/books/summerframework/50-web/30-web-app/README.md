@@ -59,7 +59,7 @@ Servlet容器会自动读取`web.xml`，根据配置的Listener启动Summer Fram
 
 最后，运行`mvn clean package`命令，在`target`目录得到最终的war包，改名为`ROOT.war`，复制到Tomcat的`webapps`目录下，启动Tomcat，可以正常访问`http://localhost:8080`：
 
-![hello-webapp](/files/attachments/1540902996672576/l)
+![hello-webapp](hello-webapp.png)
 
 ### 参考源码
 
