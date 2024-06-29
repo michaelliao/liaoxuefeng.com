@@ -26,8 +26,4 @@
 
 编辑推荐：被China-Pub会员评为“2007年我最喜爱的十大技术图书”之一。
 
-PDF下载地址：
-
-[Github下载](https://github.com/michaelliao/download)
-
-[Gitee下载](https://gitee.com/liaoxuefeng/learn-java/blob/master/book/Spring%202.0%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.pdf)
+[PDF下载](spring-2.pdf)
