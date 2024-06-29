@@ -16,7 +16,7 @@ REST就是一种设计API的模式。最常用的数据格式是JSON。由于JSO
 
 当一个Web应用以API的形式对外提供功能时，整个应用的结构就扩展为：
 
-![REST-arch](/files/attachments/1105002734527584/l)
+![REST-arch](rest.png)
 
 把网页视为一种客户端，是REST架构可扩展的一个关键。
 
@@ -31,43 +31,43 @@ REST规范定义了资源的通用访问格式，虽然它不是一个强制要�
 
 例如，商品Product就是一种资源。获取所有Product的URL如下：
 
-```
+```plain
 GET /api/products
 ```
 
 而获取某个指定的Product，例如，id为`123`的Product，其URL如下：
 
-```
+```plain
 GET /api/products/123
 ```
 
 新建一个Product使用POST请求，JSON数据包含在body中，URL如下：
 
-```
+```plain
 POST /api/products
 ```
 
 更新一个Product使用PUT请求，例如，更新id为`123`的Product，其URL如下：
 
-```
+```plain
 PUT /api/products/123
 ```
 
 删除一个Product使用DELETE请求，例如，删除id为`123`的Product，其URL如下：
 
-```
+```plain
 DELETE /api/products/123
 ```
 
 资源还可以按层次组织。例如，获取某个Product的所有评论，使用：
 
-```
+```plain
 GET /api/products/123/reviews
 ```
 
 当我们只需要获取部分数据时，可通过参数限制返回的结果集，例如，返回第2页评论，每页10项，按时间排序：
 
-```
+```plain
 GET /api/products/123/reviews?page=2&size=10&sort=time
 ```
 
@@ -90,7 +90,7 @@ ctx.body =  {
 koa检测到`ctx.body`的赋值是一个JavaScript对象时，自动把这个Object变成JSON字符串输出，无需任何额外配置和代码。
 
 ```alert type=info title=提示
-ctx.body是ctx.response.body的引用，两者效果是一样的。
+ctx.body是ctx.response.body的引用，两者是等同的。
 ```
 
 我们给`signin.mjs`添加两个REST API：
