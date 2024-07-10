@@ -96,6 +96,6 @@ SELECT * FROM classes WHERE grade_id = '1';
 
 - MySQL，大家都在用，一般错不了；
 - PostgreSQL，学术气息有点重，其实挺不错，但知名度没有MySQL高；
-- sqlite，嵌入式数据库，适合桌面和移动应用。
+- SQLite，嵌入式数据库，适合桌面和移动应用。
 
-作为一个JavaScript全栈工程师，选择哪个免费数据库呢？这里我们用sqlite，作为嵌入式数据库，优点是不用安装任何软件，直接能用。当然，在生产环境下，应当选择MySQL或者PostgreSQL。
+作为一个JavaScript全栈工程师，选择哪个免费数据库呢？这里我们用SQLite，作为嵌入式数据库，优点是不用安装任何软件，直接能用。当然，在生产环境下，应当选择MySQL或者PostgreSQL。
