@@ -208,6 +208,7 @@ Python在显示只有1个元素的tuple时，也会加一个逗号`,`，以免�
 请用索引取出下面list的指定元素：
 
 ```x-python
+# -*- coding: utf-8 -*-
 L = [
     ['Apple', 'Google', 'Microsoft'],
     ['Java', 'Python', 'Ruby', 'PHP'],

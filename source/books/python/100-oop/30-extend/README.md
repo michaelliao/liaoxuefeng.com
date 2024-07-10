@@ -218,3 +218,5 @@ Python的“file-like object“就是一种鸭子类型。对真正的文件对�
 ### 参考源码
 
 [animals.py](animals.py)
+
+[get_instance.py](get_instance.py)

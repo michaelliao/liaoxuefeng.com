@@ -137,6 +137,7 @@ print(f()) # 1
 但是，如果对外层变量赋值，由于Python解释器会把`x`当作函数`fn()`的局部变量，它会报错：
 
 ```x-python
+# -*- coding: utf-8 -*-
 def inc():
     x = 0
     def fn():
@@ -161,6 +162,7 @@ print(f()) # 2
 利用闭包返回一个计数器函数，每次调用它返回递增整数：
 
 ```x-python
+# -*- coding: utf-8 -*-
 def createCounter():
     def counter():
         return 1

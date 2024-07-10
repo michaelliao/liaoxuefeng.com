@@ -9,6 +9,6 @@ Python代码运行助手可以让你在线输入Python代码，只需要在网�
 点击Run按钮直接运行Python代码：
 
 ```x-python
-# 测试代码:
+# -*- coding: utf-8 -*-
 print('Hello, world')
 ```

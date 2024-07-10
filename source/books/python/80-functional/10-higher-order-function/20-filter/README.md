@@ -101,6 +101,7 @@ for n in primes():
 回数是指从左向右读和从右向左读都是一样的数，例如`12321`，`909`。请利用`filter()`筛选出回数：
 
 ```x-python
+# -*- coding: utf-8 -*-
 def is_palindrome(n):
     pass
 

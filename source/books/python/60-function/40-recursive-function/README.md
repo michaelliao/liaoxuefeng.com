@@ -99,6 +99,7 @@ def fact_iter(num, product):
 请编写`move(n, a, b, c)`函数，它接收参数`n`，表示3个柱子A、B、C中第1个柱子A的盘子数量，然后打印出把所有盘子从A借助B移动到C的方法，例如：
 
 ```x-python
+# -*- coding: utf-8 -*-
 def move(n, a, b, c):
     if n == 1:
         print(a, '-->', c)

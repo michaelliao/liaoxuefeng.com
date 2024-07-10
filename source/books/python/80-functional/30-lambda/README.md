@@ -42,6 +42,7 @@ def build(x, y):
 请用匿名函数改造下面的代码：
 
 ```x-python
+# -*- coding: utf-8 -*-
 def is_odd(n):
     return n % 2 == 1
 

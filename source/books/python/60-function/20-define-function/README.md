@@ -5,6 +5,7 @@
 我们以自定义一个求绝对值的`my_abs`函数为例：
 
 ```x-python
+# -*- coding: utf-8 -*-
 def my_abs(x):
     if x >= 0:
         return x
@@ -176,13 +177,14 @@ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 
 计算平方根可以调用`math.sqrt()`函数：
 
-```bash
+```plain
 >>> import math
 >>> math.sqrt(2)
 1.4142135623730951
 ```
 
 ```x-python
+# -*- coding: utf-8 -*-
 import math
 
 def quadratic(a, b, c):

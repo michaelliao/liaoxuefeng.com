@@ -269,7 +269,7 @@ Python 3的字符串使用Unicode，直接支持多语言。
 
 当`str`和`bytes`互相转换时，需要指定编码。最常用的编码是`UTF-8`。Python当然也支持其他编码方式，比如把Unicode编码成`GB2312`：
 
-```bash
+```plain
 >>> '中文'.encode('gb2312')
 b'\xd6\xd0\xce\xc4'
 ```

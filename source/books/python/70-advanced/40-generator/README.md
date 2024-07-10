@@ -270,6 +270,7 @@ Generator return value: done
 把每一行看做一个list，试写一个generator，不断输出下一行的list：
 
 ```x-python
+# -*- coding: utf-8 -*-
 def triangles():
     pass
 

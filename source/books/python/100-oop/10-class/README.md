@@ -109,6 +109,7 @@ class Student(object):
 同样的，`get_grade`方法可以直接在实例变量上调用，不需要知道内部实现细节：
 
 ```x-python
+# -*- coding: utf-8 -*-
 class Student(object):
     def __init__(self, name, score):
         self.name = name

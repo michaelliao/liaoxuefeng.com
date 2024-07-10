@@ -21,6 +21,7 @@ else:
 如果用`match`语句改写，则改写如下：
 
 ```x-python
+# -*- coding: utf-8 -*-
 score = 'B'
 
 match score:
@@ -41,6 +42,7 @@ match score:
 `match`语句除了可以匹配简单的单个值外，还可以匹配多个值、匹配一定范围，并且把匹配后的值绑定到变量：
 
 ```x-python
+# -*- coding: utf-8 -*-
 age = 15
 
 match age:
@@ -67,6 +69,7 @@ match age:
 我们假设用户输入了一个命令，用`args = ['gcc', 'hello.c']`存储，下面的代码演示了如何用`match`匹配来解析这个列表：
 
 ```x-python
+# -*- coding: utf-8 -*-
 args = ['gcc', 'hello.c', 'world.c']
 # args = ['clean']
 # args = ['gcc']
