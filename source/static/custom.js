@@ -237,6 +237,12 @@ function initExecLang() {
             console.error(`invalid code class: ${code.className}`);
             return;
         }
+        if (!window._next_output_id_) {
+            window._next_output_id_ = 1;
+        } else {
+            window._next_output_id_++;
+        }
+        let outputId = 'exec-result-' + window._next_output_id_;
         let codeExecFn = window[`exec_${lang}`];
         if (typeof (codeExecFn) !== 'function' || !(codeExecFn instanceof AsyncFunction)) {
             console.error(`async function exec_${lang} not defined.`);
@@ -251,13 +257,13 @@ function initExecLang() {
         <textarea class="exec-form-textarea" name="comment" id="comment" class="" style="width:100%; height:260px; resize:vertical; font-family:Menlo,Consolas,Monaco,'Courier New',monospace;"></textarea>
     </div>
     <div>
-        <button class="exec-form-button" type="button" onclick="try_exec_code(this)">
+        <button class="exec-form-button" type="button" onclick="try_exec_code(this, '${outputId}')">
             <svg xmlns="http://www.w3.org/2000/svg" class="exec-form-icon-idle" width="20" height="20" fill="currentColor" style="display:inline" viewBox="0 0 16 16"><path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/></svg>
             <svg xmlns="http://www.w3.org/2000/svg" class="exec-form-icon-busy" width="20" height="20" fill="currentColor" stroke="currentColor" style="display:none" viewBox="0 0 100 100"><g><circle stroke-dasharray="141.37166941154067 49.12388980384689" r="30" stroke-width="6" fill="none" cy="50" cx="50"><animateTransform keyTimes="0;1" values="0 50 50;360 50 50" dur="1s" repeatCount="indefinite" type="rotate" attributeName="transform"></animateTransform></circle><g></g></g></svg>
             Run
         </button>
     </div>
-    <div class="exec-form-result" style="display:none">
+    <div id="${outputId}" class="exec-form-result" style="display:none">
         <pre><code></code></pre>
     </div>
 </form>
