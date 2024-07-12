@@ -1,7 +1,5 @@
 # Spring 2.0核心技术与最佳实践
 
-<!-- https://www.liaoxuefeng.com/article/895883556158144 -->
-
 书名：Spring 2.0核心技术与最佳实践
 
 作者：廖雪峰

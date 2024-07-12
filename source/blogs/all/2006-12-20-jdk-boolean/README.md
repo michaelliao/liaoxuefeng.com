@@ -1,7 +1,5 @@
 # JDK源码分析：java.lang.Boolean
 
-<!-- https://www.liaoxuefeng.com/article/895884925598720 -->
-
 闲来无事，开始研究JDK 1.5源码，先找了一个最简单的`java.lang.Boolean`开始解剖。
 
 首先我们剔除所有的方法和静态变量，`Boolean`的核心代码如下：

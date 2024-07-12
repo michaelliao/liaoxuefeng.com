@@ -1,7 +1,5 @@
 # Java源码分析：深入探讨Iterator模式
 
-<!-- https://www.liaoxuefeng.com/article/895885644922112 -->
-
 `java.util`包中包含了一系列重要的集合类。本文将从分析源码入手，深入研究一个集合类的内部结构，以及遍历集合的迭代模式的源码实现内幕。
 
 下面我们先简单讨论一个根接口`Collection`，然后分析一个抽象类`AbstractList`和它的对应`Iterator`接口，并仔细研究迭代子模式的实现原理。

@@ -1,7 +1,5 @@
 # 纯CSS气泡效果
 
-<!-- https://www.liaoxuefeng.com/article/895922203976832 -->
-
 今天研究了纯CSS实现的气泡效果：
 
 <div style="display:block;width:150px;height:120px;padding:10px;background-color:#fff">
