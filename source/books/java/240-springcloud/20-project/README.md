@@ -255,7 +255,7 @@ services:
       - "./docker/redis-data:/data"
 
   mysql:
-    image: mysql:8
+    image: mysql:8.0
     container_name: mysql
     ports:
       - "3306:3306"
