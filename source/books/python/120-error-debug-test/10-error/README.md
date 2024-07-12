@@ -337,8 +337,7 @@ except ZeroDivisionError:
 
 运行下面的代码，根据异常信息进行分析，定位出错误源头，并修复：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 from functools import reduce
 
 def str2num(s):

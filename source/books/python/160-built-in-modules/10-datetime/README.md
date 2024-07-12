@@ -208,7 +208,7 @@ datetime.datetime(2015, 5, 18, 17, 2, 10, 871012, tzinfo=datetime.timezone(datet
 
 假设你获取了用户输入的日期和时间如`2015-1-21 9:01:30`，以及一个时区信息如`UTC+5:00`，均是`str`，请编写一个函数将其转换为timestamp：
 
-```x-python
+```python
 # -*- coding:utf-8 -*-
 
 import re

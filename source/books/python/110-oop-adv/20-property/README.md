@@ -114,8 +114,7 @@ class Student(object):
 
 请利用`@property`给一个`Screen`对象加上`width`和`height`属性，以及一个只读属性`resolution`：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 class Screen(object):
     pass
 

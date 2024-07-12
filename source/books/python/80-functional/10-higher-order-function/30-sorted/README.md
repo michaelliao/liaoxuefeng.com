@@ -73,8 +73,7 @@ L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
 
 请用`sorted()`对上述列表分别按名字排序：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
 
 def by_name(t):
@@ -86,8 +85,7 @@ print(L2)
 
 再按成绩从高到低排序：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
 
 def by_score(t):

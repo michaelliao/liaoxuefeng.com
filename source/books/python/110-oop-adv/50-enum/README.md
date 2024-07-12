@@ -90,8 +90,7 @@ Sat => Weekday.Sat
 
 把`Student`的`gender`属性改造为枚举类型，可以避免使用字符串：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 from enum import Enum, unique
 
 class Gender(Enum):

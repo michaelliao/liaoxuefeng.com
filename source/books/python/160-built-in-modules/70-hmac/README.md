@@ -30,8 +30,7 @@ Python自带的hmac模块实现了标准的Hmac算法。我们来看看如何使
 
 将上一节的salt改为标准的hmac算法，验证用户口令：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 import hmac, random
 
 def hmac_md5(key, s):

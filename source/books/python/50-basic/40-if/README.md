@@ -128,8 +128,7 @@ ValueError: invalid literal for int() with base 10: 'abc'
 
 用`if-elif`判断并打印结果：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 height = 1.75
 weight = 80.5
 

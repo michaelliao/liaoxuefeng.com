@@ -155,8 +155,7 @@ class TestDict(unittest.TestCase):
 
 对Student类编写单元测试，结果发现测试不通过，请修改Student类，让测试通过：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 import unittest
 
 class Student(object):

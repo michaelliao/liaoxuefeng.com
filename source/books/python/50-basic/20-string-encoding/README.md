@@ -207,7 +207,7 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 3: invalid 
 
 其中，格式化整数和浮点数还可以指定是否补0和整数与小数的位数：
 
-```x-python
+```python
 print('%2d-%02d' % (3, 1))
 print('%.2f' % 3.1415926)
 ```
@@ -252,7 +252,7 @@ The area of a circle with radius 2.5 is 19.62
 
 小明的成绩从去年的72分提升到了今年的85分，请计算小明成绩提升的百分点，并用字符串格式化显示出`'xx.x%'`，只保留小数点后1位：
 
-```x-python
+```python
 s1 = 72
 s2 = 85
 r = ???

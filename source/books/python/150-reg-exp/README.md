@@ -220,8 +220,7 @@ else:
 - someone@gmail.com
 - bill.gates@microsoft.com
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 import re
 
 def is_valid_email(addr):
@@ -240,8 +239,7 @@ print('ok')
 - &lt;Tom Paris> tom@voyager.org => Tom Paris
 - bob@example.com => bob
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 import re
 
 def name_of_email(addr):

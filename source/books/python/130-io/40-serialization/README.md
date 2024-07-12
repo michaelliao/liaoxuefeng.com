@@ -169,9 +169,7 @@ def dict2student(d):
 
 对中文进行JSON序列化时，`json.dumps()`提供了一个`ensure_ascii`参数，观察该参数对结果的影响：
 
-```x-python
-# -*- coding: utf-8 -*-
-
+```python
 import json
 
 obj = dict(name='小明', age=20)

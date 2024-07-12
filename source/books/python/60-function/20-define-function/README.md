@@ -4,8 +4,7 @@
 
 我们以自定义一个求绝对值的`my_abs`函数为例：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 def my_abs(x):
     if x >= 0:
         return x
@@ -183,8 +182,7 @@ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 1.4142135623730951
 ```
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 import math
 
 def quadratic(a, b, c):

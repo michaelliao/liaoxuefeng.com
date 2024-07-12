@@ -81,8 +81,7 @@ BMP格式采用小端方式存储数据，文件头的结构按顺序如下：
 
 请编写一个`bmpinfo.py`，可以检查任意文件是否是位图文件，如果是，打印出图片大小和颜色数。
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 import base64, struct
 bmp_data = base64.b64decode('Qk1oAgAAAAAAADYAAAAoAAAAHAAAAAoAAAABABAAAAAAADICAAASCwAAEgsAA' +
                    'AAAAAAAAAAA/3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3/' +

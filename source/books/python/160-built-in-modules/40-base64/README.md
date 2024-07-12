@@ -74,8 +74,7 @@ Base64是一种任意二进制到文本字符串的编码方法，常用于在UR
 
 请写一个能处理去掉`=`的base64解码函数：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 import base64
 
 def safe_base64_decode(s):

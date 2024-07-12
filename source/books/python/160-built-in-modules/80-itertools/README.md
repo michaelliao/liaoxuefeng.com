@@ -108,8 +108,7 @@ A ['A', 'A', 'a']
 
 利用Python提供的itertools模块，我们来计算这个序列的前N项和：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 import itertools
 
 def pi(N):

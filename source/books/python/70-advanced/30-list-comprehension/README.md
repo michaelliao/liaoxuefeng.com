@@ -151,8 +151,7 @@ False
 
 请修改列表生成式，通过添加`if`语句保证列表生成式能正确地执行：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 L1 = ['Hello', 'World', 18, 'Apple', None]
 L2 = ???
 

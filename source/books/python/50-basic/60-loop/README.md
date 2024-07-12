@@ -49,8 +49,7 @@ print(sum)
 
 `range(101)`就可以生成0-100的整数序列，计算如下：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 sum = 0
 for x in range(101):
     sum = sum + x
@@ -76,8 +75,7 @@ print(sum)
 
 请利用循环依次对list中的每个名字打印出`Hello, xxx!`：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 L = ['Bart', 'Lisa', 'Adam']
 ```
 

@@ -86,8 +86,7 @@ SQLite支持常见的标准SQL语句以及几种常见的数据类型。具体�
 
 请编写函数，在Sqlite中根据分数段查找指定的名字：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 import os, sqlite3
 
 db_file = os.path.join(os.path.dirname(__file__), 'test.db')

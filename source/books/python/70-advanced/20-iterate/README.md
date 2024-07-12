@@ -79,8 +79,7 @@ False
 
 请使用迭代查找一个list中最小和最大值，并返回一个tuple：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 def findMinAndMax(L):
     return (None, None)
 

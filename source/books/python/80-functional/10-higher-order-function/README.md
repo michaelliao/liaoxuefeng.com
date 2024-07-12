@@ -91,8 +91,7 @@ return 11
 
 用代码验证一下：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 def add(x, y, f):
     return f(x) + f(y)
 

@@ -122,9 +122,7 @@ Exception raised:
 
 对函数`fact(n)`编写doctest并执行：
 
-```x-python
-# -*- coding: utf-8 -*-
-
+```python
 def fact(n):
     '''
     Calculate 1*2*...*n

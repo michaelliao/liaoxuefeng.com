@@ -110,8 +110,7 @@ class Student(object):
 
 请把下面的`Student`对象的`gender`字段对外隐藏起来，用`get_gender()`和`set_gender()`代替，并检查参数有效性：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 class Student(object):
     def __init__(self, name, gender):
         self.name = name

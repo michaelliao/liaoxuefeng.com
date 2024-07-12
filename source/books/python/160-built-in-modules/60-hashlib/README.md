@@ -97,8 +97,7 @@ def calc_md5(password):
 
 设计一个验证用户登录的函数，根据用户输入的口令是否正确，返回True或False：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 db = {
     'michael': 'e10adc3949ba59abbe56e057f20f883e',
     'bob': '878ef96e86145580c38c87f0410ad153',
@@ -158,8 +157,7 @@ def register(username, password):
 
 然后，根据修改后的MD5算法实现用户登录的验证：
 
-```x-python
-# -*- coding: utf-8 -*-
+```python
 import hashlib, random
 
 class User(object):
