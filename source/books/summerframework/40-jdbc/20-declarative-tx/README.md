@@ -58,7 +58,7 @@ public class TransactionStatus {
 
 目前仅封装了一个Connection，将来如果扩展，则可以将事务的传播模式存储在里面。
 
-最后写个`DataSourceTransactionManager`，它持有一个[ThreadLocal](https://www.liaoxuefeng.com/wiki/1252599548343744/1306581251653666)存储的`TransactionStatus`，以及一个`DataSource`：
+最后写个`DataSourceTransactionManager`，它持有一个[ThreadLocal](../../../java/threading/thread-local/index.html)存储的`TransactionStatus`，以及一个`DataSource`：
 
 ```java
 public class DataSourceTransactionManager implements

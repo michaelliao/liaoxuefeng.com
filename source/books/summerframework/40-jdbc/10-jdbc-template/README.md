@@ -72,7 +72,7 @@ public class JdbcTemplate {
 }
 ```
 
-JdbcTemplate基于[Template模式](https://www.liaoxuefeng.com/wiki/1252599548343744/1281319636041762)，提供了大量以回调作为参数的模板方法，其中以`execute(ConnectionCallback)`为基础：
+JdbcTemplate基于[Template模式](../../../java/design-patterns/behavioral/template-method/index.html)，提供了大量以回调作为参数的模板方法，其中以`execute(ConnectionCallback)`为基础：
 
 ```java
 public <T> T execute(ConnectionCallback<T> action) {

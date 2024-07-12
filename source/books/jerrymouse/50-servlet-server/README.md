@@ -4,7 +4,7 @@
 
 而Servlet处理HTTP的接口是基于`HttpServletRequest`和`HttpServletResponse`，前者负责读取HTTP请求，后者负责写入HTTP响应。
 
-怎么把基于`HttpExchange`的操作转换为基于`HttpServletRequest`和`HttpServletResponse`？答案是使用[Adapter模式](https://www.liaoxuefeng.com/wiki/1252599548343744/1281319245971489)。
+怎么把基于`HttpExchange`的操作转换为基于`HttpServletRequest`和`HttpServletResponse`？答案是使用[Adapter模式](../../java/design-patterns/structural/adapter/index.html)。
 
 首先我们定义`HttpExchangeAdapter`，它持有一个`HttpExchange`实例，并实现`HttpExchangeRequest`和`HttpExchangeResponse`接口：
 
