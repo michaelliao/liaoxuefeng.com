@@ -75,7 +75,7 @@ SELECT * FROM classes WHERE grade_id = '1';
 
 ![class-students](table_relationship2.jpg)
 
-由于本教程不涉及到关系数据库的详细内容，如果你想从零学习关系数据库和基本的SQL语句，请参考[SQL教程](../../../../sql/index.html)。
+由于本教程不涉及到关系数据库的详细内容，如果你想从零学习关系数据库和基本的SQL语句，请参考[SQL教程](../../sql/index.html)。
 
 ### NoSQL
 
@@ -98,4 +98,4 @@ SELECT * FROM classes WHERE grade_id = '1';
 - PostgreSQL，学术气息有点重，其实挺不错，但知名度没有MySQL高；
 - SQLite，嵌入式数据库，适合桌面和移动应用。
 
-作为一个Python工程师，选择哪个免费数据库呢？这里我们用SQLite，作为嵌入式数据库，优点是不用安装任何软件，直接能用。当然，在生产环境下，应当选择MySQL或者PostgreSQL。
+作为一个Python工程师，选择哪个免费数据库呢？这里我们会介绍SQLite和MySQL，SQLite适合作为嵌入式数据库，优点是不用安装任何软件，直接能用。生产环境下，应当选择MySQL或者PostgreSQL。
