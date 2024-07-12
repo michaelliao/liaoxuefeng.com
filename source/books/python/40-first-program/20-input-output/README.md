@@ -118,7 +118,7 @@ hello, Michael
 
 请利用`print()`输出`1024 * 768 = xxx`：
 
-```x-python
+```python
 # TODO:
 print(???)
 ```
