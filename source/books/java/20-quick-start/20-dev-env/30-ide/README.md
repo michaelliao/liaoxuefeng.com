@@ -33,8 +33,6 @@ IDE提升开发效率主要靠以下几点：
 - 完全免费使用；
 - 所有功能完全满足Java开发需求。
 
-如果你使用Eclipse作为开发环境来学习本教程，还可以获得一个额外的好处：教程提供了一个基于Eclipse的[IDE练习插件](/wiki/1252599548343744/1266092093733664)，可以直接在线导入Java工程！
-
 ### 安装Eclipse
 
 Eclipse的发行版提供了预打包的开发环境，包括Java、JavaEE、C++、PHP、Rust等。从[这里](https://www.eclipse.org/downloads/packages/)下载：
