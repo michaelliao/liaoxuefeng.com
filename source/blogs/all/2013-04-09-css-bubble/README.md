@@ -13,49 +13,70 @@
 
 实现三角形之前，我们用CSS实现不同颜色的边框：
 
-<div style="display:block;margin:10px;width:30px;height:30px;border-style:solid;border-width:20px;border-color:#f00 #00f #0f0 #f0f;background-color:#fff"></div>
+<div style="display:block;width:60px;height:60px;border-style:solid;border-width:20px;border-color:#f00 #00f #0f0 #f0f;background-color:#fff"></div>
 
 代码：
 
 ```html
-<div style="display:block;margin:10px;width:30px;height:30px;border-style:solid;border-width:20px;border-color:#f00 #00f #0f0 #f0f;background-color:#fff"></div>
+<div style="display: block;
+            width: 60px;
+            height: 60px;
+            border-style: solid;
+            border-width: 20px;
+            border-color: #f00 #00f #0f0 #f0f;
+            background-color: #fff"
+></div>
 ```
 
 把div的`border`加粗，四边颜色不同，就出现了神奇的效果，每一边都变成了梯形。
 
 如果把div的`width`和`height`都设为0，会出现什么情况？
 
-<div style="display:block;margin:10px;width:0;height:0;border-style:solid;border-width:20px;border-color:#f00 #00f #0f0 #f0f;background-color:#fff"></div>
+<div style="display:block;width:0px;height:0px;border-style:solid;border-width:20px;border-color:#f00 #00f #0f0 #f0f;background-color:#fff"></div>
 
 代码：
 
 ```html
-<div style="display:block;margin:10px;width:0;height:0;border-style:solid;border-width:20px;border-color:#f00 #00f #0f0 #f0f;background-color:#fff"></div>
+<div style="display: block;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 20px;
+            border-color: #f00 #00f #0f0 #f0f;
+            background-color: #fff"
+></div>
 ```
 
 三角形出现了！
 
 但是是4个三角形，而气泡只需要一个！怎么办？把不需要的边框设置为透明：
 
-<div style="display:block;margin:10px;width:0;height:0;border-style:solid;border-width:20px;border-color:transparent #00f transparent transparent;"></div>
+<div style="display:block;width:0px;height:0px;border-style:solid;border-width:20px;border-color:transparent #f00 transparent transparent;"></div>
 
 代码：
 
 ```html
-<div style="display:block;margin:10px;width:0;height:0;border-style:solid;border-width:20px;border-color:transparent #00f transparent transparent;"></div>
+<div style="display: block;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 20px;
+            border-color: transparent #f00 transparent transparent;
+            background-color: #fff"
+></div>
 ```
 
 三角形初步完成！
 
 但是气泡的尖角不是三角形，而是斜线，怎么办？也有办法，找两个三角形叠在一起，线条就出来了：
 
-<div style="position:relative;display:block;width:50px;height:50px;"><div style="display:block;position:absolute;left:10px;top:10px;width:0;height:0;border-style:solid;border-width:20px;border-color:transparent #00f transparent transparent;"></div><div style="display:block;position:absolute;left:16px;top:10px;;width:0;height:0;border-style:solid;border-width:20px;border-color:transparent #fff transparent transparent;"></div></div>
+<div style="position:relative;display:block;width:50px;height:50px;"><div style="display:block;position:absolute;left:10px;top:10px;width:0;height:0;border-style:solid;border-width:20px;border-color:transparent #f00 transparent transparent;"></div><div style="display:block;position:absolute;left:16px;top:10px;;width:0;height:0;border-style:solid;border-width:20px;border-color:transparent #fff transparent transparent;"></div></div>
 
 代码：
 
 ```html
 <div style="position:relative;display:block;width:50px;height:50px;">
-    <div style="display:block;position:absolute;left:10px;top:10px;width:0;height:0;border-style:solid;border-width:20px;border-color:transparent #00f transparent transparent;"></div>
+    <div style="display:block;position:absolute;left:10px;top:10px;width:0;height:0;border-style:solid;border-width:20px;border-color:transparent #f00 transparent transparent;"></div>
     <div style="display:block;position:absolute;left:16px;top:10px;;width:0;height:0;border-style:solid;border-width:20px;border-color:transparent #fff transparent transparent;"></div>
 </div>
 ```
