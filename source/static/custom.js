@@ -279,3 +279,33 @@ function initExecLang() {
 
 documentReady(initExecLang);
 gitsite.addContentChangedListener(initExecLang);
+
+/******************** load gitee icon ********************/
+
+if (location.pathname.startsWith('/books/git/')) {
+    documentReady(() => {
+        const span = document.querySelector('#gsi-index div.gsc-index-item a[href="/books/git/gitee/index.html"] span.gsc-index-item-title');
+        if (span) {
+            span.style.paddingLeft = '1.2em';
+            span.style.backgroundRepeat = 'no-repeat';
+            span.style.backgroundSize = 'contain';
+            span.style.backgroundPosition = 'left center';
+            span.style.backgroundImage = "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAGJUExURQAAAMYcI8ccI8ccI8cdI8ccI8YcJcYcIsccI8wZJsYdI8YcIscdIscdI8QaIMcdI8QaJcYcIsYdI8YcJMYdI8YdI8ccI8YcI8YcIr8fH8QdJ8MeHsgkJMcdI8cdIsccIsccI8YcI8YdI8kfH8YdIsYcIsgdJMoeJf8AAMYdI8ccJMYdI8YdIsYeIskdIsccIsYcIsccIscbIsccIsccI8YcIsYcIsYdIsccIsYcIcUcIsYcI/8AAMcdIscdI8ccI8cdI8cdI8cdIscdI8YdI8geJMYcI8cdIscbIcYdI8cdIscbJcYcIscdI8YcHMYdIsYeJMYdIsUcJcccIsYcIsccIsccI8cdI8YcIsYdIskdI8MZIsYeIccdIscdIsYcI7YkJMYcIcccIsYdJMYcIskaIcccIsYdIscfH8ccI8YcIsYcI8ccI8YdIsccIsYcI8UfJMwzM8cdI8wZGcYcI8kaKMgcI8YcI8YdIsccIscdI8YcI8cdIccdI8weHsYcIsYdIsYdIscdIxtFXPcAAACCdFJOUwCWj7z81xve9xTZ1NvtJ9gwf6w/p3qz5rAIGhEOTvuF6bT+GL75RiIB2mrQjDs0+NVhJY7vdVrsxTZZhwKTybuBV+TKtlS6uFNWwTe50gmVVeM+fKvc4IB2ZyseRPKS5wdbWE36JuX0IO7x6HPizpAxBfYKkRN0vcfNcstFphmii5pZBD0wAAABdklEQVQ4y8XUZVfDMBQG4MAYg7lvjI0p7u7u7u7u7g795aS5bUiz7COH98v63vMsJ+lpi9D/JSfUOtdk6vDXtuSmIivuPIlmzCU0G5I2/q0kYvdJfPZ2OdMsibKjMaOSONuMmZhWp7EMNXkxuVt/UTuIE4c9/pGp5NZqwaNOatbA2ILaferl4bLa3MQcx7nDGOVpr1IC+QSd4cu3z+80JV/vsH45oG5odoSuBAecBZROSlY2QmEB8gLyknJzj9Ad/o0YDSTGU0BVzCnISnjN82v6SByQeSM0C4suuFsgrUOZZ5GNR3VQBlkkvUZ1ukf9A0XFgCY1CPJE0QCgaoouKXrBczO5CgOqoSikT+hwEs8OPD4CXqDssE9FmnQRY1TrlNwOuRfEBQt56MAp132WBMrAmIroaLUSd4vNoMa8qR5ghvnjcIpn3KPZQYPQOLiz9AvMUtLbGRzhiLlQ9J4PjTNkoaQtxSfDWu8s7Yn4TNHFij/6bv0A7Xb98tZz0gYAAAAASUVORK5CYII=')";
+        }
+    });
+}
+
+function initProm() {
+    const div = document.createElement('div');
+    div.innerHTML = `
+<a target="_blank" href="https://gitee.com/enterprises?utm_source=lxf" class="inline-block">
+    <img style="width:336px;height:280px;" src="/static/gitee.jpg">
+</a>
+<hr class="gsc-border mt-4">
+`;
+    const c = document.querySelector('#comment-thread');
+    c.parentNode.insertBefore(div, c);
+}
+
+documentReady(initProm);
+gitsite.addContentChangedListener(initProm);
