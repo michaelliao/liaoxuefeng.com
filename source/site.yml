@@ -45,11 +45,16 @@ site:
   # control styles:
   styles:
     # show 'Edit in Git':
-    display-git-link: true
+    display-git-link: false
     # any custom styles used in theme:
     # code-font: Monaco
   integration:
-    google-analytics: G-5Z40K7NBL5
+    comment:
+      provider: oauth
+      url: https://api.liaoxuefeng.com
+    analytics:
+      provider: google
+      gtag: G-5Z40K7NBL5
   footer: |
           <div>
             &copy;<a href="/">liaoxuefeng.com</a> 
