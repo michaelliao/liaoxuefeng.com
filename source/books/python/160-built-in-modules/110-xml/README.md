@@ -73,11 +73,7 @@ return ''.join(L)
 
 ### 练习
 
-请利用SAX编写程序解析Yahoo的XML格式的天气预报，获取天气预报：
-
-https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%202151330&format=xml
-
-参数`woeid`是城市代码，要查询某个城市代码，可以在[weather.yahoo.com](https://weather.yahoo.com/)搜索城市，浏览器地址栏的URL就包含城市代码。
+请利用SAX编写程序解析WeatherAPI的XML格式的天气预报，获取天气预报：
 
 ```python
 from xml.parsers.expat import ParserCreate
@@ -87,27 +83,15 @@ def parseXml(xml_str):
     print(xml_str)
     return {
         'city': '?',
-        'forecast': [
-            {
-                'date': '2017-11-17',
-                'high': 43,
-                'low' : 26
-            },
-            {
-                'date': '2017-11-18',
-                'high': 41,
-                'low' : 20
-            },
-            {
-                'date': '2017-11-19',
-                'high': 43,
-                'low' : 19
-            }
-        ]
+        'weather': {
+            'condition': 'Sunny',
+            'temperature': 37.2,
+            'wind': 9.7
+        }
     }
 
 # 测试:
-URL = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%202151330&format=xml'
+URL = 'https://api.weatherapi.com/v1/current.xml?key=b4e8f86b44654e6b86885330242207&q=Beijing&aqi=no'
 
 with request.urlopen(URL, timeout=4) as f:
     data = f.read()
