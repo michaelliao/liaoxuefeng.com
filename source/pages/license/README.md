@@ -1,6 +1,6 @@
 # CC BY-NC-SA 4.0 License
 
-[廖雪峰的官方网站](https://liaoxuefeng.com)所有内容由[廖雪峰](https://liaoxuefeng.com)创作，并以CC BY-NC-SA 4.0协议发布。
+[廖雪峰的官方网站](https://liaoxuefeng.com)所有内容由[廖雪峰](https://liaoxuefeng.com)创作，并以CC BY-NC-SA 4.0协议发布在[GitHub](https://github.com/michaelliao/liaoxuefeng.com)。
 
 <svg width="150px" height="30px" viewBox="0 0 150 30" xmlns="http://www.w3.org/2000/svg">
     <path xmlns="http://www.w3.org/2000/svg"
