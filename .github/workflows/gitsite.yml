@@ -33,4 +33,14 @@ jobs:
       - name: Build with GitSite
         run:
           # set output dir to '_site' for pages jobs:
-          gitsite-cli build -o _site -v
+          gitsite-cli build -o _site
+      - name: Zip Generated Site
+        run:
+          tar zcvf site.tar.gz _site/
+      - name: Release Zip
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: site.tar.gz
+          tag: ${{ github.ref }}
+          overwrite: true
