@@ -21,6 +21,9 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Setup Env
+        run:
+          echo "RELEASE_AT=`echo ${{ github.event.repository.updated_at }} | sed 's/:/-/g'`" >> "$GITHUB_ENV"
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -39,6 +42,14 @@ jobs:
       - name: Zip Generated Site
         run:
           tar zcvf site.tar.gz _site/
+      - name: Upload to AliOSS
+        uses: JohnGuan/oss-upload-action@main
+        with:
+          key-id: ${{ secrets.OSS_KEY_ID }}
+          key-secret: ${{ secrets.OSS_KEY_SECRET }}
+          region: ${{ secrets.OSS_REGION }}
+          bucket: ${{ secrets.OSS_BUCKET }}
+          assets: site.tar.gz:${{ RELEASE_AT }}/site.tar.gz
       - name: Release Zip
         uses: svenstaro/upload-release-action@v2
         with:
