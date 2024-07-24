@@ -139,13 +139,13 @@ def fetch_data(url):
     return ''
 
 # 测试
-URL = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%202151330&format=json'
+URL = 'https://api.weatherapi.com/v1/current.json?key=b4e8f86b44654e6b86885330242207&q=Beijing&aqi=no'
 data = fetch_data(URL)
 print(data)
-assert data['query']['results']['channel']['location']['city'] == 'Beijing'
+assert data['location']['name'] == 'Beijing'
 print('ok')
 ```
 
 ### 参考源码
 
-[use_urllib.py](https://github.com/michaelliao/learn-python3/blob/master/samples/commonlib/use_urllib.py)
+[use_urllib.py](use_urllib.py)
