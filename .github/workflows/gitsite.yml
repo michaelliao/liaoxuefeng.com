@@ -52,7 +52,7 @@ jobs:
           key-secret: ${{ secrets.OSS_KEY_SECRET }}
           region: ${{ secrets.OSS_REGION }}
           bucket: ${{ secrets.OSS_BUCKET }}
-          assets: site.zip:upload/${{ env.RELEASE_AT }}/site.zip
+          assets: site.zip:upload/site-${{ env.RELEASE_AT }}.zip
       - name: Release Zip
         uses: svenstaro/upload-release-action@v2
         with:
