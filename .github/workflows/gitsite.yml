@@ -44,7 +44,7 @@ jobs:
           gitsite-cli build -o _site
       - name: Zip Generated Site
         run:
-          tar zcvf site.tar.gz _site/
+          zip -r site.zip _site/
       - name: Upload to AliOSS
         uses: JohnGuan/oss-upload-action@main
         with:
@@ -52,11 +52,11 @@ jobs:
           key-secret: ${{ secrets.OSS_KEY_SECRET }}
           region: ${{ secrets.OSS_REGION }}
           bucket: ${{ secrets.OSS_BUCKET }}
-          assets: site.tar.gz:upload/${{ env.RELEASE_AT }}/site.tar.gz
+          assets: site.tar.gz:upload/${{ env.RELEASE_AT }}/site.zip
       - name: Release Zip
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: site.tar.gz
+          file: site.zip
           tag: ${{ github.ref }}
           overwrite: true
