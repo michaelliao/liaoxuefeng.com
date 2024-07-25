@@ -24,6 +24,7 @@ jobs:
       - name: Setup Env
         run:
           echo "RELEASE_AT=`echo ${{ github.event.repository.updated_at }} | sed 's/:/-/g'`" >> "$GITHUB_ENV"
+          echo ${{ env.RELEASE_AT }}
       - name: Checkout
         uses: actions/checkout@v4
         with:
