@@ -164,7 +164,7 @@ def move(x, y, step, angle=0):
 
 ### 练习
 
-请定义一个函数`quadratic(a, b, c)`，接收3个参数，返回一元二次方程 $`ax^2+bx+c=0`$ 的两个解。
+请定义一个函数`quadratic(a, b, c)`，接收3个参数，返回一元二次方程 $ax^2+bx+c=0$ 的两个解。
 
 提示：
 
