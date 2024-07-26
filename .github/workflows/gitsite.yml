@@ -58,5 +58,5 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: site.zip
-          tag: ${{ github.ref }}
+          tag: ${{ github.ref }}.${{ github.sha }}
           overwrite: true
