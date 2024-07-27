@@ -5,9 +5,7 @@ Spring的注入分为`@Autowired`和`@Value`两种。对于`@Autowired`，涉及
 本节我们来实现`PropertyResolver`，它支持3种查询方式：
 
 1. 按配置的key查询，例如：`getProperty("app.title")`;
-
 2. 以`${abc.xyz}`形式的查询，例如，`getProperty("${app.title}")`，常用于`@Value("${app.title}")`注入；
-
 3. 带默认值的，以`${abc.xyz:defaultValue}`形式的查询，例如，`getProperty("${app.title:Summer}")`，常用于`@Value("${app.title:Summer}")`注入。
 
 Java本身提供了按key-value查询的`Properties`，我们先传入`Properties`，内部按key-value存储：
