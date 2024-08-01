@@ -14,7 +14,7 @@ div.home-book-list .home-book-list-item {
     width: 192px;
     overflow: hidden;
     opacity: 0.9;
-    margin: 16px;
+    margin: 10px 20px 20px 0;
 }
 
 div.home-book-list .home-book-list-item:hover {
@@ -33,7 +33,7 @@ div.home-book-list .home-book-list-item:hover {
 div.home-book-list div.home-book-list-title {
     font-weight: bold;
     text-align: center;
-    padding: 8px 4px;
+    padding: 12px 4px 4px 4px;
 }
 
 div.home-book-list div.home-book-list-desc {
@@ -41,7 +41,7 @@ div.home-book-list div.home-book-list-desc {
 }
 
 div.home-blog-list div.home-blog-list-item {
-    margin: 16px;
+    margin: 16px 0;
 }
 
 /******************** execute lang ********************/
