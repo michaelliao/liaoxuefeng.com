@@ -24,10 +24,10 @@ site:
       uri: /books/jerrymouse/index.html
     - title: 区块链教程
       uri: /books/blockchain/index.html
-    - title: Makefile教程
-      uri: /books/makefile/index.html
     - title: Git教程
       uri: /books/git/index.html
+    - title: Makefile教程
+      uri: /books/makefile/index.html
     - title: 博客
       uri: /blogs/all/index.html
   git:
