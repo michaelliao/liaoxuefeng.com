@@ -52,7 +52,7 @@ site:
   integration:
     comment:
       provider: oauth
-      url: http://local.liaoxuefeng.com:5000
+      url: https://api.liaoxuefeng.com
     analytics:
       provider: baidu
       id: "2efddd14a5f2b304677462d06fb4f964"
