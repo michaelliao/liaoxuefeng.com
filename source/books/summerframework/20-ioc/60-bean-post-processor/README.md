@@ -184,12 +184,9 @@ class MvcController {
 
 可见，引入`BeanPostProcessor`可以实现Proxy机制，但也让依赖注入变得更加复杂。
 
-![not-a-simple-problem](/files/attachments/1540218404470849/l)
-
 但是我们仔细分析依赖关系，还是可以总结出两条原则：
 
 1. 一个Bean如果被Proxy替换，则依赖它的Bean应注入Proxy，即上图的`MvcController`应注入`UserServiceProxy`；
-
 2. 一个Bean如果被Proxy替换，如果要注入依赖，则应该注入到原始对象，即上图的`JdbcTemplate`应注入到原始的`UserService`。
 
 基于这个原则，要满足条件1是很容易的，因为只要创建Bean完成后，立刻调用`BeanPostProcessor`就实现了替换，后续其他Bean引用的肯定就是Proxy了。先改造创建Bean的流程，在创建`@Configuration`后，接着创建`BeanPostProcessor`，再创建其他普通Bean：

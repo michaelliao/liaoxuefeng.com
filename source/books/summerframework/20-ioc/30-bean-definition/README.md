@@ -352,7 +352,7 @@ public class DateTimeConfig {
 
 不创建`DateTimeConfig`行不行？不行，因为后续没有`DateTimeConfig`的实例，无法调用`local()`和`zoned()`方法。因为当前我们只创建了`BeanDefinition`，所以对于`LocalDateTime`和`ZonedDateTime`的`BeanDefinition`来说，还必须保存`DateTimeConfig`的名字，将来才能通过名字查找`DateTimeConfig`的实例。
 
-有的同学注意到我们同时存储了`initMethodName`和`initMethod`，以及`destroyMethodName`和`destroyMethod`，这是因为在`@Component`声明的Bean中，我们可以根据`@PostConstruct`和`@PreDestroy`直接拿到Method本身，而在`@Bean`声明的Bean中，我们拿不到Method，只能从`@Bean`注解提取出字符串格式的方法名称，因此，存储在`BeanDefinition`的方法名称与方法，其中总有一个为`null`。
+有的同学注意到我们同时存储了`initMethodName`和`initMethod`，以及`destroyMethodName`和`destroyMethod`，这是因为在`@Component`声明的Bean中，我们可以根据`@PostConstruct`和`@PreDestroy`直接拿到Method本身，而在`@Bean`声明的Bean中，我们拿不到Method，只能从`@Bean`注解提取出字符串格式的方法名称，因此，存储在`BeanDefinition`的方法名称与方法，其中至少有一个为`null`。
 
 最后，仔细编写`BeanDefinition`的`toString()`方法，使之能打印出详细的信息。我们编写测试，运行，打印出每个`BeanDefinition`如下：
 
