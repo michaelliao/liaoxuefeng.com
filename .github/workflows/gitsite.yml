@@ -44,7 +44,7 @@ jobs:
           gitsite-cli build -o _site
       - name: Zip Generated Site
         run:
-          zip -r site.zip _site/
+          cd _site && zip -r ../site.zip * && cd ..
       - name: Upload to AliOSS
         uses: JohnGuan/oss-upload-action@main
         with:
