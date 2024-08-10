@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Setup Env
         run:
-          echo "RELEASE_AT=`echo ${{ github.event.head_commit.timestamp }} | sed 's/:/-/g'`" >> "$GITHUB_ENV"
+          echo "RELEASE_AT=`echo ${{ github.event.head_commit.timestamp }} | sed 's/[:+]/-/g'`" >> "$GITHUB_ENV"
       - name: Print Env
         run:
           echo ${{ env.RELEASE_AT }}
