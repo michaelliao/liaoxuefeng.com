@@ -295,17 +295,8 @@ if (location.pathname.startsWith('/books/git/')) {
     });
 }
 
-function initProm() {
-    const div = document.createElement('div');
-    div.innerHTML = `
-<a target="_blank" href="https://gitee.com/enterprises?utm_source=lxf" class="inline-block">
-    <img style="width:336px;height:280px;" src="/static/gitee.jpg">
-</a>
-<hr class="gsc-border mt-4">
-`;
-    const c = document.querySelector('#comment-thread');
-    c.parentNode.insertBefore(div, c);
-}
+/******************** some dynamic script ********************/
 
-documentReady(initProm);
-gitsite.addContentChangedListener(initProm);
+documentReady(() => {
+    gitsite.loadScript('https://liaoxuefeng-release.oss-cn-hangzhou.aliyuncs.com/runtime/dynamic.js', null, true);
+});
