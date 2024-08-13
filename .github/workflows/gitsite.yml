@@ -55,7 +55,7 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: site-${{ env.SHORT_SHA }}.zip
-          tag: ${{ github.ref }}.${{ env.SHORT_SHA }}
+          tag: ${{ github.ref }}.${{ github.sha }}
           overwrite: true
 
   # Deployment job
