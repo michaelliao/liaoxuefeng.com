@@ -47,6 +47,10 @@ jobs:
         run:
           # set output dir to '_site' for pages jobs:
           gitsite-cli build -o _site
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
       - name: Zip Generated Site
         run:
           cd _site && zip -r ../site-${{ env.SHORT_SHA }}.zip * && cd ..
