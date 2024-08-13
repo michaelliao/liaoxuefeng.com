@@ -27,7 +27,7 @@ jobs:
       - name: Setup Env
         run: |
           echo "RELEASE_AT=`echo ${{ github.event.head_commit.timestamp }} | sed 's/[:+]/-/g'`" >> "$GITHUB_ENV"
-          echo "SHORT_SHA=`echo ${{ github.sha }} | cut -c1-8`" >> "$GITHUB_ENV"
+          echo "SHORT_SHA=`echo ${{ github.sha }} | cut -c1-7`" >> "$GITHUB_ENV"
       - name: Print Env
         run: |
           echo ${{ env.RELEASE_AT }}
@@ -53,13 +53,14 @@ jobs:
         uses: actions/upload-pages-artifact@v3
       - name: Zip Generated Site
         run:
-          cd _site && zip -r ../site-${{ env.SHORT_SHA }}.zip * && cd ..
+          cd _site && zip -r ../site.zip * && cd ..
       - name: Release Zip
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: site-${{ env.SHORT_SHA }}.zip
+          file: site.zip
           tag: ${{ github.ref }}.${{ github.sha }}
+          release_name: ${{ github.ref }}.${{ env.SHORT_SHA }}
           overwrite: true
 
   # Deployment job
