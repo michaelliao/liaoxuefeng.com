@@ -1,8 +1,6 @@
-# Sample workflow for building and deploying a GitSite repo to GitHub Pages
-#
-# To get started with GitSite see: https://gitsite.org
+# Workflow for building and deploying a GitSite repo to GitHub Pages
 
-name: Build by GitSite
+name: Build liaoxuefeng.com
 
 on:
   # Runs on pushes targeting the default branch
@@ -14,19 +12,26 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-22.04
     permissions:
       contents: write
+
+    runs-on: ubuntu-22.04
     steps:
       - name: Setup Env
         run:
           echo "RELEASE_AT=`echo ${{ github.event.head_commit.timestamp }} | sed 's/[:+]/-/g'`" >> "$GITHUB_ENV"
+          echo "SHORT_SHA=`echo ${{ github.sha }} | cut -c1-8`" >> "$GITHUB_ENV"
       - name: Print Env
         run:
           echo ${{ env.RELEASE_AT }}
+          echo ${{ env.SHORT_SHA }}
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -45,18 +50,24 @@ jobs:
       - name: Zip Generated Site
         run:
           cd _site && zip -r ../site.zip * && cd ..
-      - name: Upload to AliOSS
-        uses: JohnGuan/oss-upload-action@main
-        with:
-          key-id: ${{ secrets.OSS_KEY_ID }}
-          key-secret: ${{ secrets.OSS_KEY_SECRET }}
-          region: ${{ secrets.OSS_REGION }}
-          bucket: ${{ secrets.OSS_BUCKET }}
-          assets: site.zip:upload/site-${{ env.RELEASE_AT }}.zip
       - name: Release Zip
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: site.zip
-          tag: ${{ github.ref }}.${{ github.sha }}
+          file: site-${{ env.SHORT_SHA }}.zip
+          tag: ${{ github.ref }}.${{ env.SHORT_SHA }}
           overwrite: true
+
+  # Deployment job
+  deploy:
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
