@@ -49,7 +49,7 @@ jobs:
           gitsite-cli build -o _site
       - name: Zip Generated Site
         run:
-          cd _site && zip -r ../site.zip * && cd ..
+          cd _site && zip -r ../site-${{ env.SHORT_SHA }}.zip * && cd ..
       - name: Release Zip
         uses: svenstaro/upload-release-action@v2
         with:
