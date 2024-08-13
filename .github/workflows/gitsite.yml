@@ -25,11 +25,11 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Setup Env
-        run:
+        run: |
           echo "RELEASE_AT=`echo ${{ github.event.head_commit.timestamp }} | sed 's/[:+]/-/g'`" >> "$GITHUB_ENV"
           echo "SHORT_SHA=`echo ${{ github.sha }} | cut -c1-8`" >> "$GITHUB_ENV"
       - name: Print Env
-        run:
+        run: |
           echo ${{ env.RELEASE_AT }}
           echo ${{ env.SHORT_SHA }}
       - name: Checkout
