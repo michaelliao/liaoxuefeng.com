@@ -60,7 +60,8 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: site.zip
           tag: ${{ github.ref }}.${{ github.sha }}
-          release_name: ${{ github.ref }}.${{ env.SHORT_SHA }}
+          release_name: site-source.${{ env.SHORT_SHA }}
+          body: Site source code including HTML, styles, scripts, images, etc.
           overwrite: true
 
   # Deployment job
