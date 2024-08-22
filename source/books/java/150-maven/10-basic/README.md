@@ -47,36 +47,50 @@ a-maven-project
 	<version>1.0</version>
 	<packaging>jar</packaging>
 	<properties>
-        ...
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.release>17</maven.compiler.release>
 	</properties>
 	<dependencies>
         <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>1.2</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.16</version>
         </dependency>
 	</dependencies>
 </project>
 ```
 
-其中，`groupId`类似于Java的包名，通常是公司或组织名称，`artifactId`类似于Java的类名，通常是项目名称，再加上`version`，一个Maven工程就是由`groupId`，`artifactId`和`version`作为唯一标识。我们在引用其他第三方库的时候，也是通过这3个变量确定。例如，依赖`commons-logging`：
+其中，`groupId`类似于Java的包名，通常是公司或组织名称，`artifactId`类似于Java的类名，通常是项目名称，再加上`version`，一个Maven工程就是由`groupId`，`artifactId`和`version`作为唯一标识。
+
+我们在引用其他第三方库的时候，也是通过这3个变量确定。例如，依赖`org.slfj4:slf4j-simple:2.0.16`：
 
 ```xml
 <dependency>
-    <groupId>commons-logging</groupId>
-    <artifactId>commons-logging</artifactId>
-    <version>1.2</version>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>2.0.16</version>
 </dependency>
 ```
 
 使用`<dependency>`声明一个依赖后，Maven就会自动下载这个依赖包并把它放到classpath中。
 
+另外，注意到`<properties>`定义了一些属性，常用的属性有：
+
+- `project.build.sourceEncoding`：表示项目源码的字符编码，通常应设定为`UTF-8`；
+- `maven.compiler.release`：表示使用的JDK版本，例如`21`；
+- `maven.compiler.source`：表示Java编译器读取的源码版本；
+- `maven.compiler.target`：表示Java编译器编译的Class版本。
+
+从Java 9开始，推荐使用`maven.compiler.release`属性，保证编译时输入的源码和编译输出版本一致。如果源码和输出版本不同，则应该分别设置`maven.compiler.source`和`maven.compiler.target`。
+
+通过`<properties>`定义的属性，就可以固定JDK版本，防止同一个项目的不同的开发者各自使用不同版本的JDK。
+
 ### 安装Maven
 
-要安装Maven，可以从[Maven官网](https://maven.apache.org/)下载最新的Maven 3.8.x，然后在本地解压，设置几个环境变量：
+要安装Maven，可以从[Maven官网](https://maven.apache.org/)下载最新的Maven 3.9.x，然后在本地解压，设置几个环境变量：
 
 ```bash
-M2_HOME=/path/to/maven-3.8.x
+M2_HOME=/path/to/maven-3.9.x
 PATH=$PATH:$M2_HOME/bin
 ```
 
