@@ -68,7 +68,7 @@ jobs:
         env:
           SYNC_OPT_UNUSED: delete
           SYNC_TYPE: baidu
-          SYNC_REGION: ${{ secrets.BOS_REGION }}
+          SYNC_REGION: su
           SYNC_BUCKET: ${{ secrets.BOS_BUCKET }}
           SYNC_ACCESS_ID: ${{ secrets.BOS_ACCESS_ID }}
           SYNC_ACCESS_SECRET: ${{ secrets.BOS_ACCESS_SECRET }}
@@ -77,7 +77,7 @@ jobs:
         env:
           SYNC_OPT_UNUSED: delete
           SYNC_TYPE: qcloud
-          SYNC_REGION: ${{ secrets.COS_REGION }}
+          SYNC_REGION: ap-shanghai
           SYNC_BUCKET: ${{ secrets.COS_BUCKET }}
           SYNC_ACCESS_ID: ${{ secrets.COS_ACCESS_ID }}
           SYNC_ACCESS_SECRET: ${{ secrets.COS_ACCESS_SECRET }}
