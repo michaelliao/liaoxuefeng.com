@@ -63,15 +63,15 @@ jobs:
           release_name: site-source.${{ env.SHORT_SHA }}
           body: Site source code including HTML, styles, scripts, images, etc.
           overwrite: true
-      - name: Sync To Baidu Cloud
+      - name: Sync To Aliyun
         uses: michaelliao/sync-s3-compatible-action@v2
         env:
           SYNC_OPT_UNUSED: delete
-          SYNC_TYPE: baidu
-          SYNC_REGION: su
-          SYNC_BUCKET: ${{ secrets.BOS_BUCKET }}
-          SYNC_ACCESS_ID: ${{ secrets.BOS_ACCESS_ID }}
-          SYNC_ACCESS_SECRET: ${{ secrets.BOS_ACCESS_SECRET }}
+          SYNC_TYPE: aliyun
+          SYNC_REGION: cn-hangzhou
+          SYNC_BUCKET: ${{ secrets.OSS_BUCKET }}
+          SYNC_ACCESS_ID: ${{ secrets.OSS_ACCESS_ID }}
+          SYNC_ACCESS_SECRET: ${{ secrets.OSS_ACCESS_SECRET }}
       - name: Sync To QCloud
         uses: michaelliao/sync-s3-compatible-action@v2
         env:
@@ -81,6 +81,15 @@ jobs:
           SYNC_BUCKET: ${{ secrets.COS_BUCKET }}
           SYNC_ACCESS_ID: ${{ secrets.COS_ACCESS_ID }}
           SYNC_ACCESS_SECRET: ${{ secrets.COS_ACCESS_SECRET }}
+      - name: Sync To Baidu Cloud
+        uses: michaelliao/sync-s3-compatible-action@v2
+        env:
+          SYNC_OPT_UNUSED: delete
+          SYNC_TYPE: baidu
+          SYNC_REGION: su
+          SYNC_BUCKET: ${{ secrets.BOS_BUCKET }}
+          SYNC_ACCESS_ID: ${{ secrets.BOS_ACCESS_ID }}
+          SYNC_ACCESS_SECRET: ${{ secrets.BOS_ACCESS_SECRET }}
 
   # Deployment job
   deploy:
