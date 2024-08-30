@@ -60,7 +60,7 @@ naturals.map(n -> n.multiply(n)) // 1, 4, 9, 16, 25...
 
 ```java
 Stream<BigInteger> naturals = createNaturalStream(); // 不计算
-Stream<BigInteger> s2 = naturals.map(BigInteger::multiply); // 不计算
+Stream<BigInteger> s2 = naturals.map(n -> n.multiply(n)); // 不计算
 Stream<BigInteger> s3 = s2.limit(100); // 不计算
 s3.forEach(System.out::println); // 计算
 ```
@@ -71,7 +71,7 @@ s3.forEach(System.out::println); // 计算
 
 ```java
 createNaturalStream()
-    .map(BigInteger::multiply)
+    .map(n -> n.multiply(n))
     .limit(100)
     .forEach(System.out::println);
 ```
