@@ -37,7 +37,7 @@ $(BUILD_DIR)/%.d: $(SRC_DIR)/%.c
 	@mkdir -p $(dir $@); \
 	rm -f $@; \
 	$(CC) -MM $< >$@.tmp; \
-	sed 's,\($*\)\.o[ :]*,\1.o $@ : ,g' < $@.tmp > $@; \
+	sed 's,\($*\)\.o[ :]*,$(BUILD_DIR)/\1.o $@ : ,g' < $@.tmp > $@; \
 	rm -f $@.tmp
 
 # build/xyz.o 的规则由 src/xyz.c 生成:
