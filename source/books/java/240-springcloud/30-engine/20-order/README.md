@@ -171,9 +171,9 @@ OrderID = SequenceID * 10000 + today("YYmm")
 
 ### 参考源码
 
-可以从[GitHub](https://github.com/michaelliao/warpexchange/tree/step-3)或[Gitee](https://gitee.com/liaoxuefeng/warpexchange/tree/step-3/)下载源码。
+可以从[GitHub](https://github.com/michaelliao/warpexchange/tree/main/step-by-step/step-3)或[Gitee](https://gitee.com/liaoxuefeng/warpexchange/tree/main/step-by-step/step-3/)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/warpexchange/tree/step-3">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/warpexchange/tree/main/step-by-step/step-3">GitHub</a>
 
 ### 小结
 

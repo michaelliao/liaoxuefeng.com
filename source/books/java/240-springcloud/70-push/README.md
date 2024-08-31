@@ -296,9 +296,9 @@ public void broadcast(String text) {
 
 ### 参考源码
 
-可以从[GitHub](https://github.com/michaelliao/warpexchange/tree/step-10)或[Gitee](https://gitee.com/liaoxuefeng/warpexchange/tree/step-10/)下载源码。
+可以从[GitHub](https://github.com/michaelliao/warpexchange/tree/main/step-by-step/step-10)或[Gitee](https://gitee.com/liaoxuefeng/warpexchange/tree/main/step-by-step/step-10/)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/warpexchange/tree/step-10">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/warpexchange/tree/main/step-by-step/step-10">GitHub</a>
 
 ### 小结
 

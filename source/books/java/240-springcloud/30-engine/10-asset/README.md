@@ -188,9 +188,9 @@ public class AssetServiceTest {
 
 ### 参考源码
 
-可以从[GitHub](https://github.com/michaelliao/warpexchange/tree/step-2)或[Gitee](https://gitee.com/liaoxuefeng/warpexchange/tree/step-2/)下载源码。
+可以从[GitHub](https://github.com/michaelliao/warpexchange/tree/main/step-by-step/step-2)或[Gitee](https://gitee.com/liaoxuefeng/warpexchange/tree/main/step-by-step/step-2/)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/warpexchange/tree/step-2">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/warpexchange/tree/main/step-by-step/step-2">GitHub</a>
 
 ### 小结
 
