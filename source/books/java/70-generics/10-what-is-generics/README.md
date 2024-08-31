@@ -158,7 +158,18 @@ Integer n = integerList.get(1); // ClassCastException!
 实际上，编译器为了避免这种错误，根本就不允许把`ArrayList<Integer>`转型为`ArrayList<Number>`。
 
 ```alert type=caution title=特别注意
-ArrayList&lt;Integer&gt;和ArrayList&lt;Number&gt;两者完全没有继承关系。
+`ArrayList<Integer>`和`ArrayList<Number>`两者完全没有继承关系。
+```
+
+用一个图来表示泛型的继承关系，就是`T`不变时，可以向上转型，`T`本身不能向上转型：
+
+```ascii
+  List<Integer>     ArrayList<Number>
+    ▲                            ▲
+    │                            │
+    │                            X
+    │                            │
+ArrayList<Integer>  ArrayList<Integer>
 ```
 
 ### 小结
