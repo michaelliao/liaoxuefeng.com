@@ -22,7 +22,7 @@ print('hello, world')
 
 注意`print`前面不要有任何空格。然后，选择一个目录，例如`C:\work`，把文件保存为`hello.py`，就可以打开命令行窗口，把当前目录切换到`hello.py`所在目录，就可以运行这个程序了：
 
-```bash
+```plain
 C:\work> python hello.py
 hello, world
 ```
@@ -31,7 +31,7 @@ hello, world
 
 如果当前目录下没有`hello.py`这个文件，运行`python hello.py`就会报错：
 
-```bash
+```plain
 C:\project> python hello.py
 python: can't open file 'hello.py': [Errno 2] No such file or directory
 ```
@@ -54,13 +54,13 @@ print('hello, world')
 
 然后，通过命令给`hello.py`以执行权限：
 
-```bash
+```plain
 $ chmod a+x hello.py
 ```
 
 就可以直接运行`hello.py`了，比如在Mac下运行：
 
-```bash
+```plain
 $ ./hello.py
 hello, world
 ```

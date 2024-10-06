@@ -41,7 +41,7 @@ MySQL Client和MySQL Server的关系如下：
 
 也可以只安装MySQL Client，然后连接到远程MySQL Server。假设远程MySQL Server的IP地址是`10.0.1.99`，那么就使用`-h`指定IP或域名：
 
-```bash
+```plain
 mysql -h 10.0.1.99 -u root -p
 ```
 

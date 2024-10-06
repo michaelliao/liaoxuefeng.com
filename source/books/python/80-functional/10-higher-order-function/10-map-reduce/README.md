@@ -28,7 +28,7 @@ Python内建了`map()`和`reduce()`函数。
 
 现在，我们用Python代码实现：
 
-```bash
+```plain
 >>> def f(x):
 ...     return x * x
 ...
@@ -52,7 +52,7 @@ print(L)
 
 所以，`map()`作为高阶函数，事实上它把运算规则抽象了，因此，我们不但可以计算简单的f(x)=x<sup>2</sup>，还可以计算任意复杂的函数，比如，把这个list所有数字转为字符串：
 
-```bash
+```plain
 >>> list(map(str, [1, 2, 3, 4, 5, 6, 7, 8, 9]))
 ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 ```
@@ -67,7 +67,7 @@ reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
 
 比方说对一个序列求和，就可以用`reduce`实现：
 
-```bash
+```plain
 >>> from functools import reduce
 >>> def add(x, y):
 ...     return x + y
@@ -80,7 +80,7 @@ reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
 
 但是如果要把序列`[1, 3, 5, 7, 9]`变换成整数`13579`，`reduce`就可以派上用场：
 
-```bash
+```plain
 >>> from functools import reduce
 >>> def fn(x, y):
 ...     return x * 10 + y
@@ -91,7 +91,7 @@ reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
 
 这个例子本身没多大用处，但是，如果考虑到字符串`str`也是一个序列，对上面的例子稍加改动，配合`map()`，我们就可以写出把`str`转换为`int`的函数：
 
-```bash
+```plain
 >>> from functools import reduce
 >>> def fn(x, y):
 ...     return x * 10 + y

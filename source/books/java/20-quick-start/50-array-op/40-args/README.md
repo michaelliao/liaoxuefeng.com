@@ -31,13 +31,13 @@ public class Main {
 
 上面这个程序必须在命令行执行，我们先编译它：
 
-```bash
+```plain
 $ javac Main.java
 ```
 
 然后，执行的时候，给它传递一个`-version`参数：
 
-```bash
+```plain
 $ java Main -version
 v 1.0
 ```

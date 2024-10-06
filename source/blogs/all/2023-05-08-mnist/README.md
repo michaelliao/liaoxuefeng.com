@@ -20,7 +20,7 @@ MNIST（Modified National Institute of Stands and Technology）是一个开源�
 
 要编写这个AI模型，我们需要使用一种称为卷积神经网络（CNN：Convolutional Neural Network）的神经网络结构，具体到代码层面，则需要使用[PyTorch](https://pytorch.org/)这样的训练框架。PyTorch底层用C++开发，外层用Python调用，非常方便易用。先确保机器安装了Python3，然后，安装PyTorch 2：
 
-```bash
+```plain
 pip install torch torchvision torchaudio
 ```
 

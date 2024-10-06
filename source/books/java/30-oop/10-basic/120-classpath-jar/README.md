@@ -10,13 +10,13 @@
 
 所以，`classpath`就是一组目录的集合，它设置的搜索路径与操作系统相关。例如，在Windows系统上，用`;`分隔，带空格的目录用`""`括起来，可能长这样：
 
-```bash
+```plain
 C:\work\project1\bin;C:\shared;"D:\My Documents\project1\bin"
 ```
 
 在Linux系统上，用`:`分隔，可能长这样：
 
-```bash
+```plain
 /usr/shared:/usr/local/bin:/home/liaoxuefeng/bin
 ```
 
@@ -36,19 +36,19 @@ C:\work\project1\bin;C:\shared;"D:\My Documents\project1\bin"
 
 我们强烈*不推荐*在系统环境变量中设置`classpath`，那样会污染整个系统环境。在启动JVM时设置`classpath`才是推荐的做法。实际上就是给`java`命令传入`-classpath`参数：
 
-```bash
+```plain
 java -classpath .;C:\work\project1\bin;C:\shared abc.xyz.Hello
 ```
 
 或者使用`-cp`的简写：
 
-```bash
+```plain
 java -cp .;C:\work\project1\bin;C:\shared abc.xyz.Hello
 ```
 
 没有设置系统环境变量，也没有传入`-cp`参数，那么JVM默认的`classpath`为`.`，即当前目录：
 
-```bash
+```plain
 java abc.xyz.Hello
 ```
 
@@ -77,7 +77,7 @@ C:\work
 
 运行这个`Hello.class`必须在当前目录下使用如下命令：
 
-```bash
+```plain
 C:\work> java -cp . com.example.Hello
 ```
 
@@ -91,7 +91,7 @@ jar包就是用来干这个事的，它可以把`package`组织的目录层级�
 
 jar包实际上就是一个zip格式的压缩文件，而jar包相当于目录。如果我们要执行一个jar包的`class`，就可以把jar包放到`classpath`中：
 
-```bash
+```plain
 java -cp ./hello.jar abc.xyz.Hello
 ```
 
@@ -127,7 +127,7 @@ package_sample
 
 jar包还可以包含一个特殊的`/META-INF/MANIFEST.MF`文件，`MANIFEST.MF`是纯文本，可以指定`Main-Class`和其它信息。JVM会自动读取这个`MANIFEST.MF`文件，如果存在`Main-Class`，我们就不必在命令行指定启动的类名，而是用更方便的命令：
 
-```bash
+```plain
 java -jar hello.jar
 ```
 

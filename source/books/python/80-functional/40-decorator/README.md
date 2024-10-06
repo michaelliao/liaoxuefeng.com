@@ -2,7 +2,7 @@
 
 由于函数也是一个对象，而且函数对象可以被赋值给变量，所以，通过变量也能调用该函数。
 
-```bash
+```plain
 >>> def now():
 ...     print('2024-6-1')
 ...
@@ -13,7 +13,7 @@
 
 函数对象有一个`__name__`属性（注意：是前后各两个下划线），可以拿到函数的名字：
 
-```bash
+```plain
 >>> now.__name__
 'now'
 >>> f.__name__
@@ -42,7 +42,7 @@ def now():
 
 调用`now()`函数，不仅会运行`now()`函数本身，还会在运行`now()`函数前打印一行日志：
 
-```bash
+```plain
 >>> now()
 call now():
 2024-6-1
@@ -80,7 +80,7 @@ def now():
 
 执行结果如下：
 
-```bash
+```plain
 >>> now()
 execute now():
 2024-6-1
@@ -88,7 +88,7 @@ execute now():
 
 和两层嵌套的decorator相比，3层嵌套的效果是这样的：
 
-```bash
+```plain
 >>> now = log('execute')(now)
 ```
 
@@ -96,7 +96,7 @@ execute now():
 
 以上两种decorator的定义都没有问题，但还差最后一步。因为我们讲了函数也是对象，它有`__name__`等属性，但你去看经过decorator装饰之后的函数，它们的`__name__`已经从原来的`'now'`变成了`'wrapper'`：
 
-```bash
+```plain
 >>> now.__name__
 'wrapper'
 ```

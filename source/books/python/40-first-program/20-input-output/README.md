@@ -4,13 +4,13 @@
 
 用`print()`在括号中加上字符串，就可以向屏幕上输出指定的文字。比如输出`'hello, world'`，用代码实现如下：
 
-```bash
+```plain
 >>> print('hello, world')
 ```
 
 `print()`函数也可以接受多个字符串，用逗号“,”隔开，就可以连成一串输出：
 
-```bash
+```plain
 >>> print('The quick brown fox', 'jumps over', 'the lazy dog')
 The quick brown fox jumps over the lazy dog
 ```
@@ -21,7 +21,7 @@ The quick brown fox jumps over the lazy dog
 
 `print()`也可以打印整数，或者计算结果：
 
-```bash
+```plain
 >>> print(300)
 300
 >>> print(100 + 200)
@@ -30,7 +30,7 @@ The quick brown fox jumps over the lazy dog
 
 因此，我们可以把计算`100 + 200`的结果打印得更漂亮一点：
 
-```bash
+```plain
 >>> print('100 + 200 =', 100 + 200)
 100 + 200 = 300
 ```
@@ -41,7 +41,7 @@ The quick brown fox jumps over the lazy dog
 
 现在，你已经可以用`print()`输出你想要的结果了。但是，如果要让用户从电脑输入一些字符怎么办？Python提供了一个`input()`，可以让用户输入字符串，并存放到一个变量里。比如输入用户的名字：
 
-```bash
+```plain
 >>> name = input()
 Michael
 ```
@@ -50,7 +50,7 @@ Michael
 
 输入完成后，不会有任何提示，Python交互式命令行又回到`>>>`状态了。那我们刚才输入的内容到哪去了？答案是存放到`name`变量里了。可以直接输入`name`查看变量内容：
 
-```bash
+```plain
 >>> name
 'Michael'
 ```
@@ -67,7 +67,7 @@ Michael
 
 要打印出`name`变量的内容，除了直接写`name`然后按回车外，还可以用`print()`函数：
 
-```bash
+```plain
 >>> print(name)
 Michael
 ```
@@ -81,7 +81,7 @@ print('hello,', name)
 
 运行上面的程序，第一行代码会让用户输入任意字符作为自己的名字，然后存入`name`变量中；第二行代码会根据用户的名字向用户说`hello`，比如输入`Michael`：
 
-```bash
+```plain
 C:\Workspace> python hello.py
 Michael
 hello, Michael
@@ -96,7 +96,7 @@ print('hello,', name)
 
 再次运行这个程序，你会发现，程序一运行，会首先打印出`please enter your name: `，这样，用户就可以根据提示，输入名字后，得到`hello, xxx`的输出：
 
-```bash
+```plain
 C:\Workspace> python hello.py
 please enter your name: Michael
 hello, Michael

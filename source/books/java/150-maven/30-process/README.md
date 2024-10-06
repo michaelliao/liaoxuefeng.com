@@ -110,7 +110,7 @@ goal的命名总是`abc:xyz`这种形式。
 
 大多数情况，我们只要指定phase，就默认执行这些phase默认绑定的goal，只有少数情况，我们可以直接指定运行一个goal，例如，启动Tomcat服务器：
 
-```bash
+```plain
 $ mvn tomcat:run
 ```
 

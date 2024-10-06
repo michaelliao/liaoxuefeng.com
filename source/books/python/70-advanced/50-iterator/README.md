@@ -10,7 +10,7 @@
 
 可以使用`isinstance()`判断一个对象是否是`Iterable`对象：
 
-```bash
+```plain
 >>> from collections.abc import Iterable
 >>> isinstance([], Iterable)
 True
@@ -30,7 +30,7 @@ False
 
 可以使用`isinstance()`判断一个对象是否是`Iterator`对象：
 
-```bash
+```plain
 >>> from collections.abc import Iterator
 >>> isinstance((x for x in range(10)), Iterator)
 True
@@ -46,7 +46,7 @@ False
 
 把`list`、`dict`、`str`等`Iterable`变成`Iterator`可以使用`iter()`函数：
 
-```bash
+```plain
 >>> isinstance(iter([]), Iterator)
 True
 >>> isinstance(iter('abc'), Iterator)

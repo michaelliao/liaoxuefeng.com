@@ -148,7 +148,7 @@ RSA算法是1977年由Ron Rivest、Adi Shamir和Leonard Adleman共同提出的�
 
 首先，在命令行执行以下命令以生成一个RSA密钥对：
 
-```bash
+```plain
 openssl genrsa -aes256 -out rsa-key.pem 2048
 ```
 
@@ -156,7 +156,7 @@ openssl genrsa -aes256 -out rsa-key.pem 2048
 
 第二步，通过上面的`rsa-key.pem`加密文件，我们可以导出原始的私钥，命令如下：
 
-```bash
+```plain
 openssl rsa -in rsa-key.pem -outform PEM -out rsa-prv.pem
 ```
 
@@ -164,7 +164,7 @@ openssl rsa -in rsa-key.pem -outform PEM -out rsa-prv.pem
 
 类似的，我们用下面的命令导出原始的公钥：
 
-```bash
+```plain
 openssl rsa -in rsa-key.pem -outform PEM -pubout -out rsa-pub.pem
 ```
 

@@ -103,13 +103,13 @@ public class Main {
 
 要测试输入，必须从命令行读取用户输入，因此，需要走编译、执行的流程：
 
-```bash
+```plain
 $ javac Main.java
 ```
 
 这个程序编译时如果有警告，可以暂时忽略它，在后面学习IO的时候再详细解释。编译成功后，执行：
 
-```bash
+```plain
 $ java Main
 Input your name: Bob ◀── 输入 Bob
 Input your age: 12   ◀── 输入 12

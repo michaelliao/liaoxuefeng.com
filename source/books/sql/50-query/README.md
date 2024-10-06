@@ -36,7 +36,7 @@
 
 如果你想用MySQL练习，可以[下载这个SQL脚本](mysql-init-test-data.sql)，然后在命令行运行：
 
-```bash
+```plain
 $ mysql -u root -p < init-test-data.sql
 ```
 

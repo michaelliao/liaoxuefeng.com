@@ -6,14 +6,14 @@ Python的`functools`模块提供了很多有用的功能，其中一个就是偏
 
 `int()`函数可以把字符串转换为整数，当仅传入字符串时，`int()`函数默认按十进制转换：
 
-```bash
+```plain
 >>> int('12345')
 12345
 ```
 
 但`int()`函数还提供额外的`base`参数，默认值为`10`。如果传入`base`参数，就可以做N进制的转换：
 
-```bash
+```plain
 >>> int('12345', base=8)
 5349
 >>> int('12345', 16)
@@ -29,7 +29,7 @@ def int2(x, base=2):
 
 这样，我们转换二进制就非常方便了：
 
-```bash
+```plain
 >>> int2('1000000')
 64
 >>> int2('1010101')
@@ -38,7 +38,7 @@ def int2(x, base=2):
 
 `functools.partial`就是帮助我们创建一个偏函数的，不需要我们自己定义`int2()`，可以直接使用下面的代码创建一个新的函数`int2`：
 
-```bash
+```plain
 >>> import functools
 >>> int2 = functools.partial(int, base=2)
 >>> int2('1000000')
@@ -51,14 +51,14 @@ def int2(x, base=2):
 
 注意到上面的新的`int2`函数，仅仅是把`base`参数重新设定默认值为`2`，但也可以在函数调用时传入其他值：
 
-```bash
+```plain
 >>> int2('1000000', base=10)
 1000000
 ```
 
 最后，创建偏函数时，实际上可以接收函数对象、`*args`和`**kw`这3个参数，当传入：
 
-```bash
+```plain
 int2 = functools.partial(int, base=2)
 ```
 

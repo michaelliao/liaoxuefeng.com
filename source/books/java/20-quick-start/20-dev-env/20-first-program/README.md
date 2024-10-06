@@ -70,29 +70,39 @@ Java源码本质上是一个文本文件，我们需要先用`javac`把`Hello.ja
 
 第一步，在保存`Hello.java`的目录下执行命令`javac Hello.java`：
 
-```bash
+```plain
 $ javac Hello.java
 ```
 
 如果源代码无误，上述命令不会有任何输出，而当前目录下会产生一个`Hello.class`文件：
 
-```bash
+```plain
 $ ls
 Hello.class	Hello.java
 ```
 
-第二步，执行`Hello.class`，使用命令`java Hello`：
+第二步，执行`Hello.class`，使用命令`java Hello`（注意不是`java Hello.class`）：
 
-```bash
+```plain
 $ java Hello
 Hello, world!
 ```
 
 注意：给虚拟机传递的参数`Hello`是我们定义的类名，虚拟机自动查找对应的class文件并执行。
 
+如果执行`java Hello`报错：
+
+```plain
+$ java Hello
+Error: Could not find or load main class Hello
+Caused by: java.lang.ClassNotFoundException: Hello
+```
+
+出现`ClassNotFoundException`信息，说明在当前目录下并没有`Hello.class`这个文件，请切换到`Hello.class`的目录，然后执行`java Hello`。
+
 有一些童鞋可能知道，直接运行`java Hello.java`也是可以的：
 
-```bash
+```plain
 $ java Hello.java 
 Hello, world!
 ```

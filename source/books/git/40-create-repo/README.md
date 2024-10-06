@@ -4,7 +4,7 @@
 
 所以，创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录：
 
-```bash
+```plain
 $ mkdir learngit
 $ cd learngit
 $ pwd
@@ -19,7 +19,7 @@ $ pwd
 
 第二步，通过`git init`命令把这个目录变成Git可以管理的仓库：
 
-```bash
+```plain
 $ git init
 Initialized empty Git repository in /Users/michael/learngit/.git/
 ```
@@ -57,7 +57,7 @@ Git is free software.
 
 第一步，用命令`git add`告诉Git，把文件添加到仓库：
 
-```bash
+```plain
 $ git add readme.txt
 ```
 
@@ -65,7 +65,7 @@ $ git add readme.txt
 
 第二步，用命令`git commit`告诉Git，把文件提交到仓库：
 
-```bash
+```plain
 $ git commit -m "wrote a readme file"
 [master (root-commit) eaadf4e] wrote a readme file
  1 file changed, 2 insertions(+)
@@ -84,7 +84,7 @@ https://www.bilibili.com/video/BV1r4411x7km
 
 为什么Git添加文件需要`add`，`commit`一共两步呢？因为`commit`可以一次提交很多文件，所以你可以多次`add`不同的文件，比如：
 
-```bash
+```plain
 $ git add file1.txt
 $ git add file2.txt file3.txt
 $ git commit -m "add 3 files."

@@ -2,7 +2,7 @@
 
 要计算1+2+3，我们可以直接写表达式：
 
-```bash
+```plain
 >>> 1 + 2 + 3
 6
 ```
@@ -23,7 +23,7 @@ for name in names:
 
 执行这段代码，会依次打印`names`的每一个元素：
 
-```bash
+```plain
 Michael
 Bob
 Tracy
@@ -42,7 +42,7 @@ print(sum)
 
 如果要计算1-100的整数之和，从1写到100有点困难，幸好Python提供一个`range()`函数，可以生成一个整数序列，再通过`list()`函数可以转换为list。比如`range(5)`生成的序列是从0开始小于5的整数：
 
-```bash
+```plain
 >>> list(range(5))
 [0, 1, 2, 3, 4]
 ```

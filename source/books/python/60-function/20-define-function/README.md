@@ -80,7 +80,7 @@ if age >= 18:
 
 调用函数时，如果参数个数不对，Python解释器会自动检查出来，并抛出`TypeError`：
 
-```bash
+```plain
 >>> my_abs(1, 2)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -89,7 +89,7 @@ TypeError: my_abs() takes 1 positional argument but 2 were given
 
 但是如果参数类型不对，Python解释器就无法帮我们检查。试试`my_abs`和内置函数`abs`的差别：
 
-```bash
+```plain
 >>> my_abs('A')
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -117,7 +117,7 @@ def my_abs(x):
 
 添加了参数检查后，如果传入错误的参数类型，函数就可以抛出一个错误：
 
-```bash
+```plain
 >>> my_abs('A')
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -146,7 +146,7 @@ def move(x, y, step, angle=0):
 
 然后，我们就可以同时获得返回值：
 
-```bash
+```plain
 >>> x, y = move(100, 100, 60, math.pi / 6)
 >>> print(x, y)
 151.96152422706632 70.0
@@ -154,7 +154,7 @@ def move(x, y, step, angle=0):
 
 但其实这只是一种假象，Python函数返回的仍然是单一值：
 
-```bash
+```plain
 >>> r = move(100, 100, 60, math.pi / 6)
 >>> print(r)
 (151.96152422706632, 70.0)

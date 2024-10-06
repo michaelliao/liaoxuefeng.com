@@ -16,7 +16,7 @@
 
 安装完成后，在Windows环境下，请打开命令提示符，然后输入`node -v`，如果安装正常，你应该看到`v22.3.0`这样的输出：
 
-```bash
+```plain
 C:\Users\IEUser> node -v
 v22.3.0
 ```

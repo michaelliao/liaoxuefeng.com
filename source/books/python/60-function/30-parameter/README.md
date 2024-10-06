@@ -17,7 +17,7 @@ def power(x):
 
 当我们调用`power`函数时，必须传入有且仅有的一个参数`x`：
 
-```bash
+```plain
 >>> power(5)
 25
 >>> power(15)
@@ -39,7 +39,7 @@ def power(x, n):
 
 对于这个修改后的`power(x, n)`函数，可以计算任意n次方：
 
-```bash
+```plain
 >>> power(5, 2)
 25
 >>> power(5, 3)
@@ -52,7 +52,7 @@ def power(x, n):
 
 新的`power(x, n)`函数定义没有问题，但是，旧的调用代码失败了，原因是我们增加了一个参数，导致旧的代码因为缺少一个参数而无法正常调用：
 
-```bash
+```plain
 >>> power(5)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -74,7 +74,7 @@ def power(x, n=2):
 
 这样，当我们调用`power(5)`时，相当于调用`power(5, 2)`：
 
-```bash
+```plain
 >>> power(5)
 25
 >>> power(5, 2)
@@ -103,7 +103,7 @@ def enroll(name, gender):
 
 这样，调用`enroll()`函数只需要传入两个参数：
 
-```bash
+```plain
 >>> enroll('Sarah', 'F')
 name: Sarah
 gender: F
@@ -123,7 +123,7 @@ def enroll(name, gender, age=6, city='Beijing'):
 
 这样，大多数学生注册时不需要提供年龄和城市，只提供必须的两个参数：
 
-```bash
+```plain
 >>> enroll('Sarah', 'F')
 name: Sarah
 gender: F
@@ -156,7 +156,7 @@ def add_end(L=[]):
 
 当你正常调用时，结果似乎不错：
 
-```bash
+```plain
 >>> add_end([1, 2, 3])
 [1, 2, 3, 'END']
 >>> add_end(['x', 'y', 'z'])
@@ -165,14 +165,14 @@ def add_end(L=[]):
 
 当你使用默认参数调用时，一开始结果也是对的：
 
-```bash
+```plain
 >>> add_end()
 ['END']
 ```
 
 但是，再次调用`add_end()`时，结果就不对了：
 
-```bash
+```plain
 >>> add_end()
 ['END', 'END']
 >>> add_end()
@@ -201,7 +201,7 @@ def add_end(L=None):
 
 现在，无论调用多少次，都不会有问题：
 
-```bash
+```plain
 >>> add_end()
 ['END']
 >>> add_end()
@@ -228,7 +228,7 @@ def calc(numbers):
 
 但是调用的时候，需要先组装出一个list或tuple：
 
-```bash
+```plain
 >>> calc([1, 2, 3])
 14
 >>> calc((1, 3, 5, 7))
@@ -237,7 +237,7 @@ def calc(numbers):
 
 如果利用可变参数，调用函数的方式可以简化成这样：
 
-```bash
+```plain
 >>> calc(1, 2, 3)
 14
 >>> calc(1, 3, 5, 7)
@@ -256,7 +256,7 @@ def calc(*numbers):
 
 定义可变参数和定义一个list或tuple参数相比，仅仅在参数前面加了一个`*`号。在函数内部，参数`numbers`接收到的是一个tuple，因此，函数代码完全不变。但是，调用该函数时，可以传入任意个参数，包括0个参数：
 
-```bash
+```plain
 >>> calc(1, 2)
 5
 >>> calc()
@@ -265,7 +265,7 @@ def calc(*numbers):
 
 如果已经有一个list或者tuple，要调用一个可变参数怎么办？可以这样做：
 
-```bash
+```plain
 >>> nums = [1, 2, 3]
 >>> calc(nums[0], nums[1], nums[2])
 14
@@ -273,7 +273,7 @@ def calc(*numbers):
 
 这种写法当然是可行的，问题是太繁琐，所以Python允许你在list或tuple前面加一个`*`号，把list或tuple的元素变成可变参数传进去：
 
-```bash
+```plain
 >>> nums = [1, 2, 3]
 >>> calc(*nums)
 14
@@ -292,14 +292,14 @@ def person(name, age, **kw):
 
 函数`person`除了必选参数`name`和`age`外，还接受关键字参数`kw`。在调用该函数时，可以只传入必选参数：
 
-```bash
+```plain
 >>> person('Michael', 30)
 name: Michael age: 30 other: {}
 ```
 
 也可以传入任意个数的关键字参数：
 
-```bash
+```plain
 >>> person('Bob', 35, city='Beijing')
 name: Bob age: 35 other: {'city': 'Beijing'}
 >>> person('Adam', 45, gender='M', job='Engineer')
@@ -310,7 +310,7 @@ name: Adam age: 45 other: {'gender': 'M', 'job': 'Engineer'}
 
 和可变参数类似，也可以先组装出一个dict，然后，把该dict转换为关键字参数传进去：
 
-```bash
+```plain
 >>> extra = {'city': 'Beijing', 'job': 'Engineer'}
 >>> person('Jack', 24, city=extra['city'], job=extra['job'])
 name: Jack age: 24 other: {'city': 'Beijing', 'job': 'Engineer'}
@@ -318,7 +318,7 @@ name: Jack age: 24 other: {'city': 'Beijing', 'job': 'Engineer'}
 
 当然，上面复杂的调用可以用简化的写法：
 
-```bash
+```plain
 >>> extra = {'city': 'Beijing', 'job': 'Engineer'}
 >>> person('Jack', 24, **extra)
 name: Jack age: 24 other: {'city': 'Beijing', 'job': 'Engineer'}
@@ -345,7 +345,7 @@ def person(name, age, **kw):
 
 但是调用者仍可以传入不受限制的关键字参数：
 
-```bash
+```plain
 >>> person('Jack', 24, city='Beijing', addr='Chaoyang', zipcode=123456)
 ```
 
@@ -360,7 +360,7 @@ def person(name, age, *, city, job):
 
 调用方式如下：
 
-```bash
+```plain
 >>> person('Jack', 24, city='Beijing', job='Engineer')
 Jack 24 Beijing Engineer
 ```
@@ -374,7 +374,7 @@ def person(name, age, *args, city, job):
 
 命名关键字参数必须传入参数名，这和位置参数不同。如果没有传入参数名，调用将报错：
 
-```bash
+```plain
 >>> person('Jack', 24, 'Beijing', 'Engineer')
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -392,7 +392,7 @@ def person(name, age, *, city='Beijing', job):
 
 由于命名关键字参数`city`具有默认值，调用时，可不传入`city`参数：
 
-```bash
+```plain
 >>> person('Jack', 24, job='Engineer')
 Jack 24 Beijing Engineer
 ```
@@ -421,7 +421,7 @@ def f2(a, b, c=0, *, d, **kw):
 
 在函数调用的时候，Python解释器自动按照参数位置和参数名把对应的参数传进去。
 
-```bash
+```plain
 >>> f1(1, 2)
 a = 1 b = 2 c = 0 args = () kw = {}
 >>> f1(1, 2, c=3)
@@ -436,7 +436,7 @@ a = 1 b = 2 c = 0 d = 99 kw = {'ext': None}
 
 最神奇的是通过一个tuple和dict，你也可以调用上述函数：
 
-```bash
+```plain
 >>> args = (1, 2, 3, 4)
 >>> kw = {'d': 99, 'x': '#'}
 >>> f1(*args, **kw)

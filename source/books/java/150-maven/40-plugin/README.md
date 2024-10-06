@@ -4,7 +4,7 @@
 
 我们以`compile`这个phase为例，如果执行：
 
-```bash
+```plain
 $ mvn compile
 ```
 

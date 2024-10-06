@@ -124,7 +124,7 @@ collation-server = utf8_general_ci
 
 重启MySQL后，可以通过MySQL的客户端命令行检查编码：
 
-```bash
+```plain
 $ mysql -u root -p
 Enter password: 
 Welcome to the MySQL monitor...

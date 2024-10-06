@@ -62,7 +62,7 @@ if __name__=='__main__':
 
 我们可以用命令行运行`hello.py`看看效果：
 
-```bash
+```plain
 $ python3 hello.py
 Hello, world!
 $ python hello.py Michael
@@ -71,7 +71,7 @@ Hello, Michael!
 
 如果启动Python交互环境，再导入`hello`模块：
 
-```bash
+```plain
 $ python3
 Python 3.4.3 (v3.4.3:9b73f1c3e601, Feb 23 2015, 02:52:03) 
 [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
@@ -84,7 +84,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 调用`hello.test()`时，才能打印出`Hello, word!`：
 
-```bash
+```plain
 >>> hello.test()
 Hello, world!
 ```

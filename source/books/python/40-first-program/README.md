@@ -66,7 +66,7 @@
 
 在交互模式的提示符`>>>`下，直接输入代码，按回车，就可以立刻得到代码执行结果。现在，试试输入`100+200`，看看计算结果是不是300：
 
-```bash
+```plain
 >>> 100+200
 300
 ```
@@ -75,7 +75,7 @@
 
 如果要让Python打印出指定的文字，可以用`print()`函数，然后把希望打印的文字用单引号或者双引号括起来，但不能混用单引号和双引号：
 
-```bash
+```plain
 >>> print('hello, world')
 hello, world
 ```
@@ -127,7 +127,7 @@ hello, world
 
 例如，在Python交互式环境下，输入：
 
-```bash
+```plain
 >>> 100 + 200 + 300
 600
 ```
@@ -142,7 +142,7 @@ hello, world
 
 然后在命令行模式下执行：
 
-```bash
+```plain
 C:\work>python calc.py
 ```
 
@@ -156,7 +156,7 @@ print(100 + 200 + 300)
 
 再执行，就可以看到结果：
 
-```bash
+```plain
 C:\work>python calc.py
 600
 ```
@@ -176,7 +176,7 @@ C:\work>python calc.py
 
 如果遇到`SyntaxError`，表示输入的Python代码有语法错误，最常见的一种语法错误是使用了中文标点，例如使用了中文括号`（`和`）`：
 
-```bash
+```plain
 >>> print（'hello'）
   File "<stdin>", line 1
     print（'hello'）
@@ -186,7 +186,7 @@ SyntaxError: invalid character '（' (U+FF08)
 
 或者使用了中文引号`“`和`”`：
 
-```bash
+```plain
 >>> print(“hello”)
   File "<stdin>", line 1
     print(“hello”)

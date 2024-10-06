@@ -265,14 +265,14 @@ work
 
 首先，确保当前目录是`work`目录，即存放`src`和`bin`的父目录：
 
-```bash
+```plain
 $ ls
 bin src
 ```
 
 然后，编译`src`目录下的所有Java文件：
 
-```bash
+```plain
 $ javac -d ./bin src/**/*.java
 ```
 
@@ -280,7 +280,7 @@ $ javac -d ./bin src/**/*.java
 
 注意：Windows不支持`**`这种搜索全部子目录的做法，所以在Windows下编译必须依次列出所有`.java`文件：
 
-```bash
+```plain
 C:\work> javac -d bin src\com\itranswarp\sample\Main.java src\com\itranswarp\world\Persion.java
 ```
 
@@ -298,7 +298,7 @@ bin
 
 现在，我们就可以直接运行`class`文件了。根据当前目录的位置确定classpath，例如，当前目录仍为`work`，则classpath为`bin`或者`./bin`：
 
-```bash
+```plain
 $ java -cp bin com.itranswarp.sample.Main 
 Hello, world!
 ```

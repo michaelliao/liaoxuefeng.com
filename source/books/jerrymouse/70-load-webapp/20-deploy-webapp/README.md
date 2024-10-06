@@ -14,7 +14,7 @@
 
 启动Web Server并加载war文件，使用以下命令：
 
-```bash
+```plain
 $ java -jar /path/to/jerrymouse-1.0.0.jar -w /path/to/hello-webapp-1.0.war
 ```
 

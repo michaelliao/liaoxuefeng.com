@@ -62,7 +62,7 @@ clean:
 
 这个`Makefile`定义了源码目录`SRC_DIR`、生成目录`BUILD_DIR`，以及其他变量，同时用`-include`消除了`.d`文件不存在的错误。执行`make`，输出如下：
 
-```bash
+```plain
 $ make
 cc -Wall -c -o build/hello.o src/hello.c
 cc -Wall -c -o build/main.o src/main.c

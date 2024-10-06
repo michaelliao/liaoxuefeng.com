@@ -180,7 +180,7 @@ Maven并不会每次都从中央仓库下载jar包。一个jar包一旦被下载
 
 在命令中，进入到`pom.xml`所在目录，输入以下命令：
 
-```bash
+```plain
 $ mvn clean package
 ```
 

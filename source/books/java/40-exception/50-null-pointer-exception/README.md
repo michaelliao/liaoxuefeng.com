@@ -109,7 +109,7 @@ class Address {
 
 这种增强的`NullPointerException`详细信息是Java 14新增的功能，但默认是关闭的，我们可以给JVM添加一个`-XX:+ShowCodeDetailsInExceptionMessages`参数启用它：
 
-```bash
+```plain
 java -XX:+ShowCodeDetailsInExceptionMessages Main.java
 ```
 

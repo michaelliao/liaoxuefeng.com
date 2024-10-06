@@ -164,7 +164,7 @@ web-servlet-hello/
 
 要运行我们的`hello.war`，首先要[下载Tomcat服务器](https://tomcat.apache.org/download-10.cgi)，解压后，把`hello.war`复制到Tomcat的`webapps`目录下，然后切换到`bin`目录，执行`startup.sh`或`startup.bat`启动Tomcat服务器：
 
-```bash
+```plain
 $ ./startup.sh 
 Using CATALINA_BASE:   .../apache-tomcat-10.1.x
 Using CATALINA_HOME:   .../apache-tomcat-10.1.x

@@ -62,7 +62,7 @@ UPDATE students SET score=60;
 
 例如，更新`id=1`的记录时：
 
-```bash
+```plain
 mysql> UPDATE students SET name='大宝' WHERE id=1;
 Query OK, 1 row affected (0.00 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
@@ -72,7 +72,7 @@ MySQL会返回`1`，可以从打印的结果`Rows matched: 1  Changed: 1`看到�
 
 当更新`id=999`的记录时：
 
-```bash
+```plain
 mysql> UPDATE students SET name='大宝' WHERE id=999;
 Query OK, 0 rows affected (0.00 sec)
 Rows matched: 0  Changed: 0  Warnings: 0

@@ -4,7 +4,7 @@
 
 我们通常说的Java 8，Java 11，Java 17，是指JDK的版本，也就是JVM的版本，更确切地说，就是`java.exe`这个程序的版本：
 
-```bash
+```plain
 $ java -version
 java version "17" 2021-09-14 LTS
 ```
@@ -29,7 +29,7 @@ java.lang.UnsupportedClassVersionError: Xxx has been compiled by a more recent v
 
 指定编译输出有两种方式，一种是在`javac`命令行中用参数`--release`设置：
 
-```bash
+```plain
 $ javac --release 11 Main.java
 ```
 
@@ -37,7 +37,7 @@ $ javac --release 11 Main.java
 
 第二种方式是用参数`--source`指定源码版本，用参数`--target`指定输出class版本：
 
-```bash
+```plain
 $ javac --source 9 --target 11 Main.java
 ```
 

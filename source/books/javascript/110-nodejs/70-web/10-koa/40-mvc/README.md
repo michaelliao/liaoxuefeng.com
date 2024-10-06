@@ -305,7 +305,7 @@ if (email === 'admin@example.com' && password === '123456') {
 
 如果要以`production`模式启动app，需要设置环境变量，可以通过以下命令启动：
 
-```bash
+```plain
 $ NODE_ENV=production node app.mjs
 ```
 

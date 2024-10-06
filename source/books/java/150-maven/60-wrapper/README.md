@@ -10,13 +10,13 @@
 
 安装Maven Wrapper最简单的方式是在项目的根目录（即`pom.xml`所在的目录）下运行安装命令：
 
-```bash
+```plain
 $ mvn wrapper:wrapper
 ```
 
 它会自动使用最新版本的Maven。如果要指定使用的Maven版本，使用下面的安装命令指定版本，例如`3.9.0`：
 
-```bash
+```plain
 $ mvn wrapper:wrapper -Dmaven=3.9.0
 ```
 
@@ -41,13 +41,13 @@ my-project
 
 发现多了`mvnw`、`mvnw.cmd`和`.mvn`目录，我们只需要把`mvn`命令改成`mvnw`就可以使用跟项目关联的Maven。例如：
 
-```bash
+```plain
 mvnw clean package
 ```
 
 在Linux或macOS下运行时需要加上`./`：
 
-```bash
+```plain
 $ ./mvnw clean package
 ```
 

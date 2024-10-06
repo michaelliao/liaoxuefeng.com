@@ -46,7 +46,7 @@ public class Main {
 
 现在，假设我们完成了Jerrymouse服务器的开发，那么最后得到的就是`jerrymouse.jar`这样的jar包，如果要运行一个`hello-webapp.war`，我们期待的命令行如下：
 
-```bash
+```plain
 $ java -jar jerrymouse.jar --war hello-webapp.war
 ```
 

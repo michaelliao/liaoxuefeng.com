@@ -14,7 +14,7 @@
 
 一般来说，第三方库都会在Python官方的[pypi.python.org](https://pypi.python.org/)网站注册，要安装一个第三方库，必须先知道该库的名称，可以在官网或者pypi上搜索，比如Pillow的名称叫[Pillow](https://pypi.python.org/pypi/Pillow/)，因此，安装Pillow的命令就是：
 
-```bash
+```plain
 pip install Pillow
 ```
 
@@ -50,7 +50,7 @@ pip install Pillow
 
 当我们试图加载一个模块时，Python会在指定的路径下搜索对应的.py文件，如果找不到，就会报错：
 
-```bash
+```plain
 >>> import mymodule
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -59,7 +59,7 @@ ImportError: No module named mymodule
 
 默认情况下，Python解释器会搜索当前目录、所有已安装的内置模块和第三方模块，搜索路径存放在`sys`模块的`path`变量中：
 
-```bash
+```plain
 >>> import sys
 >>> sys.path
 ['', '/Library/Frameworks/Python.framework/Versions/3.6/lib/python36.zip', '/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6', ..., '/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages']
@@ -69,7 +69,7 @@ ImportError: No module named mymodule
 
 一是直接修改`sys.path`，添加要搜索的目录：
 
-```bash
+```plain
 >>> import sys
 >>> sys.path.append('/Users/michael/my_py_scripts')
 ```

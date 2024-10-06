@@ -10,7 +10,7 @@ MySQL Workbench可以用可视化的方式查询、创建和修改数据库表�
 
 在一个运行MySQL的服务器上，实际上可以创建多个数据库（Database）。要列出所有数据库，使用命令：
 
-```bash
+```plain
 mysql> SHOW DATABASES;
 +--------------------+
 | Database           |
@@ -31,14 +31,14 @@ mysql> SHOW DATABASES;
 
 要创建一个新数据库，使用命令：
 
-```bash
+```plain
 mysql> CREATE DATABASE test;
 Query OK, 1 row affected (0.01 sec)
 ```
 
 要删除一个数据库，使用命令：
 
-```bash
+```plain
 mysql> DROP DATABASE test;
 Query OK, 0 rows affected (0.01 sec)
 ```
@@ -47,7 +47,7 @@ Query OK, 0 rows affected (0.01 sec)
 
 对一个数据库进行操作时，要首先将其切换为当前数据库：
 
-```bash
+```plain
 mysql> USE test;
 Database changed
 ```
@@ -56,7 +56,7 @@ Database changed
 
 列出当前数据库的所有表，使用命令：
 
-```bash
+```plain
 mysql> SHOW TABLES;
 +---------------------+
 | Tables_in_test      |
@@ -70,7 +70,7 @@ mysql> SHOW TABLES;
 
 要查看一个表的结构，使用命令：
 
-```bash
+```plain
 mysql> DESC students;
 +----------+--------------+------+-----+---------+----------------+
 | Field    | Type         | Null | Key | Default | Extra          |
@@ -86,7 +86,7 @@ mysql> DESC students;
 
 还可以使用以下命令查看创建表的SQL语句：
 
-```bash
+```plain
 mysql> SHOW CREATE TABLE students;
 +----------+-------------------------------------------------------+
 | students | CREATE TABLE `students` (                             |
@@ -103,26 +103,26 @@ mysql> SHOW CREATE TABLE students;
 
 创建表使用`CREATE TABLE`语句，而删除表使用`DROP TABLE`语句：
 
-```bash
+```plain
 mysql> DROP TABLE students;
 Query OK, 0 rows affected (0.01 sec)
 ```
 
 修改表就比较复杂。如果要给`students`表新增一列`birth`，使用：
 
-```bash
+```plain
 ALTER TABLE students ADD COLUMN birth VARCHAR(10) NOT NULL;
 ```
 
 要修改`birth`列，例如把列名改为`birthday`，类型改为`VARCHAR(20)`：
 
-```bash
+```plain
 ALTER TABLE students CHANGE COLUMN birth birthday VARCHAR(20) NOT NULL;
 ```
 
 要删除列，使用：
 
-```bash
+```plain
 ALTER TABLE students DROP COLUMN birthday;
 ```
 
@@ -130,7 +130,7 @@ ALTER TABLE students DROP COLUMN birthday;
 
 使用`EXIT`命令退出MySQL：
 
-```bash
+```plain
 mysql> EXIT
 Bye
 ```

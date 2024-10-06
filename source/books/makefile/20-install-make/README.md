@@ -12,19 +12,19 @@
 
 以Ubuntu为例，在Linux命令行下，用`apt`命令安装`make`以及GCC工具链：
 
-```bash
+```plain
 $ sudo apt install build-essential
 ```
 
 对于macOS系统，因为它的内核是BSD（一种Unix），所以也能直接跑`make`，推荐安装Homebrew，然后通过Homebrew安装`make`以及GCC工具链：
 
-```bash
+```plain
 $ brew install make gcc
 ```
 
 安装完成后，可以输入`make -v`验证：
 
-```bash
+```plain
 $ make -v
 GNU Make 4.3
 ...
@@ -32,7 +32,7 @@ GNU Make 4.3
 
 输入`gcc --version`验证GCC工具链：
 
-```bash
+```plain
 $ gcc --version
 gcc (Ubuntu ...) 11.4.0
 ...

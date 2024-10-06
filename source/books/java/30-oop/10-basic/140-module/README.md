@@ -10,7 +10,7 @@
 
 如果是自己开发的程序，除了一个自己的`app.jar`以外，还需要一堆第三方的jar包，运行一个Java程序，一般来说，命令行写这样：
 
-```bash
+```plain
 java -cp app.jar:a.jar:b.jar:c.jar com.liaoxuefeng.sample.Main
 ```
 
@@ -86,7 +86,7 @@ public class Main {
 
 首先，我们把工作目录切换到`oop-module`，在当前目录下编译所有的`.java`文件，并存放到`bin`目录下，命令如下：
 
-```bash
+```plain
 $ javac -d bin src/module-info.java src/com/itranswarp/sample/*.java
 ```
 
@@ -114,13 +114,13 @@ oop-module
 
 下一步，我们需要把bin目录下的所有class文件先打包成jar，在打包的时候，注意传入`--main-class`参数，让这个jar包能自己定位`main`方法所在的类：
 
-```bash
+```plain
 $ jar --create --file hello.jar --main-class com.itranswarp.sample.Main -C bin .
 ```
 
 现在我们就在当前目录下得到了`hello.jar`这个jar包，它和普通jar包并无区别，可以直接使用命令`java -jar hello.jar`来运行它。但是我们的目标是创建模块，所以，继续使用JDK自带的`jmod`命令把一个jar包转换成模块：
 
-```bash
+```plain
 $ jmod create --class-path hello.jar hello.jmod
 ```
 
@@ -130,20 +130,20 @@ $ jmod create --class-path hello.jar hello.jmod
 
 要运行一个jar，我们使用`java -jar xxx.jar`命令。要运行一个模块，我们只需要指定模块名。试试：
 
-```bash
+```plain
 $ java --module-path hello.jmod --module hello.world
 ```
 
 结果是一个错误：
 
-```bash
+```plain
 Error occurred during initialization of boot layer
 java.lang.module.FindException: JMOD format not supported at execution time: hello.jmod
 ```
 
 原因是`.jmod`不能被放入`--module-path`中。换成`.jar`就没问题了：
 
-```bash
+```plain
 $ java --module-path hello.jar --module hello.world
 Hello, xml!
 ```
@@ -158,7 +158,7 @@ Hello, xml!
 
 现在，JRE自身的标准库已经分拆成了模块，只需要带上程序用到的模块，其他的模块就可以被裁剪掉。怎么裁剪JRE呢？并不是说把系统安装的JRE给删掉部分模块，而是“复制”一份JRE，但只带上用到的模块。为此，JDK提供了`jlink`命令来干这件事。命令如下：
 
-```bash
+```plain
 $ jlink --module-path hello.jmod --add-modules java.base,java.xml,hello.world --output jre/
 ```
 
@@ -166,7 +166,7 @@ $ jlink --module-path hello.jmod --add-modules java.base,java.xml,hello.world --
 
 现在，在当前目录下，我们可以找到`jre`目录，这是一个完整的并且带有我们自己`hello.jmod`模块的JRE。试试直接运行这个JRE：
 
-```bash
+```plain
 $ jre/bin/java --module hello.world
 Hello, xml!
 ```

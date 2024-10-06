@@ -63,7 +63,7 @@ public class Main {
 
 要执行`assert`语句，必须给Java虚拟机传递`-enableassertions`（可简写为`-ea`）参数启用断言。所以，上述程序必须在命令行下运行才有效果：
 
-```bash
+```plain
 $ java -ea Main.java
 Exception in thread "main" java.lang.AssertionError
 	at Main.main(Main.java:5)

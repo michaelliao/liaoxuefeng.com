@@ -38,7 +38,7 @@ hello.o: hello.c
 
 查找`main.o`也是类似的匹配过程，于是我们执行`make`，就可以用模式规则完成编译：
 
-```bash
+```plain
 $ make
 compiling hello.c...
 cc -c -o hello.o hello.c

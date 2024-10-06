@@ -103,7 +103,7 @@ try (InputStream input = new FileInputStream("input.txt");
 
 请利用`InputStream`和`OutputStream`，编写一个复制文件的程序，它可以带参数运行：
 
-```bash
+```plain
 java CopyFile.java source.txt copy.txt
 ```
 

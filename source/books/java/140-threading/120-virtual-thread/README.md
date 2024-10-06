@@ -171,7 +171,7 @@ for (int i=0; i<100000; i++) {
 
 最后注意，虚拟线程在Java 21正式发布，在Java 19/20是预览功能，默认关闭，需要添加参数`--enable-preview`启用：
 
-```bash
+```plain
 java --source 19 --enable-preview Main.java
 ```
 

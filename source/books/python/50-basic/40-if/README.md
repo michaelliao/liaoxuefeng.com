@@ -87,7 +87,7 @@ else:
 
 输入`1982`，结果报错：
 
-```bash
+```plain
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: unorderable types: str() > int()
@@ -106,7 +106,7 @@ else:
 
 再次运行，就可以得到正确地结果。但是，如果输入`abc`呢？又会得到一个错误信息：
 
-```bash
+```plain
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: invalid literal for int() with base 10: 'abc'

@@ -15,7 +15,7 @@ clean:
 
 执行`make`，输出如下：
 
-```bash
+```plain
 $ make
 cc    -c -o hello.o hello.c
 cc    -c -o main.o main.c

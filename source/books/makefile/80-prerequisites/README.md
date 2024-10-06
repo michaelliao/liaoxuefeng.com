@@ -6,7 +6,7 @@
 
 但是，要识别出`.c`文件的头文件依赖，可以用GCC提供的`-MM`参数：
 
-```bash
+```plain
 $ cc -MM main.c
 main.o: main.c hello.h
 ```
@@ -57,7 +57,7 @@ include $(DEPS)
 
 运行`make`，首次输出如下：
 
-```bash
+```plain
 $ make
 Makefile:31: hello.d: No such file or directory
 Makefile:31: main.d: No such file or directory
@@ -97,7 +97,7 @@ main.o main.d : main.c hello.h
 
 改动`hello.h`，再次运行`make`，可以触发`main.c`的编译：
 
-```bash
+```plain
 $ make
 rm -f main.d; \
         cc -MM main.c >main.d.tmp; \

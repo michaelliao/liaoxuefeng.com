@@ -58,13 +58,13 @@ MySQL安装后会自动在后台运行。为了验证MySQL安装是否正确，�
 
 首先安装[Docker Desktop](https://www.docker.com/products/docker-desktop/)，然后在命令行输入以下命令拉取MySQL最新版：
 
-```bash
+```plain
 $ docker pull mysql
 ```
 
 拉取完成后，输入以下命令直接启动MySQL服务器：
 
-```bash
+```plain
 $ docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -v /Users/liaoxuefeng/mysql-data:/var/lib/mysql mysql
 ```
 

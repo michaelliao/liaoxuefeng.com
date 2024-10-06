@@ -26,7 +26,7 @@ def lazy_sum(*args):
 
 当我们调用`lazy_sum()`时，返回的并不是求和结果，而是求和函数：
 
-```bash
+```plain
 >>> f = lazy_sum(1, 3, 5, 7, 9)
 >>> f
 <function lazy_sum.<locals>.sum at 0x101c6ed90>
@@ -34,7 +34,7 @@ def lazy_sum(*args):
 
 调用函数`f`时，才真正计算求和的结果：
 
-```bash
+```plain
 >>> f()
 25
 ```
@@ -43,7 +43,7 @@ def lazy_sum(*args):
 
 请再注意一点，当我们调用`lazy_sum()`时，每次调用都会返回一个新的函数，即使传入相同的参数：
 
-```bash
+```plain
 >>> f1 = lazy_sum(1, 3, 5, 7, 9)
 >>> f2 = lazy_sum(1, 3, 5, 7, 9)
 >>> f1==f2
@@ -74,7 +74,7 @@ f1, f2, f3 = count()
 
 你可能认为调用`f1()`，`f2()`和`f3()`结果应该是`1`，`4`，`9`，但实际结果是：
 
-```bash
+```plain
 >>> f1()
 9
 >>> f2()
@@ -105,7 +105,7 @@ def count():
 
 再看看结果：
 
-```bash
+```plain
 >>> f1, f2, f3 = count()
 >>> f1()
 1

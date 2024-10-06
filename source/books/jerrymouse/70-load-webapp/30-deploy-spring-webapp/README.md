@@ -103,7 +103,7 @@ public class AppConfig {
 
 用Maven编译`spring-webapp`，得到`spring-webapp-1.0.war`文件。用以下命令运行：
 
-```bash
+```plain
 $ java -jar /path/to/jerrymouse-1.0.0.jar -w /path/to/spring-webapp-1.0.war
 ```
 

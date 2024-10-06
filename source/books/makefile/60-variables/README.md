@@ -101,7 +101,7 @@ world.out: hello.o main.o
 
 执行结果输出如下：
 
-```bash
+```plain
 $@ = world.out
 $< = hello.o
 $^ = hello.o main.o

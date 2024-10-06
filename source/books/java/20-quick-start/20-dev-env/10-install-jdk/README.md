@@ -27,7 +27,7 @@ C:\Program Files\Java\jdk-23
 
 在Mac下，它在`~/.bash_profile`或`~/.zprofile`里，它是：
 
-```bash
+```plain
 export JAVA_HOME=`/usr/libexec/java_home -v 23`
 ```
 
@@ -39,7 +39,7 @@ Path=%JAVA_HOME%\bin;<现有的其他路径>
 
 在Mac下，它在`~/.bash_profile`或`~/.zprofile`里，长这样：
 
-```bash
+```plain
 export PATH=$JAVA_HOME/bin:$PATH
 ```
 

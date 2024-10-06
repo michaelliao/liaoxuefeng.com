@@ -89,7 +89,7 @@ a-maven-project
 
 要安装Maven，可以从[Maven官网](https://maven.apache.org/)下载最新的Maven 3.9.x，然后在本地解压，设置几个环境变量：
 
-```bash
+```plain
 M2_HOME=/path/to/maven-3.9.x
 PATH=$PATH:$M2_HOME/bin
 ```

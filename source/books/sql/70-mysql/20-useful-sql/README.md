@@ -66,7 +66,7 @@ INSERT INTO statistics (class_id, average) SELECT class_id, AVG(score) FROM stud
 
 确保`INSERT`语句的列和`SELECT`语句的列能一一对应，就可以在`statistics`表中直接保存查询的结果：
 
-```bash
+```plain
 > SELECT * FROM statistics;
 +----+----------+--------------+
 | id | class_id | average      |

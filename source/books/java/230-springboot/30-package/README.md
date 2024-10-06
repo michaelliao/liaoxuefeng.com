@@ -18,13 +18,13 @@
 
 无需任何配置，Spring Boot的这款插件会自动定位应用程序的入口Class，我们执行以下Maven命令即可打包：
 
-```bash
+```plain
 $ mvn clean package
 ```
 
 以`springboot-exec-jar`项目为例，打包后我们在`target`目录下可以看到两个jar文件：
 
-```bash
+```plain
 $ ls
 classes
 generated-sources
@@ -36,7 +36,7 @@ springboot-exec-jar-1.0-SNAPSHOT.jar.original
 
 其中，`springboot-exec-jar-1.0-SNAPSHOT.jar.original`是Maven标准打包插件打的jar包，它只包含我们自己的Class，不包含依赖，而`springboot-exec-jar-1.0-SNAPSHOT.jar`是Spring Boot打包插件创建的包含依赖的jar，可以直接运行：
 
-```bash
+```plain
 $ java -jar springboot-exec-jar-1.0-SNAPSHOT.jar
 ```
 

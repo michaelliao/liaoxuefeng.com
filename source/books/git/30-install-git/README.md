@@ -8,7 +8,7 @@
 
 首先，你可以试着输入`git`，看看系统有没有安装Git：
 
-```bash
+```plain
 $ git
 The program 'git' is currently not installed. You can install it by typing:
 sudo apt-get install git
@@ -28,7 +28,7 @@ sudo apt-get install git
 
 一是安装[homebrew](http://brew.sh/)，然后通过homebrew安装Git：
 
-```bash
+```plain
 $ brew install git
 ```
 
@@ -46,7 +46,7 @@ $ brew install git
 
 安装完成后，还需要最后一步设置，在命令行输入：
 
-```bash
+```plain
 $ git config --global user.name "Your Name"
 $ git config --global user.email "email@example.com"
 ```

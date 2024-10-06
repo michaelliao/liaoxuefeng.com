@@ -6,14 +6,14 @@
 
 以Python内置的求绝对值的函数`abs()`为例，调用该函数用以下代码：
 
-```bash
+```plain
 >>> abs(-10)
 10
 ```
 
 但是，如果只写`abs`呢？
 
-```bash
+```plain
 >>> abs
 <built-in function abs>
 ```
@@ -22,7 +22,7 @@
 
 要获得函数调用结果，我们可以把结果赋值给变量：
 
-```bash
+```plain
 >>> x = abs(-10)
 >>> x
 10
@@ -30,7 +30,7 @@
 
 但是，如果把函数本身赋值给变量呢？
 
-```bash
+```plain
 >>> f = abs
 >>> f
 <built-in function abs>
@@ -40,7 +40,7 @@
 
 如果一个变量指向了一个函数，那么，可否通过该变量来调用这个函数？用代码验证一下：
 
-```bash
+```plain
 >>> f = abs
 >>> f(-10)
 10
@@ -54,7 +54,7 @@
 
 如果把`abs`指向其他对象，会有什么情况发生？
 
-```bash
+```plain
 >>> abs = 10
 >>> abs(-10)
 Traceback (most recent call last):

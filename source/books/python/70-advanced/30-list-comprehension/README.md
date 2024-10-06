@@ -4,14 +4,14 @@
 
 举个例子，要生成list `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`可以用`list(range(1, 11))`：
 
-```bash
+```plain
 >>> list(range(1, 11))
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
 但如果要生成`[1x1, 2x2, 3x3, ..., 10x10]`怎么做？方法一是循环：
 
-```bash
+```plain
 >>> L = []
 >>> for x in range(1, 11):
 ...    L.append(x * x)
@@ -22,7 +22,7 @@
 
 但是循环太繁琐，而列表生成式则可以用一行语句代替循环生成上面的list：
 
-```bash
+```plain
 >>> [x * x for x in range(1, 11)]
 [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 ```
@@ -31,14 +31,14 @@
 
 for循环后面还可以加上if判断，这样我们就可以筛选出仅偶数的平方：
 
-```bash
+```plain
 >>> [x * x for x in range(1, 11) if x % 2 == 0]
 [4, 16, 36, 64, 100]
 ```
 
 还可以使用两层循环，可以生成全排列：
 
-```bash
+```plain
 >>> [m + n for m in 'ABC' for n in 'XYZ']
 ['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']
 ```
@@ -47,7 +47,7 @@ for循环后面还可以加上if判断，这样我们就可以筛选出仅偶数
 
 运用列表生成式，可以写出非常简洁的代码。例如，列出当前目录下的所有文件和目录名，可以通过一行代码实现：
 
-```bash
+```plain
 >>> import os # 导入os模块，模块的概念后面讲到
 >>> [d for d in os.listdir('.')] # os.listdir可以列出文件和目录
 ['.emacs.d', '.ssh', '.Trash', 'Adlm', 'Applications', 'Desktop', 'Documents', 'Downloads', 'Library', 'Movies', 'Music', 'Pictures', 'Public', 'VirtualBox VMs', 'Workspace', 'XCode']
@@ -55,7 +55,7 @@ for循环后面还可以加上if判断，这样我们就可以筛选出仅偶数
 
 `for`循环其实可以同时使用两个甚至多个变量，比如`dict`的`items()`可以同时迭代key和value：
 
-```bash
+```plain
 >>> d = {'x': 'A', 'y': 'B', 'z': 'C' }
 >>> for k, v in d.items():
 ...     print(k, '=', v)
@@ -67,7 +67,7 @@ z = C
 
 因此，列表生成式也可以使用两个变量来生成list：
 
-```bash
+```plain
 >>> d = {'x': 'A', 'y': 'B', 'z': 'C' }
 >>> [k + '=' + v for k, v in d.items()]
 ['y=B', 'x=A', 'z=C']
@@ -75,7 +75,7 @@ z = C
 
 最后把一个list中所有的字符串变成小写：
 
-```bash
+```plain
 >>> L = ['Hello', 'World', 'IBM', 'Apple']
 >>> [s.lower() for s in L]
 ['hello', 'world', 'ibm', 'apple']
@@ -87,14 +87,14 @@ z = C
 
 例如，以下代码正常输出偶数：
 
-```bash
+```plain
 >>> [x for x in range(1, 11) if x % 2 == 0]
 [2, 4, 6, 8, 10]
 ```
 
 但是，我们不能在最后的`if`加上`else`：
 
-```bash
+```plain
 >>> [x for x in range(1, 11) if x % 2 == 0 else 0]
   File "<stdin>", line 1
     [x for x in range(1, 11) if x % 2 == 0 else 0]
@@ -106,7 +106,7 @@ SyntaxError: invalid syntax
 
 另一些童鞋发现把`if`写在`for`前面必须加`else`，否则报错：
 
-```bash
+```plain
 >>> [x if x % 2 == 0 for x in range(1, 11)]
   File "<stdin>", line 1
     [x if x % 2 == 0 for x in range(1, 11)]
@@ -116,7 +116,7 @@ SyntaxError: invalid syntax
 
 这是因为`for`前面的部分是一个表达式，它必须根据`x`计算出一个结果。因此，考察表达式：`x if x % 2 == 0`，它无法根据`x`计算出结果，因为缺少`else`，必须加上`else`：
 
-```bash
+```plain
 >>> [x if x % 2 == 0 else -x for x in range(1, 11)]
 [-1, 2, -3, 4, -5, 6, -7, 8, -9, 10]
 ```
@@ -129,7 +129,7 @@ SyntaxError: invalid syntax
 
 如果list中既包含字符串，又包含整数，由于非字符串类型没有`lower()`方法，所以列表生成式会报错：
 
-```bash
+```plain
 >>> L = ['Hello', 'World', 18, 'Apple', None]
 >>> [s.lower() for s in L]
 Traceback (most recent call last):
@@ -140,7 +140,7 @@ AttributeError: 'int' object has no attribute 'lower'
 
 使用内建的`isinstance`函数可以判断一个变量是不是字符串：
 
-```bash
+```plain
 >>> x = 'abc'
 >>> y = 123
 >>> isinstance(x, str)

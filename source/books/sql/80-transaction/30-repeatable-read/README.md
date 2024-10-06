@@ -6,7 +6,7 @@
 
 我们仍然先准备好`students`表的数据：
 
-```bash
+```plain
 mysql> select * from students;
 +----+-------+
 | id | name  |

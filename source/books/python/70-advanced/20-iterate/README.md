@@ -14,7 +14,7 @@ for (i=0; i<length; i++) {
 
 `list`这种数据类型虽然有下标，但很多其他数据类型是没有下标的，但是，只要是可迭代对象，无论有无下标，都可以迭代，比如`dict`就可以迭代：
 
-```bash
+```plain
 >>> d = {'a': 1, 'b': 2, 'c': 3}
 >>> for key in d:
 ...     print(key)
@@ -30,7 +30,7 @@ b
 
 由于字符串也是可迭代对象，因此，也可以作用于`for`循环：
 
-```bash
+```plain
 >>> for ch in 'ABC':
 ...     print(ch)
 ...
@@ -43,7 +43,7 @@ C
 
 那么，如何判断一个对象是可迭代对象呢？方法是通过`collections.abc`模块的`Iterable`类型判断：
 
-```bash
+```plain
 >>> from collections.abc import Iterable
 >>> isinstance('abc', Iterable) # str是否可迭代
 True
@@ -55,7 +55,7 @@ False
 
 最后一个小问题，如果要对`list`实现类似Java那样的下标循环怎么办？Python内置的`enumerate`函数可以把一个`list`变成索引-元素对，这样就可以在`for`循环中同时迭代索引和元素本身：
 
-```bash
+```plain
 >>> for i, value in enumerate(['A', 'B', 'C']):
 ...     print(i, value)
 ...
@@ -66,7 +66,7 @@ False
 
 上面的`for`循环里，同时引用了两个变量，在Python里是很常见的，比如下面的代码：
 
-```bash
+```plain
 >>> for x, y in [(1, 1), (2, 4), (3, 9)]:
 ...     print(x, y)
 ...

@@ -51,7 +51,7 @@ DELETE FROM students;
 
 例如，分别执行删除`id=1`和`id=999`的记录：
 
-```bash
+```plain
 mysql> DELETE FROM students WHERE id=1;
 Query OK, 1 row affected (0.01 sec)
 

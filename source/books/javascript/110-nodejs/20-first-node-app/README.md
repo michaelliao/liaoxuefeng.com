@@ -23,7 +23,7 @@ console.log('Hello, world.');
 
 然后，选择一个目录，例如`C:\Workspace`，把文件保存为`hello.js`，就可以打开命令行窗口，把当前目录切换到`hello.js`所在目录，然后输入以下命令运行这个程序了：
 
-```bash
+```plain
 C:\Workspace> node hello.js
 Hello, world.
 ```
@@ -89,7 +89,7 @@ Error: Cannot find module 'C:\Workspace\hello.js'
 
 例如，在Node交互式环境下，输入：
 
-```bash
+```plain
 > 100 + 200 + 300;
 600
 ```
@@ -104,7 +104,7 @@ Error: Cannot find module 'C:\Workspace\hello.js'
 
 然后在命令行模式下执行：
 
-```bash
+```plain
 C:\Workspace> node calc.js
 ```
 
@@ -118,7 +118,7 @@ console.log(100 + 200 + 300);
 
 再执行，就可以看到结果：
 
-```bash
+```plain
 C:\Workspace> node calc.js
 600
 ```

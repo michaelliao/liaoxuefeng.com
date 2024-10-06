@@ -63,7 +63,7 @@ Network = IP & Mask = 101.202.99.0
 
 用`nslookup`可以查看域名对应的IP地址：
 
-```bash
+```plain
 $ nslookup liaoxuefeng.com
 Server:  xxx.xxx.xxx.xxx
 Address: xxx.xxx.xxx.xxx#53

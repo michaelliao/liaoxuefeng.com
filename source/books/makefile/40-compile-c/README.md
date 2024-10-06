@@ -83,7 +83,7 @@ clean:
 
 执行`make`，输出如下：
 
-```bash
+```plain
 $ make
 cc -c hello.c
 cc -c main.c
@@ -92,7 +92,7 @@ cc -o world.out hello.o main.o
 
 在当前目录下可以看到`hello.o`、`main.o`以及最终的可执行程序`world.out`。执行`world.out`：
 
-```bash
+```plain
 $ ./world.out 
 start...
 hello, world!
@@ -103,7 +103,7 @@ exit.
 
 修改`hello.c`，把输出改为`"hello, bob!\n"`，再执行`make`，观察输出：
 
-```bash
+```plain
 $ make
 cc -c hello.c
 cc -o world.out hello.o main.o
@@ -111,7 +111,7 @@ cc -o world.out hello.o main.o
 
 仅重新编译了`hello.c`，并未编译`main.c`。由于`hello.o`已更新，所以，仍然要重新生成`world.out`。执行`world.out`：
 
-```bash
+```plain
 $ ./world.out 
 start...
 hello, bob!
@@ -129,7 +129,7 @@ void hello();
 
 以及`hello.c`，再次执行`make`：
 
-```bash
+```plain
 $ make
 cc -c hello.c
 cc -c main.c
@@ -140,7 +140,7 @@ cc -o world.out hello.o main.o
 
 执行`make clean`会删除所有的`.o`文件，以及可执行文件`world.out`，再次执行`make`就会强制全量编译：
 
-```bash
+```plain
 $ make clean && make
 rm -f *.o world.out
 cc -c hello.c

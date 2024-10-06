@@ -34,7 +34,7 @@ work
 
 然后用`javac`编译`Main.java`，编译的时候要指定`classpath`，不然编译器找不到我们引用的`org.apache.commons.logging`包。编译命令如下：
 
-```bash
+```plain
 javac -cp commons-logging-1.2.jar Main.java
 ```
 
@@ -49,7 +49,7 @@ work
 
 现在可以执行这个`Main.class`，使用`java`命令，也必须指定`classpath`，命令如下：
 
-```bash
+```plain
 java -cp .;commons-logging-1.2.jar Main
 ```
 
@@ -57,7 +57,7 @@ java -cp .;commons-logging-1.2.jar Main
 
 如果在Linux或macOS下运行，注意`classpath`的分隔符不是`;`，而是`:`：
 
-```bash
+```plain
 java -cp .:commons-logging-1.2.jar Main
 ```
 

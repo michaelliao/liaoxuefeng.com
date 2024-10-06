@@ -69,7 +69,7 @@ m.txt: a.txt b.txt
 
 在当前目录创建`a.txt`、`b.txt`和`c.txt`，输入一些内容，执行`make`：
 
-```bash
+```plain
 $ make
 cat a.txt b.txt > m.txt
 cat m.txt c.txt > x.txt
@@ -85,7 +85,7 @@ cat m.txt c.txt > x.txt
 
 如果我们再次运行`make`，输出如下：
 
-```bash
+```plain
 $ make
 make: `x.txt' is up to date.
 ```
@@ -98,7 +98,7 @@ make使用文件的创建和修改时间来判断是否应该更新一个目标�
 
 修改`c.txt`后，运行`make`，会触发`x.txt`的更新：
 
-```bash
+```plain
 $ make
 cat m.txt c.txt > x.txt
 ```
@@ -123,7 +123,7 @@ clean:
 
 `clean`规则与我们前面编写的规则有所不同，它没有依赖文件，因此，要执行`clean`，必须用命令`make clean`：
 
-```bash
+```plain
 $ make clean
 rm -f m.txt
 rm -f x.txt
@@ -181,7 +181,7 @@ cd_ok:
 
 再执行`cd_ok`目标就得到了预期结果：
 
-```bash
+```plain
 $ make cd_ok
 pwd; cd ..; pwd
 /home/ubuntu/makefile-tutorial/v1
@@ -239,7 +239,7 @@ has_error:
 
 执行上述目标，输出如下：
 
-```bash
+```plain
 $ make has_error
 rm zzz.txt
 rm: zzz.txt: No such file or directory
@@ -258,7 +258,7 @@ ignore_error:
 
 执行上述目标，输出如下：
 
-```bash
+```plain
 $ make ignore_error
 rm zzz.txt
 rm: zzz.txt: No such file or directory

@@ -4,14 +4,14 @@
 
 Python内置的`sorted()`函数就可以对list进行排序：
 
-```bash
+```plain
 >>> sorted([36, 5, -12, 9, -21])
 [-21, -12, 5, 9, 36]
 ```
 
 此外，`sorted()`函数也是一个高阶函数，它还可以接收一个`key`函数来实现自定义的排序，例如按绝对值大小排序：
 
-```bash
+```plain
 >>> sorted([36, 5, -12, 9, -21], key=abs)
 [5, 9, -12, -21, 36]
 ```
@@ -34,7 +34,7 @@ result sort => [5, 9, -12, -21, 36]
 
 我们再看一个字符串排序的例子：
 
-```bash
+```plain
 >>> sorted(['bob', 'about', 'Zoo', 'Credit'])
 ['Credit', 'Zoo', 'about', 'bob']
 ```
@@ -45,14 +45,14 @@ result sort => [5, 9, -12, -21, 36]
 
 这样，我们给`sorted`传入key函数，即可实现忽略大小写的排序：
 
-```bash
+```plain
 >>> sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower)
 ['about', 'bob', 'Credit', 'Zoo']
 ```
 
 要进行反向排序，不必改动key函数，可以传入第三个参数`reverse=True`：
 
-```bash
+```plain
 >>> sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True)
 ['Zoo', 'Credit', 'bob', 'about']
 ```
