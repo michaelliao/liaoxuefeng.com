@@ -123,7 +123,7 @@ package_sample
 
 ![hello.zip.invalid](bad-jar.jpg)
 
-说明打包打得有问题，JVM仍然无法从jar包中查找正确的`class`，原因是`hong.Person`必须按`hong/Person.class`存放，而不是`bin/hong/Person.class`。
+上面的`hello.zip`包含有`bin`目录，说明打包打得有问题，JVM仍然无法从jar包中查找正确的`class`，原因是`hong.Person`必须按`hong/Person.class`存放，而不是`bin/hong/Person.class`。
 
 jar包还可以包含一个特殊的`/META-INF/MANIFEST.MF`文件，`MANIFEST.MF`是纯文本，可以指定`Main-Class`和其它信息。JVM会自动读取这个`MANIFEST.MF`文件，如果存在`Main-Class`，我们就不必在命令行指定启动的类名，而是用更方便的命令：
 
@@ -131,14 +131,14 @@ jar包还可以包含一个特殊的`/META-INF/MANIFEST.MF`文件，`MANIFEST.MF
 java -jar hello.jar
 ```
 
-在大型项目中，不可能手动编写`MANIFEST.MF`文件，再手动创建zip包。Java社区提供了大量的开源构建工具，例如[Maven](../../maven/index.html)，可以非常方便地创建jar包。
+在大型项目中，不可能手动编写`MANIFEST.MF`文件，再手动创建jar包。Java社区提供了大量的开源构建工具，例如[Maven](../../maven/index.html)，可以非常方便地创建jar包。
 
 ### 小结
 
 JVM通过环境变量`classpath`决定搜索`class`的路径和顺序；
 
-不推荐设置系统环境变量`classpath`，始终建议通过`-cp`命令传入；
+强烈建议**不要设置**系统环境变量`classpath`，建议始终通过`-cp`命令传入；
 
-jar包相当于目录，可以包含很多`.class`文件，方便下载和使用；
+jar包本质上是zip格式，相当于目录，可以包含很多`.class`文件，方便下载和使用；
 
 `MANIFEST.MF`文件可以提供jar包的信息，如`Main-Class`，这样可以直接运行jar包。
