@@ -163,7 +163,7 @@ public abstract class AfterInvocationHandlerAdapter implements InvocationHandler
 
 截止目前，客户端只需要定义带有`@Around`注解的Bean，就能自动触发AOP。我们思考下Spring的事务机制，其实也是AOP拦截，不过它的注解是`@Transactional`。如果要扩展Annotation，即能自定义注解来启动AOP，怎么做？
 
-假设我们后续编写了一个事务模块，提供注解`@Transactional`，那么，要启动AOP，就必须仿照`AroundProxyBeanPostProcessor`，提供一个`TransactionProxyBeanPostProcessor`，不过复制代码太麻烦了，我们可以改造一下`AroundProxyBeanPostProcessor`，用范型代码处理Annotation，先抽象出一个`AnnotationProxyBeanPostProcessor`：
+假设我们后续编写了一个事务模块，提供注解`@Transactional`，那么，要启动AOP，就必须仿照`AroundProxyBeanPostProcessor`，提供一个`TransactionProxyBeanPostProcessor`，不过复制代码太麻烦了，我们可以改造一下`AroundProxyBeanPostProcessor`，用泛型代码处理Annotation，先抽象出一个`AnnotationProxyBeanPostProcessor`：
 
 ```java
 public abstract class AnnotationProxyBeanPostProcessor<A extends Annotation> implements BeanPostProcessor {
