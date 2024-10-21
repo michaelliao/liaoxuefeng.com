@@ -67,9 +67,7 @@ while (en.hasMoreElements()) {
 几个要点：
 
 1. ClassLoader首先从`Thread.getContextClassLoader()`获取，如果获取不到，再从当前Class获取，因为Web应用的ClassLoader不是JVM提供的基于Classpath的ClassLoader，而是Servlet容器提供的ClassLoader，它不在默认的Classpath搜索，而是在`/WEB-INF/classes`目录和`/WEB-INF/lib`的所有jar包搜索，从`Thread.getContextClassLoader()`可以获取到Servlet容器专属的ClassLoader；
-
 2. Windows和Linux/macOS的路径分隔符不同，前者是`\`，后者是`/`，需要正确处理；
-
 3. 扫描目录时，返回的路径可能是`abc/xyz`，也可能是`abc/xyz/`，需要注意处理末尾的`/`。
 
 这样我们就完成了能扫描指定包以及子包下所有文件的`ResourceResolver`。
