@@ -107,5 +107,6 @@ if __name__ == "__main__":
 
 但是，把AI当作一个时刻在线的编程助手，用好AI，可以更快更好地理解和掌握算法，提高自己的编程能力和编程效率。
 
-如果你想现在就体验MarsCode AI高效刷题，可以[点这里开始](https://www.marscode.cn/practice-intro?utm_source=content&utm_medium=liaoxuefeng&utm_campaign=shuati
-)，目前完全免费！
+如果你想现在就体验MarsCode AI高效刷题，可以点这里开始，目前完全免费：
+
+[https://www.marscode.cn](https://www.marscode.cn/practice-intro?utm_source=content&utm_medium=liaoxuefeng&utm_campaign=shuati)
