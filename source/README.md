@@ -1,6 +1,6 @@
 # 首页
 
-廖雪峰的官方网站为您提供原创精品中文教程：
+<h4>廖雪峰的官方网站为您提供原创精品中文教程：</h4>
 
 <div class="home-book-list">
     <!-- java -->
@@ -27,7 +27,7 @@
                 Python教程
             </div>
             <div class="home-book-list-desc">
-                小白的Python新手教程，基于最新Python 3！
+                小白的Python新手教程，基于最新Python 3版本！
             </div>
         </a>
     </div>
@@ -55,7 +55,7 @@
                 SQL教程
             </div>
             <div class="home-book-list-desc">
-                小白的零基础SQL教程，可在线跑SQL！
+                小白的零基础SQL教程，可以在线跑SQL！
             </div>
         </a>
     </div>
@@ -111,7 +111,7 @@
                 Git教程
             </div>
             <div class="home-book-list-desc">
-                最适合小白用户入门的浅显易懂的Git教程！
+                最适合小白入门的浅显易懂的Git教程！
             </div>
         </a>
     </div>
@@ -131,7 +131,7 @@
     </div>
 </div>
 
-最新发表的博客文章：
+<h4>最新发表的博客文章：</h4>
 
 <div id="home-blog-list" class="home-blog-list"></div>
 
