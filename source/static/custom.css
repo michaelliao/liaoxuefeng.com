@@ -160,7 +160,7 @@ div.git-explorer>div.git-explorer-frame>div.git-explorer-frame-code {
 }
 
 div.git-explorer>div.git-explorer-frame>div.git-explorer-frame-code {
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 div.git-explorer>div.git-explorer-frame>div.git-explorer-frame-code>pre {
