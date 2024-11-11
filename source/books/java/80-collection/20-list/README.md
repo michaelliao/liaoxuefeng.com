@@ -146,7 +146,7 @@ List<Integer> list = List.of(1, 2, 5);
 
 ### 遍历List
 
-和数组类型，我们要遍历一个`List`，完全可以用`for`循环根据索引配合`get(int)`方法遍历：
+和数组类型类似，我们要遍历一个`List`，完全可以用`for`循环根据索引配合`get(int)`方法遍历：
 
 ```java
 import java.util.List;
