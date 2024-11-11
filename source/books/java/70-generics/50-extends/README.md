@@ -149,7 +149,7 @@ public class Main {
         Number last = p.getLast();
         p.setFirst(new Integer(first.intValue() + 100));
         p.setLast(new Integer(last.intValue() + 100));
-        return p.getFirst().intValue() + p.getFirst().intValue();
+        return p.getFirst().intValue() + p.getLast().intValue();
     }
 }
 
