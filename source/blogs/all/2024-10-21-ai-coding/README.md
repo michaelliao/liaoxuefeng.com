@@ -6,7 +6,7 @@ AI编程，最近正在风靡全球。作为开发人员，使用AI编程，可�
 
 ### 安装MarsCode AI
 
-使用MarsCode AI，先从[官网](https://www.marscode.cn/home?utm_source=content&utm_medium=liaoxuefeng&utm_campaign=article)免费注册并登录。MarsCode AI提供了三种使用方式：集成到VS Code，集成到JetBrain的IDE，以及直接在浏览器中使用云IDE。这里我们以VS Code为例，看看MarsCode AI的表现。
+使用MarsCode AI，先从[官网](https://www.marscode.cn/home?utm_source=problemset&utm_medium=liaoxuefeng&utm_campaign=article)免费注册并登录。MarsCode AI提供了三种使用方式：集成到VS Code，集成到JetBrain的IDE，以及直接在浏览器中使用云IDE。这里我们以VS Code为例，看看MarsCode AI的表现。
 
 在VS Code中安装MarsCode AI插件，只需要在插件市场中搜索`MarsCode`，点击安装，重启后在VS Code左侧面板找到MarsCode，设置语言为中文，登录后即可开始使用：
 
@@ -128,4 +128,4 @@ static void print_dir(char *buffer)
 
 如果你想现在就体验用MarsCode AI辅助编程，可以点这里开始，目前完全免费：
 
-[https://www.marscode.cn](https://www.marscode.cn/home?utm_source=content&utm_medium=liaoxuefeng&utm_campaign=article)
+[https://www.marscode.cn](https://www.marscode.cn/home?utm_source=problemset&utm_medium=liaoxuefeng&utm_campaign=article)

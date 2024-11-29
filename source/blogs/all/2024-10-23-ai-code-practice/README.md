@@ -4,11 +4,9 @@
 
 不过，在LeetCode上刷题，我们往往会遇到一些问题，比如题目太难，没有思路，即使直接参考别人给出的最终代码，也无法完全理解。
 
-这时，我们可以用豆包MarsCode AI的[刷题助手](https://www.marscode.cn/practice-intro?utm_source=content&utm_medium=liaoxuefeng&utm_campaign=shuati
-)来帮助我们，在刷题过程中，遇到代码问题，先让AI给出思路，不行再给出参考代码，这样一步一步地完成，可以帮助我们更好地理解和掌握算法。
+这时，我们可以用豆包MarsCode AI的[刷题助手](https://juejin.cn/problemset?utm_source=practice&utm_medium=liaoxuefeng&utm_campaign=competition)来帮助我们，在刷题过程中，遇到代码问题，先让AI给出思路，不行再给出参考代码，这样一步一步地完成，可以帮助我们更好地理解和掌握算法。
 
-在MarsCode上刷题不需要安装任何软件，直接[在线打开](https://www.marscode.cn/practice-intro?utm_source=content&utm_medium=liaoxuefeng&utm_campaign=shuati
-)：
+在MarsCode上刷题不需要安装任何软件，直接[在线打开](https://juejin.cn/problemset?utm_source=practice&utm_medium=liaoxuefeng&utm_campaign=competition)：
 
 ![ui](ui.png)
 
@@ -109,4 +107,4 @@ if __name__ == "__main__":
 
 如果你想现在就体验MarsCode AI高效刷题，可以点这里开始，目前完全免费：
 
-[https://www.marscode.cn](https://www.marscode.cn/practice-intro?utm_source=content&utm_medium=liaoxuefeng&utm_campaign=shuati)
+[https://www.marscode.cn](https://juejin.cn/problemset?utm_source=practice&utm_medium=liaoxuefeng&utm_campaign=competition)
