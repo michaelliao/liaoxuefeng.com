@@ -131,7 +131,7 @@ jar包还可以包含一个特殊的`/META-INF/MANIFEST.MF`文件，`MANIFEST.MF
 java -jar hello.jar
 ```
 
-在大型项目中，不可能手动编写`MANIFEST.MF`文件，再手动创建jar包。Java社区提供了大量的开源构建工具，例如[Maven](../../maven/index.html)，可以非常方便地创建jar包。
+在大型项目中，不可能手动编写`MANIFEST.MF`文件，再手动创建jar包。Java社区提供了大量的开源构建工具，例如[Maven](../../../maven/index.html)，可以非常方便地创建jar包。
 
 ### 小结
 
