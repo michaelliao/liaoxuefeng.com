@@ -370,3 +370,10 @@ void set_servo_pwm(uint8_t channel, int16_t angle)
 ```video ratio=16:9
 https://www.bilibili.com/video/BV1EWz1YaE7P/
 ```
+
+### 源码
+
+本项目的SolidWorks设计模型和控制代码完全开源，需要的同学自取：
+
+[https://github.com/michaelliao/robotic-arm](https://github.com/michaelliao/robotic-arm)
+
