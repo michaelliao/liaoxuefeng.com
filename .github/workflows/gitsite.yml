@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: Setup Env
         run: |
-          echo "RELEASE_AT=`echo ${{ github.event.head_commit.timestamp }} | sed 's/[:+]/-/g'`" >> "$GITHUB_ENV"
+          echo "RELEASE_AT=`echo ${{ github.event.head_commit.timestamp }} | sed 's/[:+]/-/g' | cut -c1-19`" >> "$GITHUB_ENV"
           echo "SHORT_SHA=`echo ${{ github.sha }} | cut -c1-7`" >> "$GITHUB_ENV"
       - name: Print Env
         run: |
@@ -59,8 +59,8 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: site.zip
-          tag: ${{ github.ref }}.${{ github.sha }}
-          release_name: site-source.${{ env.SHORT_SHA }}
+          tag: ${{ env.RELEASE_AT }}
+          release_name: site-source.${{ env.RELEASE_AT }}
           body: Site source code including HTML, styles, scripts, images, etc.
           overwrite: true
       - name: Sync To Aliyun
