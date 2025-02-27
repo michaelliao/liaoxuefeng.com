@@ -13,26 +13,26 @@ Gitee的免费版本也提供私有库功能，只是有5人的成员上限。
 Gitee企业版正在优惠中：
 
 - 买1年送1个月：优惠码`lhkYPzFJ`
-- 买2年送3个月：优惠码`YGyEBFZC`
-- 买3年送6个月：优惠码`qBNwfvET`
+- 买2年送3个月：优惠码`tHyhJjeE`
+- 买3年送6个月：优惠码`N6KOc5BG`
 
 &gt;&gt; [Gitee企业版专属购买通道](https://gitee.com/enterprises?invite_code=Z2l0ZWUtMzgzMTE1) <<
 
 小提示：记得先复制优惠码信息，在购买页面输入优惠码即可。
 
-使用Gitee和使用GitHub类似，我们在Gitee上注册账号并登录后，需要先上传自己的SSH公钥。选择右上角用户头像 -> 菜单“修改资料”，然后选择“SSH公钥”，填写一个便于识别的标题，然后把用户主目录下的`.ssh/id_rsa.pub`文件的内容粘贴进去：
+使用Gitee和使用GitHub类似，我们在Gitee上注册账号并登录后，需要先上传自己的SSH公钥。选择右上角用户头像 -> 菜单“设置”，然后在左侧菜单选择“SSH公钥”，填写一个便于识别的标题，然后把用户主目录下的`.ssh/id_rsa.pub`文件的内容粘贴进去：
 
-![gitee-add-ssh-key](add-key.jpg)
+![gitee-add-ssh-key](add-key.png)
 
 点击“确定”即可完成并看到刚才添加的Key：
 
-![gitee-key](keys.jpg)
+![gitee-key](keys.png)
 
 如果我们已经有了一个本地的git仓库（例如，一个名为learngit的本地库），如何把它关联到Gitee的远程库上呢？
 
-首先，我们在Gitee上创建一个新的项目，选择右上角用户头像 -> 菜单“控制面板”，然后点击“创建项目”：
+首先，我们在Gitee上创建一个新的项目，选择右上角用户头像旁的加号，然后点击“新建仓库”：
 
-![gitee-new-repo](create-repo.jpg)
+![gitee-new-repo](create-repo.png)
 
 项目名称最好与本地库保持一致。
 
