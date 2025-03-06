@@ -25,7 +25,7 @@ x64 MSI Installer           Download
 C:\Program Files\Java\jdk-23
 ```
 
-在Mac下，它在`~/.bash_profile`或`~/.zprofile`里，它是：
+在macOS下，它在`~/.bash_profile`或`~/.zprofile`里，它是：
 
 ```plain
 export JAVA_HOME=`/usr/libexec/java_home -v 23`
@@ -37,49 +37,46 @@ export JAVA_HOME=`/usr/libexec/java_home -v 23`
 Path=%JAVA_HOME%\bin;<现有的其他路径>
 ```
 
-在Mac下，它在`~/.bash_profile`或`~/.zprofile`里，长这样：
+在macOS下，它在`~/.bash_profile`或`~/.zprofile`里，长这样：
 
 ```plain
 export PATH=$JAVA_HOME/bin:$PATH
 ```
 
-把`JAVA_HOME`的`bin`目录添加到`PATH`中是为了在任意文件夹下都可以运行`java`。打开命令提示符窗口，输入命令`java -version`，如果一切正常，你会看到如下输出：
+把`JAVA_HOME`的`bin`目录添加到`PATH`中是为了在任意文件夹下都可以运行`java`。打开PowerShell窗口，输入命令`java -version`，如果一切正常，你会看到如下输出：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    - □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> java -version                                      │
-│java version "23" ...                                   │
-│Java(TM) SE Runtime Environment                         │
-│Java HotSpot(TM) 64-Bit Server VM                       │
-│                                                        │
-│C:\>                                                    │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> java -version                   │
+│java version "23" ...                                    │
+│Java(TM) SE Runtime Environment                          │
+│Java HotSpot(TM) 64-Bit Server VM                        │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 如果你看到的版本号不是`23`，而是`15`、`1.8`之类，说明系统存在多个JDK，且默认JDK不是JDK 23，需要把JDK 23提到`PATH`前面。
 
-如果你得到一个错误输出：
+如果你得到一个错误输出：“无法将“java”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。”：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    - □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> java -version                                      │
-│'java' is not recognized as an internal or external comm│
-│and, operable program or batch file.                    │
-│                                                        │
-│C:\>                                                    │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> java -version                   │
+│java : The term 'java' is not recognized as ...          │
+│...                                                      │
+│    + FullyQualifiedErrorId : CommandNotFoundException   │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 这是因为系统无法找到Java虚拟机的程序`java.exe`，需要检查`JAVA_HOME`和`PATH`的配置。
