@@ -10,19 +10,27 @@
 
 ### 在Windows上安装Python
 
-首先，根据你的Windows版本（64位还是32位）从Python的官方网站下载Python 3对应的[安装程序](https://www.python.org/downloads/windows/)，然后，运行下载的exe安装包：
+在Windows上安装Python，有两种方法。
+
+方法一，可以直接从Python的官方网站下载Python 3对应的[Windows安装程序](https://www.python.org/downloads/windows/)，推荐下载`Windows installer (64-bit)`，然后，运行下载的`python-3.x-amd64.exe`安装包：
 
 ![install-py3](win-version.png)
 
 特别要注意勾上`Add Python 3.x to PATH`，然后点“Install Now”即可完成安装。
 
-### 在Mac上安装Python
+方法二，先安装一个包管理器，推荐[Scoop](https://scoop.sh/)，然后在PowerShell中通过以下命令安装Python：
 
-如果你正在使用Mac，那么系统自带的Python版本是2.7。要安装最新的Python 3，有两个方法：
+```plain
+C:\> scoop install python
+```
+
+### 在macOS上安装Python
+
+如果你正在使用Mac，那么系统自带的Python版本是2.x。要安装最新的Python 3.x，有两个方法：
 
 方法一：从Python官网下载Python 3 macOS版的[安装程序](https://www.python.org/downloads/macos/)，下载后双击运行并安装；
 
-方法二：如果安装了[Homebrew](https://brew.sh/)，直接通过命令`brew install python3`安装即可。
+方法二：如果安装了包管理器[Homebrew](https://brew.sh/)，直接通过命令`brew install python3`安装即可。
 
 ### 在Linux上安装Python
 
@@ -32,46 +40,48 @@
 
 ### 运行Python
 
-安装成功后，打开命令提示符窗口，敲入`python`后，会出现两种情况：
+```alert type=notice title=注意
+Python在Linux/macOS的命令是`python3`，在Windows下的命令是`python`，后续请自行根据操作系统选择合适的命令。
+```
+
+安装成功后，打开命令行窗口（Windows下打开PowerShell），敲入`python`后，会出现两种情况：
 
 情况一：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    - □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> python                                             │
-│Python 3.12 ...                                         │
-│[MSC v... 64 bit (AMD64)] on win32                      │
-│Type "help", "copyright", "credits" or "license"...     │
-│>>> _                                                   │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> python                          │
+│Python 3.13 ...                                          │
+│Type "help", "copyright", "credits" or "license" for ... │
+│>>> _                                                    │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
-看到类似`Python 3.xxx`的输出，就说明Python安装成功！
+看到类似`Python 3.x`的输出，就说明Python安装成功！
 
-你看到提示符`>>>`就表示我们已经在Python交互式环境中了，可以输入任何Python代码，回车后会立刻得到执行结果。现在，输入`exit()`并回车，就可以退出Python交互式环境（直接关掉命令行窗口也可以）。
+看到提示符变为`>>>`就表示我们已经在Python交互式环境中了，可以输入任何Python代码，回车后会立刻得到执行结果。现在，输入`exit()`并回车，就可以退出Python交互式环境（直接关掉命令行窗口也可以）。
 
-情况二：得到一个错误：
+情况二：得到一个错误：“无法将“python”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。”：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    - □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> python                                             │
-│'python' is not recognized as an internal or external co│
-│mmand, operable program or batch file.                  │
-│                                                        │
-│C:\> _                                                  │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> python                          │
+│python : The term 'python' is not recognized as ...      │
+│...                                                      │
+│    + FullyQualifiedErrorId : CommandNotFoundException   │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 这是因为Windows会根据一个`Path`的环境变量设定的路径去查找`python.exe`，如果没找到，就会报错。如果在安装时漏掉了勾选`Add Python 3.x to PATH`，那就要手动把`python.exe`所在的路径添加到Path中。
@@ -82,6 +92,8 @@
 
 学会如何把Python安装到计算机中，并且熟练打开和退出Python交互式环境；
 
-在Windows上运行Python时，请先启动命令行，然后运行`python`；
+在Windows上运行Python时，请先启动PowerShell命令行，然后运行`python`；
 
-在Mac和Linux上运行Python时，请打开终端，然后运行`python3`。
+在macOS和Linux上运行Python时，请打开终端，然后运行`python3`；
+
+退出Python交互式环境，需要在提示符`>>>`下输入`exit()`并回车确认。
