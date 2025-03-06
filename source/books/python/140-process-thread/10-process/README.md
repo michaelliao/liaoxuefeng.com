@@ -12,7 +12,7 @@ Python的`os`模块封装了常见的系统调用，其中就包括`fork`，可�
 import os
 
 print('Process (%s) start...' % os.getpid())
-# Only works on Unix/Linux/Mac:
+# Only works on Unix/Linux/macOS:
 pid = os.fork()
 if pid == 0:
     print('I am child process (%s) and my parent is %s.' % (os.getpid(), os.getppid()))

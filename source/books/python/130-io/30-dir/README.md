@@ -12,7 +12,7 @@
 'posix'
 ```
 
-如果是`posix`，说明系统是`Linux`、`Unix`或`Mac OS X`，如果是`nt`，就是`Windows`系统。
+如果是`posix`，说明系统是`Linux`、`Unix`或`macOS`，如果是`nt`，就是`Windows`系统。
 
 要获取详细的系统信息，可以调用`uname()`函数：
 

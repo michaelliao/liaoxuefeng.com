@@ -4,7 +4,7 @@
 import os
 
 print("Process (%s) start..." % os.getpid())
-# Only works on Unix/Linux/Mac:
+# Only works on Unix/Linux/macOS:
 pid = os.fork()
 if pid == 0:
     print("I am child process (%s) and my parent is %s." % (os.getpid(), os.getppid()))
