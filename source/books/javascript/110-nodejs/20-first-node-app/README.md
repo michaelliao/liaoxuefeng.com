@@ -48,21 +48,21 @@ Error: Cannot find module 'C:\Workspace\hello.js'
 
 请注意区分命令行模式和Node交互模式。
 
-看到类似`C:\>`是在Windows提供的命令行模式：
+看到类似`PS C:\>`是在Windows提供的命令行模式：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    - □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> node hello.js                                      │
-│Hello, world.                                           │
-│                                                        │
-│C:\>                                                    │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> node hello.js                   │
+│Hello, world.                                            │
+│                                                         │
+│PS C:\Users\liaoxuefeng>                                 │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 在命令行模式下，可以执行`node`进入Node交互式环境，也可以执行`node hello.js`运行一个`.js`文件。
@@ -70,17 +70,17 @@ Error: Cannot find module 'C:\Workspace\hello.js'
 看到`>`是在Node交互式环境下：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    - □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> node                                               │
-│Welcome to Node.js v22.x.x.                             │
-│>                                                       │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> node                            │
+│Welcome to Node.js v22.x.x.                              │
+│>                                                        │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 在Node交互式环境下，我们可以输入JavaScript代码并立刻执行。

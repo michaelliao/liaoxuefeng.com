@@ -47,22 +47,22 @@ s.close()
 
 ```ascii
 ┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    - □ x │
+│Windows PowerShell                                - □ x │
 ├────────────────────────────────────────────────────────┤
-│$ python udp_server.py                                  │
+│PS C:\Users\liaoxuefeng> python udp_server.py           │
 │Bind UDP on 9999...                                     │
 │Received from 127.0.0.1:63823...                        │
 │Received from 127.0.0.1:63823...                        │
 │Received from 127.0.0.1:63823...                        │
 │       ┌────────────────────────────────────────────────┴───────┐
-│       │Command Prompt                                    - □ x │
+│       │Windows PowerShell                                - □ x │
 │       ├────────────────────────────────────────────────────────┤
-│       │$ python udp_client.py                                  │
+│       │PS C:\Users\liaoxuefeng> python udp_client.py           │
 └───────┤Welcome!                                                │
         │Hello, Michael!                                         │
         │Hello, Tracy!                                           │
         │Hello, Sarah!                                           │
-        │$                                                       │
+        │PS C:\Users\liaoxuefeng>                                │
         │                                                        │
         │                                                        │
         └────────────────────────────────────────────────────────┘

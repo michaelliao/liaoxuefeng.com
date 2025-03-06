@@ -4,18 +4,18 @@
 
 ### 命令行模式
 
-在Windows开始菜单选择“命令提示符”，就进入到命令行模式，它的提示符类似`C:\>`：
+在Windows开始菜单选择“Terminal”，就进入到PowerShell命令行模式，它的提示符类似`PS C:\>`：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    - □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> _                                                  │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng>                                 │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 ### Python交互模式
@@ -23,37 +23,36 @@
 在命令行模式下敲命令`python`，就看到类似如下的一堆文本输出，然后就进入到Python交互模式，它的提示符是`>>>`。
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt - python                           - □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> python                                             │
-│Python 3.x ... on win32                                 │
-│Type "help", ... for more information.                  │
-│>>> _                                                   │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> python                          │
+│Python 3.x ... on win32                                  │
+│Type "help", ... for more information.                   │
+│>>> _                                                    │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 在Python交互模式下输入`exit()`并回车，就退出了Python交互模式，并回到命令行模式：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    - □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> python                                             │
-│Python 3.x ... on win32                                 │
-│Type "help", ... for more information.                  │
-│>>> exit()                                              │
-│                                                        │
-│C:\> _                                                  │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> python                          │
+│Python 3.x ... on win32                                  │
+│Type "help", ... for more information.                   │
+│>>> exit()                                               │
+│                                                         │
+│PS C:\Users\liaoxuefeng>                                 │
+└─────────────────────────────────────────────────────────┘
 ```
 
 也可以直接通过开始菜单选择`Python (command line)`菜单项，*直接进入*Python交互模式，但是输入`exit()`后窗口会直接关闭，不会回到命令行模式。
@@ -93,55 +92,53 @@ hello, world
 执行一个`.py`文件*只能*在命令行模式执行。如果敲一个命令`python hello.py`，看到如下错误：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    _ □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> python hello.py                                    │
-│python: can't open file 'hello.py': [Errno 2] No such   │
-│file or directory                                       │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> python hello.py                 │
+│python: can't open file 'hello.py': [Errno 2] No such    │
+│file or directory                                        │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
-错误提示`No such file or directory`说明这个`hello.py`在当前目录*找不到*，必须先把当前目录切换到`hello.py`所在的目录下，才能正常执行：
+错误提示`No such file or directory`说明这个`hello.py`在当前目录下*找不到*，必须先把当前目录切换到`hello.py`所在的目录下，才能正常执行：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    _ □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> cd work                                            │
-│                                                        │
-│C:\work> python hello.py                                │
-│Hello, world!                                           │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> cd work                         │
+│PS C:\Users\liaoxuefengwork> python hello.py             │
+│Hello, world!                                            │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
+
+上述命令假定`hello.py`存储在`work`目录下。如果你的`hello.py`存储在其他目录，例如，`test`目录，则使用`cd test`，或者使用绝对路径`cd \Users\who_am_i\learn\sample`。
 
 在Windows下，如果要切换到其他盘符，例如切换到`D:`盘，需要输入`D:`：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    _ □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> D:                                                 │
-│                                                        │
-│D:\> cd work                                            │
-│                                                        │
-│D:\work>                                                │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│PS C:\Users\liaoxuefeng> D:                              │
+│PS D:\> cd work                                          │
+│PS D:\work>                                              │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
-在`D:\`提示符下，再继续用`cd`命令切换到`work`目录，就可以正常执行`python hello.py`了。
+在`D:\`提示符下，再继续用`cd`命令切换到包含文件`hello.py`的`work`目录，就可以正常执行`python hello.py`了。
 
 此外，在命令行模式运行`.py`文件和在Python交互式环境下直接运行Python代码有所不同。Python交互式环境会把每一行Python代码的结果自动打印出来，但是，直接运行Python代码却不会。
 

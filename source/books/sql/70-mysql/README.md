@@ -5,22 +5,22 @@
 打开命令提示符，输入命令`mysql -u root -p`，提示输入口令。填入MySQL的root口令，如果正确，就连上了MySQL Server，同时提示符变为`mysql>`：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    - □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> mysql -u root -p                                   │
-│Enter password: ******                                  │
-│                                                        │
-│Server version: 5.7                                     │
-│Copyright (c) 2000, 2018, ...                           │
-│Type 'help;' or '\h' for help.                          │
-│                                                        │
-│mysql>                                                  │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> mysql -u root -p                │
+│Enter password: ******                                   │
+│                                                         │
+│Server version: 5.7                                      │
+│Copyright (c) 2000, 2018, ...                            │
+│Type 'help;' or '\h' for help.                           │
+│                                                         │
+│mysql>                                                   │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 输入`exit`断开与MySQL Server的连接并返回到命令提示符。

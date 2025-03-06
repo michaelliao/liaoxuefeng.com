@@ -99,21 +99,19 @@ Windows可以把`%M2_HOME%\bin`添加到系统Path变量中。
 然后，打开命令行窗口，输入`mvn -version`，应该看到Maven的版本信息：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt                                    - □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> mvn -version                                       │
-│Apache Maven 3.9.x ...                                  │
-│Maven home: C:\Users\liaoxuefeng\maven                  │
-│Java version: ...                                       │
-│...                                                     │
-│                                                        │
-│C:\> _                                                  │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> mvn -version                    │
+│Apache Maven 3.9.x ...                                   │
+│Maven home: C:\Users\liaoxuefeng\maven                   │
+│Java version: ...                                        │
+│...                                                      │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 如果提示命令未找到，说明系统PATH路径有误，需要修复后再运行。

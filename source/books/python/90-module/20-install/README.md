@@ -29,19 +29,19 @@ pip install Pillow
 安装好Anaconda后，重新打开命令行窗口，输入python，可以看到Anaconda的信息：
 
 ```ascii
-┌────────────────────────────────────────────────────────┐
-│Command Prompt - python                           - □ x │
-├────────────────────────────────────────────────────────┤
-│Microsoft Windows [Version 10.0.0]                      │
-│(c) 2015 Microsoft Corporation. All rights reserved.    │
-│                                                        │
-│C:\> python                                             │
-│Python 3.6.3 |Anaconda, Inc.| ... on win32              │
-│Type "help", ... for more information.                  │
-│>>> import numpy                                        │
-│>>> _                                                   │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│Windows PowerShell                                 - □ x │
+├─────────────────────────────────────────────────────────┤
+│Windows PowerShell                                       │
+│Copyright (C) Microsoft Corporation. All rights reserved.│
+│                                                         │
+│PS C:\Users\liaoxuefeng> python                          │
+│Python 3.13.3 |Anaconda, Inc.| ... on win32              │
+│Type "help", ... for more information.                   │
+│>>> import numpy                                         │
+│>>>                                                      │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 可以尝试直接`import numpy`等已安装的第三方模块。
