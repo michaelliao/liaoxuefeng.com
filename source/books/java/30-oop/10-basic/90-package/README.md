@@ -284,6 +284,20 @@ $ javac -d ./bin src/**/*.java
 C:\work> javac -d bin src\com\itranswarp\sample\Main.java src\com\itranswarp\world\Persion.java
 ```
 
+使用Windows的PowerShell可以利用`Get-ChildItem`来列出指定目录下的所有`.java`文件：
+
+```plain
+PS C:\work> (Get-ChildItem -Path .\src -Recurse -Filter *.java).FullName
+C:\work\src\com\itranswarp\sample\Main.java
+C:\work\src\com\itranswarp\world\Person.java
+```
+
+因此，编译命令可写为：
+
+```plain
+PS C:\work> javac -d .\bin (Get-ChildItem -Path .\src -Recurse -Filter *.java).FullName
+```
+
 如果编译无误，则`javac`命令没有任何输出。可以在`bin`目录下看到如下`class`文件：
 
 ```ascii
