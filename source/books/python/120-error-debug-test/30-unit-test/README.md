@@ -134,6 +134,34 @@ OK
 
 这是推荐的做法，因为这样可以一次批量运行很多单元测试，并且，有很多工具可以自动来运行这些单元测试。
 
+在开发阶段，很多时候，我们希望反复执行某一个测试方法，例如`test_attr()`，而不是每次都运行所有的测试方法，可以通过指定`module.class.method`来运行单个测试方法：
+
+```plain
+$ python -m unittest mydict_test.TestDict.test_attr
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+```
+
+其中，`module`是文件名`mydict_test`（不含`.py`），`class`是测试类`TestDict`，`method`是指定的测试方法名`test_attr`。
+
+如果希望执行`test_attr()`和`test_attrerror()`两个测试方法，我们可以传入`-k`参数，用`attr`来匹配：
+
+```plain
+$ python -m unittest mydict_test -k attr -v
+test_attr (mydict_test.TestDict.test_attr) ... ok
+test_attrerror (mydict_test.TestDict.test_attrerror) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+```
+
+观察上述命令，`-v`参数能打印出具体执行的测试方法，`-k attr`参数筛选出了包含`attr`的测试方法。可见，单元测试的执行是十分灵活的。
+
 ### setUp与tearDown
 
 可以在单元测试中编写两个特殊的`setUp()`和`tearDown()`方法。这两个方法会分别在每调用一个测试方法的前后分别被执行。
