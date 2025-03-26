@@ -304,7 +304,7 @@ function initExecLang() {
         let formHtml = `
 <form data-lang="${lang}" class="exec-form" style="margin: 16px 0;" onsubmit="return false">
     <div>
-        <textarea class="exec-form-textarea" name="comment" id="comment" class="" style="width:100%; height:260px; resize:vertical; font-family:Menlo,Consolas,Monaco,'Courier New',monospace;"></textarea>
+        <textarea class="exec-form-textarea" name="comment" id="comment" class="" style="margin-top: 0; width:100%; height:260px; resize:vertical; font-family:Menlo,Consolas,Monaco,'Courier New',monospace;"></textarea>
     </div>
     <div>
         <button class="exec-form-button" type="button" onclick="try_exec_code(this, '${outputId}')">
