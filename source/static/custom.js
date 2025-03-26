@@ -1,5 +1,55 @@
 console.log(`welcome to ${location.hostname}!`);
 
+/******************** copy code to clipboard ********************/
+
+function initCopyCode() {
+    let code_blocks = document.querySelectorAll('pre.hljs>code');
+    if (code_blocks.length > 0) {
+        console.log('init copy code...');
+        let copy_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg>';
+        let copied_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></svg>';
+        for (let i = 0; i < code_blocks.length; i++) {
+            let code_block = code_blocks[i];
+            let pre = code_block.parentElement;
+            let container = document.createElement('div');
+            container.style.position = 'relative';
+            pre.parentElement.insertBefore(container, pre);
+            container.appendChild(pre);
+            let copyButton = document.createElement('div');
+            copyButton.style.position = 'absolute';
+            copyButton.style.top = '8px';
+            copyButton.style.right = '10px';
+            copyButton.style.cursor = 'pointer';
+            let a = document.createElement('a');
+            a.innerHTML = copy_svg;
+            a.title = '复制到剪贴板';
+            a.href = 'javascript:void(0)';
+            a.dataset.copied = '0';
+            a.onclick = function () {
+                if (a.dataset.copied === '1') {
+                    return;
+                }
+                a.dataset.copied = '1';
+                let code_block = copyButton.parentElement.querySelector('pre>code');
+                navigator.clipboard.writeText(code_block.innerText || code_block.textContent).then(() => {
+                    a.innerHTML = copied_svg;
+                    a.title = '已复制';
+                    setTimeout(() => {
+                        a.dataset.copied = '0';
+                        a.title = '复制到剪贴板';
+                        a.innerHTML = copy_svg;
+                    }, 2000);
+                });
+            };
+            copyButton.appendChild(a);
+            container.appendChild(copyButton);
+        }
+    }
+}
+
+documentReady(initCopyCode);
+gitsite.addContentChangedListener(initCopyCode);
+
 /******************** auto load git explorer if link found ********************/
 
 function initGitExplorer() {
