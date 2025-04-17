@@ -229,9 +229,9 @@ public class FilterChainImpl implements FilterChain {
 
 ### 参考源码
 
-可以从[GitHub](https://github.com/michaelliao/jerrymouse/tree/master/step-by-step/filter-chain-support)或[Gitee](https://gitee.com/liaoxuefeng/jerrymouse/tree/master/step-by-step/filter-chain-support)下载源码。
+可以从[GitHub](https://github.com/michaelliao/jerrymouse/tree/main/step-by-step/filter-chain-support)或[Gitee](https://gitee.com/liaoxuefeng/jerrymouse/tree/main/step-by-step/filter-chain-support)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/jerrymouse/tree/master/step-by-step/filter-chain-support">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/jerrymouse/tree/main/step-by-step/filter-chain-support">GitHub</a>
 
 ### 小结
 

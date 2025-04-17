@@ -139,9 +139,9 @@ $ java -jar /path/to/jerrymouse-1.0.0.jar -w /path/to/spring-webapp-1.0.war
 
 ### 参考源码
 
-可以从[GitHub](https://github.com/michaelliao/jerrymouse/tree/master/step-by-step/spring-webapp)或[Gitee](https://gitee.com/liaoxuefeng/jerrymouse/tree/master/step-by-step/spring-webapp)下载源码。
+可以从[GitHub](https://github.com/michaelliao/jerrymouse/tree/main/step-by-step/spring-webapp)或[Gitee](https://gitee.com/liaoxuefeng/jerrymouse/tree/main/step-by-step/spring-webapp)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/jerrymouse/tree/master/step-by-step/spring-webapp">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/jerrymouse/tree/main/step-by-step/spring-webapp">GitHub</a>
 
 ### 小结
 

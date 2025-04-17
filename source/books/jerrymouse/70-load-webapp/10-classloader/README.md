@@ -156,9 +156,9 @@ Object createInstance(String className) {
 
 ### 参考源码
 
-可以从[GitHub](https://github.com/michaelliao/jerrymouse/tree/master/server)或[Gitee](https://gitee.com/liaoxuefeng/jerrymouse/tree/master/server)下载源码。
+可以从[GitHub](https://github.com/michaelliao/jerrymouse/tree/main/server)或[Gitee](https://gitee.com/liaoxuefeng/jerrymouse/tree/main/server)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/jerrymouse/tree/master/server">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/jerrymouse/tree/main/server">GitHub</a>
 
 ### 小结
 
