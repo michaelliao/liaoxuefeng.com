@@ -123,6 +123,6 @@ assertEquals("Morning, Bob.", proxy.morning());
 
 ### 参考源码
 
-可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/master/step-by-step/proxy-resolver)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/master/step-by-step/proxy-resolver)下载源码。
+可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/main/step-by-step/proxy-resolver)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/main/step-by-step/proxy-resolver)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/master/step-by-step/proxy-resolver">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/main/step-by-step/proxy-resolver">GitHub</a>

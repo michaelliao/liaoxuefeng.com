@@ -150,6 +150,6 @@ public <T> List<T> queryForList(String sql, RowMapper<T> rowMapper, Object... ar
 
 ### 参考源码
 
-可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/master/step-by-step/jdbc-template)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/master/step-by-step/jdbc-template)下载源码。
+可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/main/step-by-step/jdbc-template)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/main/step-by-step/jdbc-template)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/master/step-by-step/jdbc-template">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/main/step-by-step/jdbc-template">GitHub</a>

@@ -58,6 +58,6 @@ void initBean(BeanDefinition def) {
 处理`@PreDestroy`方法更简单，在`ApplicationContext`关闭时遍历所有Bean，调用`destroy`方法即可。
 
 
-可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/master/step-by-step/init-beans)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/master/step-by-step/init-beans)下载源码。
+可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/main/step-by-step/init-beans)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/main/step-by-step/init-beans)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/master/step-by-step/init-beans">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/main/step-by-step/init-beans">GitHub</a>

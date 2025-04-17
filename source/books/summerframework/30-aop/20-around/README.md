@@ -196,6 +196,6 @@ public class TransactionalProxyBeanPostProcessor extends AnnotationProxyBeanPost
 
 ### 参考源码
 
-可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/master/framework/summer-aop)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/master/framework/summer-aop)下载源码。
+可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/main/framework/summer-aop)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/main/framework/summer-aop)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/master/framework/summer-aop">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/main/framework/summer-aop">GitHub</a>

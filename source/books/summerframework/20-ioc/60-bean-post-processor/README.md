@@ -447,6 +447,6 @@ public class MailService {
 }
 ```
 
-可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/master/step-by-step/bean-post-processor)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/master/step-by-step/bean-post-processor)下载源码。
+可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/main/step-by-step/bean-post-processor)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/main/step-by-step/bean-post-processor)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/master/step-by-step/bean-post-processor">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/main/step-by-step/bean-post-processor">GitHub</a>

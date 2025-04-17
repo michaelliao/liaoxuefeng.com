@@ -302,6 +302,6 @@ class C {
 
 可见无论以什么顺序创建，C总是最先被实例化，A总是最后被实例化。
 
-可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/master/step-by-step/create-bean-instances)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/master/step-by-step/create-bean-instances)下载源码。
+可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/main/step-by-step/create-bean-instances)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/main/step-by-step/create-bean-instances)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/master/step-by-step/create-bean-instances">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/main/step-by-step/create-bean-instances">GitHub</a>

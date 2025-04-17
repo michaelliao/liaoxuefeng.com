@@ -368,6 +368,6 @@ define bean: BeanDefinition [name=createSpecifyInitBean, beanClass=com.itranswar
 
 现在，我们已经能扫描并创建所有的`BeanDefinition`，只是目前每个`BeanDefinition`内部的`instance`还是`null`，因为我们后续才会创建真正的Bean。
 
-可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/master/step-by-step/create-bean-definitions)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/master/step-by-step/create-bean-definitions)下载源码。
+可以从[GitHub](https://github.com/michaelliao/summer-framework/tree/main/step-by-step/create-bean-definitions)或[Gitee](https://gitee.com/liaoxuefeng/summer-framework/tree/main/step-by-step/create-bean-definitions)下载源码。
 
-<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/master/step-by-step/create-bean-definitions">GitHub</a>
+<a class="git-explorer" href="https://github.com/michaelliao/summer-framework/tree/main/step-by-step/create-bean-definitions">GitHub</a>
