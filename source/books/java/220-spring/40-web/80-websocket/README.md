@@ -30,20 +30,27 @@ Connection: Upgrade
 
 第一项是嵌入式Tomcat支持WebSocket的组件，第二项是Spring封装的支持WebSocket的接口。
 
-接下来，我们需要在AppConfig中加入Spring Web对WebSocket的配置，此处我们需要创建一个`WebSocketConfigurer`实例：
+接下来，我们需要在`AppConfig`中加入Spring Web对WebSocket的配置，先增加一个`@EnableWebSocket`注解，然后创建一个`WebSocketConfigurer`实例：
 
 ```java
-@Bean
-WebSocketConfigurer createWebSocketConfigurer(
-        @Autowired ChatHandler chatHandler,
-        @Autowired ChatHandshakeInterceptor chatInterceptor)
-{
-    return new WebSocketConfigurer() {
-        public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-            // 把URL与指定的WebSocketHandler关联，可关联多个:
-            registry.addHandler(chatHandler, "/chat").addInterceptors(chatInterceptor);
-        }
-    };
+@Configuration
+@ComponentScan
+@EnableWebMvc
+@EnableWebSocket // 启用WebSocket支持
+public class AppConfig {
+    @Bean
+    WebSocketConfigurer createWebSocketConfigurer(
+            @Autowired ChatHandler chatHandler,
+            @Autowired ChatHandshakeInterceptor chatInterceptor)
+    {
+        return new WebSocketConfigurer() {
+            public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+                // 把URL与指定的WebSocketHandler关联，可关联多个:
+                registry.addHandler(chatHandler, "/chat").addInterceptors(chatInterceptor);
+            }
+        };
+    }
+    ...
 }
 ```
 
