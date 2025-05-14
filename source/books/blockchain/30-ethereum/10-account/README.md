@@ -63,7 +63,7 @@ const ethUtil = require('ethereumjs-util');
 
 // 搜索指定前缀为'0xAA...'的地址:
 let prefix = '0xAA';
-----
+
 if (/^0x[a-fA-F0-9]{1,2}$/.test(prefix)) {
     let
         max = parseInt(Math.pow(32, prefix.length-2)),

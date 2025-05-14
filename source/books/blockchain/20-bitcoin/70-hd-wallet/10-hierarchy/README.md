@@ -79,7 +79,7 @@ bitcoin.HDNode.fromBase58(xpub_m_0).deriveHardened(99).getAddress();
 
 ### BIP-44
 
-HD钱包理论上有无限的层级，对使用secp256k1算法的任何币都适用。但是，如果一种钱包使用`m/1/2/x`，另一种钱包使用`m/3/4/x`，没有一种统一的规范，就会乱套。
+HD钱包理论上有无限的层级，对使用secp256k1算法的任何币都适用。但是，如果一种钱包使用`m/1/2/x`，另一种钱包使用`m/3/4/x`，没有一个统一的规范，就会乱套。
 
 比特币的[BIP-44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki)规范定义了一种如何派生私钥的标准，它本身非常简单：
 

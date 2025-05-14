@@ -104,7 +104,7 @@ SHA-256的理论碰撞概率是：尝试2的130次方的随机输入，有99.8%�
 const
     bitcoin = require('bitcoinjs-lib'),
     createHash = require('create-hash');
-----
+
 function standardHash(name, data) {
     let h = createHash(name);
     return h.update(data).digest();
