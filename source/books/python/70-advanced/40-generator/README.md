@@ -175,8 +175,8 @@ StopIteration
 
 可以看到，`odd`不是普通函数，而是generator函数，在执行过程中，遇到`yield`就中断，下次又继续执行。执行3次`yield`后，已经没有`yield`可以执行了，所以，第4次调用`next(o)`就报错。
 
-```!
-请务必注意：调用generator函数会创建一个generator对象，多次调用generator函数会创建多个相互独立的generator。
+```alert type=warning title=注意
+调用generator函数会创建一个generator对象，多次调用generator函数会创建多个相互独立的generator。
 ```
 
 有的童鞋会发现这样调用`next()`每次都返回1：

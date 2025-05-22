@@ -36,7 +36,7 @@
 
 例如，要生成`m.txt`，依赖`a.txt`与`b.txt`，规则如下：
 
-```
+```makefile
 # 目标文件: 依赖文件1 依赖文件2
 m.txt: a.txt b.txt
 	cat a.txt b.txt > m.txt
@@ -46,20 +46,20 @@ m.txt: a.txt b.txt
 
 以`#`开头的是注释，会被`make`命令忽略。
 
-```!
-注意：Makefile的规则中，命令必须以Tab开头，不能是空格。
+```alert type=warning title=注意
+在Makefile的规则中，命令必须以Tab开头，不能是空格。
 ```
 
 类似的，我们写出生成`x.txt`的规则如下：
 
-```
+```makefile
 x.txt: m.txt c.txt
 	cat m.txt c.txt > x.txt
 ```
 
 由于`make`执行时，默认执行第一条规则，所以，我们把规则`x.txt`放到前面。完整的`Makefile`如下：
 
-```
+```makefile
 x.txt: m.txt c.txt
 	cat m.txt c.txt > x.txt
 
@@ -92,7 +92,7 @@ make: `x.txt' is up to date.
 
 `make`检测到`x.txt`已经是最新版本，无需再次执行，因为`x.txt`的创建时间晚于它依赖的`m.txt`和`c.txt`的最后修改时间。
 
-```?
+```alert type=info title=提示
 make使用文件的创建和修改时间来判断是否应该更新一个目标文件。
 ```
 
@@ -115,7 +115,7 @@ cat m.txt c.txt > x.txt
 
 删除时，我们也不希望手动删除，而是编写一个`clean`规则来删除它们：
 
-```
+```makefile
 clean:
 	rm -f m.txt
 	rm -f x.txt
@@ -161,7 +161,7 @@ cd:
 
 执行`cd`规则：
 
-```
+```plain
 $ make cd
 pwd
 /home/ubuntu/makefile-tutorial/v1
@@ -216,7 +216,7 @@ no_output:
 
 执行结果如下：
 
-```
+```plain
 $ make no_output
 not display
 echo 'will display'
