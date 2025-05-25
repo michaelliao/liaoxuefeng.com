@@ -1,4 +1,5 @@
 site:
+  domain: https://liaoxuefeng.com
   title: 廖雪峰的官方网站
   description: 廖雪峰的官方网站 (liaoxuefeng.com) 研究互联网产品和技术，提供原创中文精品教程
   keywords: 廖雪峰, liaoxuefeng, git, gitsite, javascript, node, jquery, python, java, spring, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币
