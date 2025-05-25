@@ -32,7 +32,7 @@ TO: OP_DUP OP_HASH160 <address> OP_EQUALVERIFY OP_CHECKSIG
 │  ┌─────────────────────────────────────────────────────────────────────┐
 │  │tx:55142366a67beda9d3ba9bfbd6166e8e95c4931a2b44e5b44b5685597e4c8774  │
 │  ├──────────────────────────────────┬──────────────────────────────────┤
-└─>│1M6Bzo23yqad8YwzTeRapGXQ76Pb9RRJYJ│13Kb2ykVGpNTJbxwnrfoyZAwgd4ZpXHv2q│
+└─▶│1M6Bzo23yqad8YwzTeRapGXQ76Pb9RRJYJ│13Kb2ykVGpNTJbxwnrfoyZAwgd4ZpXHv2q│
    └──────────────────────────────────┴──────────────────────────────────┘
     script: 4830450221008ecb5ab06e62a67e320880db70ee8a7020503a055d7c45b7
             3dcc41adf01ea9f602203a0d8f4314342636a6a473fc0b4dd4e49b62be28
