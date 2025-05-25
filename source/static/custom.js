@@ -1,5 +1,10 @@
 console.log(`welcome to ${location.hostname}!`);
 
+const runInitScripts = [
+    // path prefix, document ready, page loaded:
+    // ['/path/to/example/', initWhenFirstLoaded, initWhenPageLoaded]
+];
+
 /******************** copy code to clipboard ********************/
 
 function initCopyCode() {
@@ -47,8 +52,7 @@ function initCopyCode() {
     }
 }
 
-documentReady(initCopyCode);
-gitsite.addContentChangedListener(initCopyCode);
+runInitScripts.push(['/', initCopyCode, initCopyCode]);
 
 /******************** auto load git explorer if link found ********************/
 
@@ -68,59 +72,54 @@ function initGitExplorer() {
     }
 }
 
-documentReady(initGitExplorer);
-gitsite.addContentChangedListener(initGitExplorer);
+runInitScripts.push(['/', initGitExplorer, initGitExplorer]);
 
 /******************** load script for blockchian ********************/
 
-if (location.pathname.startsWith('/books/blockchain/')) {
-    documentReady(() => {
-        gitsite.loadScript('/static/blockchain-lib.js');
-    });
+function initBlockchain() {
+    gitsite.loadScript('/static/blockchain-lib.js');
 }
+
+runInitScripts.push(['/books/blockchain/', initBlockchain, null]);
 
 /******************** load script for javascript ********************/
 
-if (location.pathname.startsWith('/books/javascript/')) {
-    documentReady(() => {
-        function initJqueryOrUnderscore() {
-            if (location.pathname.startsWith('/books/javascript/jquery/')) {
-                gitsite.loadScript('/static/jquery.js');
-            }
-            else if (location.pathname.startsWith('/books/javascript/underscore/')) {
-                gitsite.loadScript('/static/underscore.js');
-            }
-        }
-        initJqueryOrUnderscore();
-        gitsite.addContentChangedListener(initJqueryOrUnderscore);
-    });
+function initJqueryOrUnderscroll() {
+    if (location.pathname.startsWith('/books/javascript/jquery/')) {
+        gitsite.loadScript('/static/jquery.js');
+    }
+    if (location.pathname.startsWith('/books/javascript/underscore/')) {
+        gitsite.loadScript('/static/underscore.js');
+    }
 }
+
+runInitScripts.push(['/books/javascript/', initJqueryOrUnderscroll, initJqueryOrUnderscroll]);
 
 /******************** load script for sql ********************/
 
-if (location.pathname.startsWith('/books/sql/')) {
-    let initSql = function () {
-        alasql.options.joinstar = 'underscore';
-        let
-            i,
-            classes_data = [['一班'], ['二班'], ['三班'], ['四班']],
-            students_data = [[1, '小明', 'M', 90], [1, '小红', 'F', 95], [1, '小军', 'M', 88], [1, '小米', 'F', 73], [2, '小白', 'F', 81], [2, '小兵', 'M', 55], [2, '小林', 'M', 85], [3, '小新', 'F', 91], [3, '小王', 'M', 89], [3, '小丽', 'F', 88]];
-        alasql('DROP TABLE IF EXISTS classes');
-        alasql('DROP TABLE IF EXISTS students');
-        alasql('CREATE TABLE classes (id BIGINT NOT NULL AUTO_INCREMENT, name VARCHAR(10) NOT NULL, PRIMARY KEY (id))');
-        alasql('CREATE TABLE students (id BIGINT NOT NULL AUTO_INCREMENT, class_id BIGINT NOT NULL, name VARCHAR(10) NOT NULL, gender CHAR(1) NOT NULL, score BIGINT NOT NULL, PRIMARY KEY (id))');
-        for (i = 0; i < classes_data.length; i++) {
-            alasql('INSERT INTO classes (name) VALUES (?)', classes_data[i]);
-        }
-        for (i = 0; i < students_data.length; i++) {
-            alasql('INSERT INTO students (class_id, name, gender, score) VALUES (?, ?, ?, ?)', students_data[i]);
-        }
-    };
-    documentReady(() => {
-        gitsite.loadScript('/static/alasql.js', initSql, true);
-    });
-    gitsite.addContentChangedListener(initSql);
+function initSqlData() {
+    alasql.options.joinstar = 'underscore';
+    let
+        i,
+        classes_data = [['一班'], ['二班'], ['三班'], ['四班']],
+        students_data = [[1, '小明', 'M', 90], [1, '小红', 'F', 95], [1, '小军', 'M', 88], [1, '小米', 'F', 73], [2, '小白', 'F', 81], [2, '小兵', 'M', 55], [2, '小林', 'M', 85], [3, '小新', 'F', 91], [3, '小王', 'M', 89], [3, '小丽', 'F', 88]];
+    alasql('DROP TABLE IF EXISTS classes');
+    alasql('DROP TABLE IF EXISTS students');
+    alasql('CREATE TABLE classes (id BIGINT NOT NULL AUTO_INCREMENT, name VARCHAR(10) NOT NULL, PRIMARY KEY (id))');
+    alasql('CREATE TABLE students (id BIGINT NOT NULL AUTO_INCREMENT, class_id BIGINT NOT NULL, name VARCHAR(10) NOT NULL, gender CHAR(1) NOT NULL, score BIGINT NOT NULL, PRIMARY KEY (id))');
+    for (i = 0; i < classes_data.length; i++) {
+        alasql('INSERT INTO classes (name) VALUES (?)', classes_data[i]);
+    }
+    for (i = 0; i < students_data.length; i++) {
+        alasql('INSERT INTO students (class_id, name, gender, score) VALUES (?, ?, ?, ?)', students_data[i]);
+    }
 }
+
+function initSql() {
+    gitsite.loadScript('/static/alasql.js', initSqlData);
+}
+
+runInitScripts.push(['/books/sql/', initSql, initSqlData]);
 
 /******************** auto load x-lang ********************/
 
@@ -327,12 +326,24 @@ function initExecLang() {
     });
 }
 
-documentReady(initExecLang);
-gitsite.addContentChangedListener(initExecLang);
+runInitScripts.push(['/', initExecLang, initExecLang]);
 
 /******************** some dynamic script ********************/
 
-documentReady(() => {
+function initDynamicScript() {
     let t = parseInt(Date.now() / 3600000);
     gitsite.loadScript(`https://liaoxuefeng-dynamic-1251042815.cos.ap-shanghai.myqcloud.com/js/dynamic.js?t=${t}`, null, true);
-});
+}
+
+runInitScripts.push(['/', initDynamicScript, null]);
+
+// run init scripts when not in pdf mode:
+if (!window.__pdf__) {
+    for (let i = 0; i < runInitScripts.length; i++) {
+        let [pathPrefix, initOnDocumentReady, initWhenContentChanged] = runInitScripts[i];
+        if (location.pathname.startsWith(pathPrefix)) {
+            initOnDocumentReady && documentReady(initOnDocumentReady);
+            initWhenContentChanged && gitsite.addContentChangedListener(initWhenContentChanged);
+        }
+    }
+}
