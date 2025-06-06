@@ -4,7 +4,7 @@
 
 Filter是Servlet规范中的一个重要组件，它的作用是在HTTP请求到达Servlet之前进行预处理。它可以被一个或多个Filter按照一定的顺序组成一个处理链（FilterChain），用来处理一些公共逻辑，比如打印日志、登录检查等。
 
-Filter还可以有针对性地拦截或者放行HTTP请求，本质上一个`FilterChain`就是一个[责任链](../../java/fixme)模式。在Servlet容器中，处理流程如下：
+Filter还可以有针对性地拦截或者放行HTTP请求，本质上一个`FilterChain`就是一个[责任链](/books/java/design-patterns/behavioral/chain-of-responsibility/)模式。在Servlet容器中，处理流程如下：
 
 ```ascii
   ┌─────────────────┐
