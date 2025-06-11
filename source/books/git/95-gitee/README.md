@@ -10,12 +10,6 @@
 Gitee的免费版本也提供私有库功能，只是有5人的成员上限。
 ```
 
-Gitee企业版正在优惠中：
-
-- 买1年送1个月：优惠码`lhkYPzFJ`
-- 买2年送3个月：优惠码`tHyhJjeE`
-- 买3年送6个月：优惠码`N6KOc5BG`
-
 &gt;&gt; [Gitee企业版专属购买通道](https://gitee.com/enterprises?invite_code=Z2l0ZWUtMzgzMTE1) <<
 
 小提示：记得先复制优惠码信息，在购买页面输入优惠码即可。
