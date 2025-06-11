@@ -12,8 +12,6 @@ Gitee的免费版本也提供私有库功能，只是有5人的成员上限。
 
 &gt;&gt; [Gitee企业版专属购买通道](https://gitee.com/enterprises?invite_code=Z2l0ZWUtMzgzMTE1) <<
 
-小提示：记得先复制优惠码信息，在购买页面输入优惠码即可。
-
 使用Gitee和使用GitHub类似，我们在Gitee上注册账号并登录后，需要先上传自己的SSH公钥。选择右上角用户头像 -> 菜单“设置”，然后在左侧菜单选择“SSH公钥”，填写一个便于识别的标题，然后把用户主目录下的`.ssh/id_rsa.pub`文件的内容粘贴进去：
 
 ![gitee-add-ssh-key](add-key.png)
