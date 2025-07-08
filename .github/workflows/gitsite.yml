@@ -1,6 +1,6 @@
 # Workflow for building and deploying a GitSite repo to GitHub Pages
 
-name: Build liaoxuefeng.com
+name: Build & deploy liaoxuefeng.com
 
 on:
   # Runs on pushes targeting the default branch
