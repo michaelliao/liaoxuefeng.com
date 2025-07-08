@@ -81,15 +81,6 @@ jobs:
           SYNC_BUCKET: ${{ secrets.COS_BUCKET }}
           SYNC_ACCESS_ID: ${{ secrets.COS_ACCESS_ID }}
           SYNC_ACCESS_SECRET: ${{ secrets.COS_ACCESS_SECRET }}
-      - name: Sync To Baidu Cloud
-        uses: michaelliao/sync-s3-compatible-action@v2
-        env:
-          SYNC_OPT_UNUSED: delete
-          SYNC_TYPE: baidu
-          SYNC_REGION: su
-          SYNC_BUCKET: ${{ secrets.BOS_BUCKET }}
-          SYNC_ACCESS_ID: ${{ secrets.BOS_ACCESS_ID }}
-          SYNC_ACCESS_SECRET: ${{ secrets.BOS_ACCESS_SECRET }}
 
   # Deployment job
   deploy:
