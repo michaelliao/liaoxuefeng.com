@@ -223,7 +223,7 @@ public class FilterChainImpl implements FilterChain {
 
 现在，我们就成功地在`ServletContext`中实现了对`Filter`的管理，以及根据每个请求，构造对应的`FilterChain`来处理请求。目前还有几个小问题：
 
-一是和Servlet一样，Filter本身应该是Web App开发人员实现，而不是由服务器实现。我们在在服务器中写死了两个Filter，这个问题后续解决；
+一是和Servlet一样，Filter本身应该是Web App开发人员实现，而不是由服务器实现。我们在服务器中写死了两个Filter，这个问题后续解决；
 
 二是Servlet规范并没有规定多个Filter应该如何排序，我们在实现时也没有对Filter进行排序。如果要按固定顺序给Filter排序，从Servlet规范来说怎么排序都可以，通常是按`@WebFilter`定义的`filterName`进行排序，Spring Boot提供的一个`FilterRegistrationBean`允许开发人员自己定义Filter的顺序。
 
