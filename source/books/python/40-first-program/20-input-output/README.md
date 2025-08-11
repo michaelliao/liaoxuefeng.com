@@ -2,20 +2,20 @@
 
 ### 输出
 
-用`print()`在括号中加上字符串，就可以向屏幕上输出指定的文字。比如输出`'hello, world'`，用代码实现如下：
+用`print()`在括号中加上字符串，就可以向屏幕上输出指定的文字。比如输出`hello, world`，用代码实现如下：
 
 ```plain
 >>> print('hello, world')
 ```
 
-`print()`函数也可以接受多个字符串，用逗号“,”隔开，就可以连成一串输出：
+`print()`函数也可以接受多个字符串，用逗号`,`隔开，就可以连成一串输出：
 
 ```plain
 >>> print('The quick brown fox', 'jumps over', 'the lazy dog')
 The quick brown fox jumps over the lazy dog
 ```
 
-`print()`会依次打印每个字符串，遇到逗号“,”会输出一个空格，因此，输出的字符串是这样拼起来的：
+`print()`会依次打印每个字符串，遇到逗号`,`会输出一个空格，因此，输出的字符串是这样拼起来的：
 
 ![print-explain](print.jpg)
 
@@ -28,7 +28,7 @@ The quick brown fox jumps over the lazy dog
 300
 ```
 
-因此，我们可以把计算`100 + 200`的结果打印得更漂亮一点：
+我们还可以把计算`100 + 200`的结果打印得更漂亮一点：
 
 ```plain
 >>> print('100 + 200 =', 100 + 200)
