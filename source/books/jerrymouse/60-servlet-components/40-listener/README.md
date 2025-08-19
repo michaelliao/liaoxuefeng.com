@@ -6,7 +6,7 @@
 
 Listener是Java Web App中的一种事件监听机制，用于监听Web应用程序中产生的事件，例如，在`ServletContext`初始化完成后，会触发`contextInitialized`事件，实现了`ServletContextListener`接口的Listener就可以接收到事件通知，可以在内部做一些初始化工作，如加载配置文件，初始化数据库连接池等。实现了`HttpSessionListener`接口的Listener可以接收到Session的创建和消耗事件，这样就可以统计在线用户数。
 
-Listener机制是基于[观察者模式](../../java/fixme)实现的，即当某个事件发生时，Listener会接收到通知并执行相应的操作。
+Listener机制是基于[观察者模式](/books/java/design-patterns/behavioral/observer/index.html)实现的，即当某个事件发生时，Listener会接收到通知并执行相应的操作。
 
 ### Listener类型
 
