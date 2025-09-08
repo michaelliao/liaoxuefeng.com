@@ -50,7 +50,7 @@ SMTP协议是一个建立在TCP之上的协议，任何程序发送邮件都必�
 
 首先，我们需要创建一个Maven工程，并把JavaMail相关的两个依赖加入进来：
 
-- jakarta.mail:javax.mail-api:2.0.1
+- jakarta.mail:jakarta.mail-api:2.0.1
 - com.sun.mail:jakarta.mail:2.0.1
 
 这两个包一个是接口定义，一个是具体实现。如果使用早期的1.x版本，则需注意引入的包名有所不同：
@@ -85,7 +85,7 @@ Session session = Session.getInstance(props, new Authenticator() {
 session.setDebug(true);
 ```
 
-以587端口为例，连接SMTP服务器时，需要准备一个`Properties`对象，填入相关信息。最后获取`Session`实例时，如果服务器需要认证，还需要传入一个`Authenticator`对象，并返回指定的用户名和口令。
+以`587`端口为例，连接SMTP服务器时，需要准备一个`Properties`对象，填入相关信息。最后获取`Session`实例时，如果服务器需要认证，还需要传入一个`Authenticator`对象，并返回指定的用户名和口令。
 
 当我们获取到`Session`实例后，打开调试模式可以看到SMTP通信的详细内容，便于调试。
 
