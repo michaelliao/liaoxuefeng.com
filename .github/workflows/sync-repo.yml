@@ -1,5 +1,7 @@
 # This workflow sync the current github repo to a remote repo by using 'git push'.
 
+name: Sync to Gitee
+
 on:
   push:
     branches: ["main"]
