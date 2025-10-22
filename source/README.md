@@ -13,7 +13,7 @@
                 Java教程
             </div>
             <div class="home-book-list-desc">
-                小白的零基础Java教程，零基础迈向Java架构师！
+                小白的Java新手教程，零基础迈向Java架构师！
             </div>
         </a>
     </div>
@@ -27,7 +27,7 @@
                 Python教程
             </div>
             <div class="home-book-list-desc">
-                小白的Python新手教程，基于最新Python 3版本！
+                完全面向小白的Python新手教程！
             </div>
         </a>
     </div>
@@ -69,7 +69,7 @@
                 手写Spring
             </div>
             <div class="home-book-list-desc">
-                自己动手，从零开发一个迷你版的Spring框架！
+                从零开发一个迷你版的Spring框架！
             </div>
         </a>
     </div>
@@ -83,7 +83,7 @@
                 手写Tomcat
             </div>
             <div class="home-book-list-desc">
-                自己动手，从零开发一个迷你版的Tomcat服务器！
+                从零开发一个迷你版的Tomcat服务器！
             </div>
         </a>
     </div>
