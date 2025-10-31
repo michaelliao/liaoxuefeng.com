@@ -162,6 +162,13 @@ try (var ctx = new UserContext("Bob")) {
 
 这样就在`UserContext`中完全封装了`ThreadLocal`，外部代码在`try (resource) {...}`内部可以随时调用`UserContext.currentUser()`获取当前线程绑定的用户名。
 
+最后对比一下局部变量、静态变量和`ThreadLocal`变量的区别：
+
+|        | 局部变量 | 静态变量 | ThreadLocal变量      |
+|--------|----------|----------|----------------------|
+| 作用域 | 方法内部 | 全局     | 仅执行线程路径       |
+| 跨方法 | 不能     | 任意方法 | 仅执行线程调用的方法 |
+
 ### 练习
 
 练习使用ThreadLocal。
