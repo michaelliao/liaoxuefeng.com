@@ -57,6 +57,8 @@ site:
     analytics:
       provider: baidu
       id: "2efddd14a5f2b304677462d06fb4f964"
+    abcjs:
+      disable: true
   footer: |
           <div>
             &copy;<a href="/">liaoxuefeng.com</a> 
