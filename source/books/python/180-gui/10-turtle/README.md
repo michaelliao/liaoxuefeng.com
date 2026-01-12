@@ -144,6 +144,6 @@ done()
 
 [rect.py](rect.py)
 
-[starts.py](starts.py)
+[stars.py](stars.py)
 
 [tree.py](tree.py)
