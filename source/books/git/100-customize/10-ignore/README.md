@@ -114,7 +114,7 @@ Git会告诉我们，`.gitignore`的第3行规则忽略了该文件，于是我�
 
 把指定文件排除在`.gitignore`规则外的写法就是`!`+文件名，所以，只需把例外文件添加进去即可。
 
-可以通过[GitIgnore Online Generator](https://michaelliao.github.io/gitignore-online-generator/)在线生成`.gitignore`文件并直接下载。
+可以通过[GitIgnore Online Generator](https://gitignore.puppylab.org)在线生成`.gitignore`文件并直接下载。
 
 最后一个问题：`.gitignore`文件放哪？答案是放Git仓库根目录下，但其实一个Git仓库也可以有多个`.gitignore`文件，`.gitignore`文件放在哪个目录下，就对哪个目录（包括子目录）起作用。
 
