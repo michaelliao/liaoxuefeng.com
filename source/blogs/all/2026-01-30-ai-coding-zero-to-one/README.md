@@ -108,3 +108,7 @@ A：以后不好说，现阶段洗洗睡吧。
 [https://gemini.google.com/share/cbc2af3e7fc3](https://gemini.google.com/share/cbc2af3e7fc3)
 
 如果有同学希望继续改进ASCII Draw，可以从GitHub克隆代码，然后在此会话的基础上继续让Gemini改代码。
+
+### 参考源码
+
+[https://github.com/michaelliao/asciidraw.puppylab.org](https://github.com/michaelliao/asciidraw.puppylab.org)
