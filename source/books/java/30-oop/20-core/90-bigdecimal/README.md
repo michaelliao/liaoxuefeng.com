@@ -37,10 +37,10 @@ System.out.println(d4.scale()); // -2
 
 可以对一个`BigDecimal`设置它的`scale`，如果精度比原始值低，那么按照指定的方法进行四舍五入或者直接截断：
 
-```x-java
+```java
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-----
+
 public class Main {
     public static void main(String[] args) {
         BigDecimal d1 = new BigDecimal("123.456789");
@@ -63,9 +63,9 @@ BigDecimal d4 = d1.divide(d2); // 报错：ArithmeticException，因为除不尽
 
 还可以对`BigDecimal`做除法的同时求余数：
 
-```x-java
+```java
 import java.math.BigDecimal;
-----
+
 public class Main {
     public static void main(String[] args) {
         BigDecimal n = new BigDecimal("12.345");
