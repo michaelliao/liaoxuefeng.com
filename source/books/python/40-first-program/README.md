@@ -115,13 +115,13 @@ hello, world
 │Copyright (C) Microsoft Corporation. All rights reserved.│
 │                                                         │
 │PS C:\Users\liaoxuefeng> cd work                         │
-│PS C:\Users\liaoxuefengwork> python hello.py             │
+│PS C:\Users\liaoxuefeng\work> python hello.py            │
 │Hello, world!                                            │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
 
-上述命令假定`hello.py`存储在`work`目录下。如果你的`hello.py`存储在其他目录，例如，`test`目录，则使用`cd test`，或者使用绝对路径`cd \Users\who_am_i\learn\sample`。
+上述命令假定`hello.py`存储在`work`目录下。如果你的`hello.py`存储在其他目录，例如，`test`目录，则使用`cd test`，或者使用绝对路径`cd C:\Users\who_am_i\learn\sample`。
 
 在Windows下，如果要切换到其他盘符，例如切换到`D:`盘，需要输入`D:`：
 
