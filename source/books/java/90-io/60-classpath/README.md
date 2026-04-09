@@ -24,7 +24,7 @@ try (InputStream input = new FileInputStream(conf)) {
 
 从classpath读取文件就可以避免不同环境下文件路径不一致的问题：如果我们把`default.properties`文件放到classpath中，就不用关心它的实际存放路径。
 
-在classpath中的资源文件，路径总是以`／`开头，我们先获取当前的`Class`对象，然后调用`getResourceAsStream()`就可以直接从classpath读取任意的资源文件：
+在classpath中的资源文件，路径总是以`/`开头，我们先获取当前的`Class`对象，然后调用`getResourceAsStream()`就可以直接从classpath读取任意的资源文件：
 
 ```java
 try (InputStream input = getClass().getResourceAsStream("/default.properties")) {
