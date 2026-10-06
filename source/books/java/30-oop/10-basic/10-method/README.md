@@ -362,6 +362,34 @@ class Person {
 
 不要怀疑引用参数绑定的机制，试解释为什么上面的代码两次输出都是`"Bob"`。
 
+最后说说为什么方法内部可以使用隐含的`this`变量。实际上这并不是什么神秘的语法，而是Java编译器自动给每个方法添加了一个额外的`this`参数，这个参数永远在第一个位置，并且参数类型必须是当前对象的类型。
+
+如果我们手动把`this`参数写出来，编译也完全没有问题：
+
+```java
+class Person {
+    private String name;
+
+    // 等价: void setName(String name)
+    public void setName(Person this, String name) {
+        this.name = name;
+    }
+
+    // 等价: void hello()
+    public void hello(Person this) {
+        System.out.println("Hello, " + this.name + "!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.setName("Bob");
+        p.hello();
+    }
+}
+```
+
 ### 练习
 
 给`Person`类增加`getAge`/`setAge`方法：
