@@ -6,7 +6,7 @@
 
 本文从技术角度详细介绍如何创建PDF。
 
-先说原理：网站所有教程均以Markdown格式存储，并通过[GitSite](https://gitsite.org)工具生成HTML静态页面。现在，要把一个页面转成一个PDF文件，最简单的方法是用浏览器的打印功能，可以直接将页面输出为PDF。
+先说原理：网站所有教程均以Markdown格式存储，并通过[GitSite](https://gitsite.puppylab.org)工具生成HTML静态页面。现在，要把一个页面转成一个PDF文件，最简单的方法是用浏览器的打印功能，可以直接将页面输出为PDF。
 
 但是，直接打印HTML页面为PDF是不行的，主要问题是：
 

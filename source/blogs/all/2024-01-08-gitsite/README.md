@@ -1,6 +1,6 @@
 # 复古建站系统GitSite
 
-[GitSite](https://gitsite.org)是一个复古建站系统，它可以将Git管理的Markdown文档转换为纯静态HTML网站，再非常便利地部署到GitHub Page、GitLab Page、CloudFlare Page、AWS S3、Vercel等。
+[GitSite](https://gitsite.puppylab.org)是一个复古建站系统，它可以将Git管理的Markdown文档转换为纯静态HTML网站，再非常便利地部署到GitHub Page、GitLab Page、CloudFlare Page、AWS S3、Vercel等。
 
 为什么要用Git来管理Markdown文档呢？因为一个传统的CMS系统，例如WordPress，文档都是存储在数据库里的，因此，必须提供一个后台编辑系统，让用户能写文档 / 更新 / 发布，这就涉及到后台系统的增删改查、版本管理、权限管理、在线编辑器、图片上传……等等。
 
@@ -38,4 +38,4 @@ Markdown文本转乐谱：
 
 当然，传统的CMS也是非常有用的，因为GitSite是专为开源站点设计的，它仅适合规模不大的文档 / 博客 / 书籍 / 公众号备份等。
 
-访问GitSite → [https://gitsite.org](https://gitsite.org)
+访问GitSite → [https://gitsite.puppylab.org](https://gitsite.puppylab.org)
