@@ -73,17 +73,15 @@ Eclipse的发行版提供了预打包的开发环境，包括Java、JavaEE、C++
 
 #### Java > Compiler
 
-将“Compiler compliance level”设置为`20`，本教程的所有代码均使用Java 20的语法，并且编译到Java 20的版本。
-
-去掉“Use default compliance settings”并钩上“Enable preview features for Java 20”，这样我们就可以使用Java 20的预览功能。
+将“Compiler compliance level”设置为`25`或更高，本教程的所有代码均使用Java 25的语法，并且编译到Java 25的版本。
 
 ```alert type=notice title=注意
-如果Compiler compliance level没有22这个选项，请更新到最新版Eclipse。如果更新后还是没有22，打开Help - Eclipse Marketplace，搜索Java 22 Support安装后重启即可。
+如果Compiler compliance level没有25这个选项，请更新到最新版Eclipse。
 ```
 
 #### Java > Installed JREs
 
-在Installed JREs中应该看到Java SE 20，如果还有其他的JRE，可以删除，以确保Java SE 20是默认的JRE。
+在Installed JREs中应该看到Java SE 25，如果还有其他的JRE，可以删除，以确保Java SE 25是默认的JRE。
 
 ### Eclipse IDE结构
 
