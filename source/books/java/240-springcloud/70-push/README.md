@@ -34,7 +34,7 @@ Vert.x本身包含若干模块，根据需要，我们引入3个组件：
 我们先编写推送服务的入口：
 
 ```java
-package com.itranswarp.exchange.push;
+package org.puppylab.exchange.push;
 
 @SpringBootApplication
 // 禁用数据库自动配置 (无DataSource, JdbcTemplate...)
@@ -51,7 +51,7 @@ public class PushApplication {
 }
 ```
 
-上述代码仍然是一个标准的Spring Boot应用，因为我们希望利用Spring Cloud Config读取配置。由于我们不使用Spring自身的Web功能，因此需要禁用Spring的Web功能。推送服务本身并不需要访问数据库，因此禁用数据库自动配置。最后，我们把`PushApplication`放在`com.itranswarp.exchange.push`包下面，以避免自动扫描到`com.itranswarp.exchange`包下的组件（如RedisService）。
+上述代码仍然是一个标准的Spring Boot应用，因为我们希望利用Spring Cloud Config读取配置。由于我们不使用Spring自身的Web功能，因此需要禁用Spring的Web功能。推送服务本身并不需要访问数据库，因此禁用数据库自动配置。最后，我们把`PushApplication`放在`org.puppylab.exchange.push`包下面，以避免自动扫描到`org.puppylab.exchange`包下的组件（如RedisService）。
 
 下一步是编写`PushService`，注意它是一个Spring组件，由Spring初始化：
 

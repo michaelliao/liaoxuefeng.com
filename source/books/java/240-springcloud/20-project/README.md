@@ -20,7 +20,7 @@
     http://maven.apache.org/xsd/maven-4.0.0.xsd"
 >
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.itranswarp.exchange</groupId>
+    <groupId>org.puppylab.exchange</groupId>
     <artifactId>parent</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
@@ -118,7 +118,7 @@
 
     <!-- 指定Parent -->
     <parent>
-        <groupId>com.itranswarp.exchange</groupId>
+        <groupId>org.puppylab.exchange</groupId>
         <artifactId>parent</artifactId>
         <version>1.0</version>
         <!-- Parent POM的相对路径 -->
@@ -143,7 +143,7 @@
 
         <!-- 依赖Common模块 -->
         <dependency>
-            <groupId>com.itranswarp.exchange</groupId>
+            <groupId>org.puppylab.exchange</groupId>
             <artifactId>common</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -181,7 +181,7 @@
     http://maven.apache.org/maven-v4_0_0.xsd"
 >
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.itranswarp.exchange</groupId>
+    <groupId>org.puppylab.exchange</groupId>
     <artifactId>build</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
