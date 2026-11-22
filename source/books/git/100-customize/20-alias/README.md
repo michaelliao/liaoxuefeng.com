@@ -101,7 +101,7 @@ $ git add A.txt
 $ git commit -m "fix bug 1001"
 ```
 
-提交后我们才发现忘了把`B.txt`加进去。不要慌，先`add`再`append`，，把`B.txt`的改动追加到`fix bug 1001`里：
+提交后我们才发现忘了把`B.txt`加进去。不要慌，先`add`再`append`，把`B.txt`的改动追加到`fix bug 1001`里：
 
 ```plain
 $ git add B.txt
