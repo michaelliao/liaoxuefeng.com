@@ -76,6 +76,47 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 为什么不早点告诉我？别激动，咱不是为了多记几个英文单词嘛！
 
+### 追加改动
+
+有时候，我们用`git commit`提交后，发现还有改动的文件忘记提交了，如果再提交一次，就变成了两次提交，不好看。
+
+怎么办？
+
+Git的`commit`命令提供了一个`--amend`参数，允许再次提交时，合并到上一次的commit里。我们用`append`别名来封装这个操作：
+
+```plain
+git config --global alias.append '!git diff --cached --quiet && echo "nothing to append to last commit." || git commit --amend --no-edit'
+```
+
+注意：用Windows的PowerShell时，要这么写命令：
+
+```plain
+git config --global alias.append "!git diff --cached --quiet && echo 'nothing to append to last commit.' || git commit --amend --no-edit"
+```
+
+现在，假设有文件`A.txt`和`B.txt`都做了改动，先正常提交文件`A.txt`的改动：
+
+```plain
+$ git add A.txt
+$ git commit -m "fix bug 1001"
+```
+
+提交后我们才发现忘了把`B.txt`加进去。不要慌，先`add`再`append`，，把`B.txt`的改动追加到`fix bug 1001`里：
+
+```plain
+$ git add B.txt
+$ git append
+```
+
+现在，`fix bug 1001`这个提交就同时包含了`A.txt`和`B.txt`的改动。
+
+如果当前没有任何待提交的改动，`git append`会提示`nothing to append to last commit.`，什么也不干，然后直接退出：
+
+```plain
+$ git append
+nothing to append to last commit.
+```
+
 ### 配置文件
 
 配置Git的时候，加上`--global`是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。
